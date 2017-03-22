@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="">
+    {% include icons.html %}
+    <!-- <button class='h5'>Toggle Grid</button> -->
+    <div class="">
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
+    </div>
+    <script>
+      const toggleGrid = e => {
+        document.body.classList.toggle('grid8')
+        document.body.classList.toggle('debug')
+      }
+      document.body.addEventListener('click', toggleGrid)
+    </script>
+  </body>
+
+</html>

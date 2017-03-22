@@ -1,0 +1,56 @@
+/*
+ * Grid System in Sass
+ */
+
+// Set your number of columns.
+$column-count: 12;
+
+
+// Default media queries
+@for $i from 1 through $column-count{
+	.col-#{$i} {
+		width:calc( #{$i} / #{$column-count} * 100% );
+		//margin-left: $gutter;
+	 }
+}
+@for $i from 1 through $column-count{
+  .s-col-#{$i} {
+     @include breakpoint(s) {
+      width:calc( #{$i} / #{$column-count} * 100% );
+     };
+   }
+}
+@for $i from 1 through $column-count{
+  .m-col-#{$i} {
+     @include breakpoint(m) {
+       width:calc( #{$i} / #{$column-count} * 100% );
+     };
+   }
+}
+@for $i from 1 through $column-count{
+   .l-col-#{$i} {
+     @include breakpoint(l) {
+       width:calc( #{$i} / #{$column-count} * 100% );
+     };
+   }
+}
+@for $i from 1 through $column-count{
+   .xl-col-#{$i} {
+      @include breakpoint(xl) {
+        width:calc( #{$i} / #{$column-count} * 100% );
+     };
+   }
+}
+
+
+// Width Utilities
+.w-10{width:10%;}
+.w-20{width:20%;}
+.w-30{width:30%;}
+.w-40{width:40%;}
+.w-50{width:50%;}
+.w-60{width:60%;}
+.w-70{width:70%;}
+.w-80{width:80%;}
+.w-90{width:90%;}
+.w-100{width:100%;}

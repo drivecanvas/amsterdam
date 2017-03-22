@@ -1,0 +1,109 @@
+
+// Set Family Classes
+.sans{font-family: $sans-font-family;}
+.serif{font-family: $serif-font-family;}
+.monospace {font-family: $monospace-font-family;}
+
+
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+// Addtl Style & Weight Variables
+$caps-letter-spacing: .1em;
+
+
+
+$measure-width:32em;
+.measure, .mx{
+  max-width:$measure-width;
+}
+
+/* Basscss Typography */
+.font-family-inherit { font-family: inherit }
+.font-size-inherit { font-size: inherit }
+.text-decoration-none { text-decoration: none }
+
+strong { font-weight: $bold-font-weight}
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: $caps-letter-spacing; }
+.uppercase{ text-transform:uppercase; }
+.bold {font-weight:$bold-font-weight;}
+.text-left   { text-align: left }
+.text-center { text-align: center }
+.text-right  { text-align: right }
+.text-justify{ text-align: justify }
+.nowrap { white-space: nowrap }
+.break-word { word-wrap: break-word }
+.list-style-none { list-style: none }
+.underline { text-decoration: underline }
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+span.kern{
+  letter-spacing:.02em;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+small, .small{
+  font-size:0.875rem;
+  line-height:1.5rem;
+  margin-top:0.125rem;
+
+}
+
+
+
+
+
+
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure, small,
+%vertical-rhythm {
+    margin-top:0;
+    //margin-bottom: $space-s;
+}
+
+
+
+// Set Global Default on Body
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: normal;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+@import
+"headings",
+"lists"
+;
