@@ -13,4 +13,3 @@ The Canvas Design System Library
 * Jekyll / Liquid Templating (Mimics Handlebars in Live Environment)
 * 8px Base Grid / Maths
 * Consistent Type Scale / Baseline
-* 
