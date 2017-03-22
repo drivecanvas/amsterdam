@@ -1,13 +1,5 @@
-
-// Set Family Classes
-.sans{font-family: $sans-font-family;}
-.serif{font-family: $serif-font-family;}
-.monospace {font-family: $monospace-font-family;}
-
-
-
 /**
- * Reset some basic elements
+ * Reset our vertical rhthym
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -36,7 +28,15 @@ $measure-width:32em;
 .font-size-inherit { font-size: inherit }
 .text-decoration-none { text-decoration: none }
 
-strong { font-weight: $bold-font-weight}
+.quote{
+  font-style:italic;
+  box-sizing:border-box;
+  box-shadow: -2px 0 0 0;
+  padding-left: $space-m;
+  padding-top: $space-m;
+  padding-bottom: $space-s;
+  margin-bottom: $space-m;
+}
 .regular { font-weight: normal }
 .italic  { font-style: italic }
 .caps    { text-transform: uppercase; letter-spacing: $caps-letter-spacing; }
@@ -56,20 +56,26 @@ strong { font-weight: $bold-font-weight}
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-span.kern{
-  letter-spacing:.02em;
+.ls-1{
+  letter-spacing:.1em;
+}
+.ls-2{
+  letter-spacing:.2em;
+}
+.kern1{
+  letter-spacing:-.1em;
+}
+.kern2{
+  letter-spacing:-.2em;
 }
 
-.list-reset {
-  list-style: none;
-  padding-left: 0;
-}
+
 small, .small{
   font-size:0.875rem;
   line-height:1.5rem;
   margin-top:0.125rem;
-
 }
+strong { font-weight: $bold-font-weight}
 
 
 

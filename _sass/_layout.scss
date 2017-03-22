@@ -97,7 +97,6 @@
 .table-cell   { display: table-cell }
 .table-row    { display: table-row }
 
-
 // Flex Box
 .flex         { display: flex; display:-webkit-flex;}
 .flex-column  { flex-direction: column }
@@ -187,6 +186,7 @@ $width-xxl: 96rem;
 $width-xxxl: 128rem;
 
 //Width
+.width-0 {width:0;}
 .width-10{width:10%;}
 .width-20{width:20%;}
 .width-30{width:30%;}

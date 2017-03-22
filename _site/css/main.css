@@ -884,6 +884,15 @@ td {
   line-height: 1.5;
   padding: .25rem .25rem .25rem 0; }
 
+.sans {
+  font-family: "usual", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+
+.serif {
+  font-family: "freight-text-pro", Georgia, Athelas, Palatino, Garamond, Cambria, "Times New Roman", Times, serif; }
+
+.monospace {
+  font-family: Roboto Mono, Source Code Pro, SFMono, menlo, inconsolata, consolas, "fira mono", "noto mono", "droid sans mono", "dejavu sans mono", "liberation mono", "ubuntu mono", monaco, "courier new", monospace; }
+
 .fw-100 {
   font-weight: 100; }
 
@@ -1466,6 +1475,9 @@ img {
 .fit {
   max-width: 100%; }
 
+.width-0 {
+  width: 0; }
+
 .width-10 {
   width: 10%; }
 
@@ -1661,9 +1673,6 @@ a.btn-big {
 .current {
   box-shadow: 0 0.05em 0 0 #000; }
 
-li {
-  padding-bottom: 0.5rem; }
-
 /**
  * Lists
  */
@@ -1672,15 +1681,13 @@ ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1.5rem; }
 
-li > ul,
-li > ol {
-  margin-bottom: 0; }
+li {
+  padding-bottom: 0.5rem; }
+  li > ul,
+  li > ol {
+    margin-bottom: 0; }
 
-.list-reset {
-  list-style: none; }
-  .list-reset li {
-    padding-bottom: 0; }
-
+/* Definition List Specific */
 dl {
   list-style: square; }
   dl dt {
@@ -1689,6 +1696,12 @@ dl {
   dl dd {
     padding: 0.5rem;
     margin: 0; }
+
+.list-reset {
+  list-style: none;
+  padding-left: 0; }
+  .list-reset li {
+    padding-bottom: 0; }
 
 /**
  * Images
@@ -1792,7 +1805,7 @@ img {
   padding-bottom: 8rem; }
 
 .pb-xxxl {
-  padding-bottom: 8rem; }
+  padding-bottom: 16rem; }
 
 .py-xs {
   padding-top: 0.25rem;
@@ -2244,17 +2257,8 @@ img {
 .shadow {
   box-shadow: 0 0.25rem 1rem 0.25rem rgba(0, 0, 0, 0.25); }
 
-.sans {
-  font-family: "usual", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
-
-.serif {
-  font-family: "freight-text-pro", Georgia, Athelas, Palatino, Garamond, Cambria, "Times New Roman", Times, serif; }
-
-.monospace {
-  font-family: Roboto Mono, Source Code Pro, SFMono, menlo, inconsolata, consolas, "fira mono", "noto mono", "droid sans mono", "dejavu sans mono", "liberation mono", "ubuntu mono", monaco, "courier new", monospace; }
-
 /**
- * Reset some basic elements
+ * Reset our vertical rhthym
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -2275,8 +2279,14 @@ dl, dd, ol, ul, figure {
 .text-decoration-none {
   text-decoration: none; }
 
-strong {
-  font-weight: 600; }
+.quote {
+  font-style: italic;
+  box-sizing: border-box;
+  box-shadow: -2px 0 0 0;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem; }
 
 .regular {
   font-weight: normal; }
@@ -2324,17 +2334,25 @@ strong {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-span.kern {
-  letter-spacing: .02em; }
+.ls-1 {
+  letter-spacing: .1em; }
 
-.list-reset {
-  list-style: none;
-  padding-left: 0; }
+.ls-2 {
+  letter-spacing: .2em; }
+
+.kern1 {
+  letter-spacing: -.1em; }
+
+.kern2 {
+  letter-spacing: -.2em; }
 
 small, .small {
   font-size: 0.875rem;
   line-height: 1.5rem;
   margin-top: 0.125rem; }
+
+strong {
+  font-weight: 600; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -2375,9 +2393,6 @@ h5 {
 h6 {
   line-height: 1.5rem; }
 
-li {
-  padding-bottom: 0.5rem; }
-
 /**
  * Lists
  */
@@ -2386,15 +2401,13 @@ ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1.5rem; }
 
-li > ul,
-li > ol {
-  margin-bottom: 0; }
+li {
+  padding-bottom: 0.5rem; }
+  li > ul,
+  li > ol {
+    margin-bottom: 0; }
 
-.list-reset {
-  list-style: none; }
-  .list-reset li {
-    padding-bottom: 0; }
-
+/* Definition List Specific */
 dl {
   list-style: square; }
   dl dt {
@@ -2403,6 +2416,12 @@ dl {
   dl dd {
     padding: 0.5rem;
     margin: 0; }
+
+.list-reset {
+  list-style: none;
+  padding-left: 0; }
+  .list-reset li {
+    padding-bottom: 0; }
 
 :root {
   --orange: #f90;

@@ -1,7 +1,3 @@
-li {
-  padding-bottom: $space-s;
-}
-
 /**
  * Lists
  */
@@ -12,18 +8,14 @@ ul, ol, dl {
 }
 
 li {
+  padding-bottom: $space-s;
     > ul,
     > ol {
          margin-bottom: 0;
     }
 }
-.list-reset {
-    list-style: none;
-    li{
-      padding-bottom:0;
-    }
-}
 
+/* Definition List Specific */
 dl{
   list-style:square;
   dt{
@@ -33,5 +25,13 @@ dl{
   dd{
     padding: $space-s;
     margin:0;
+  }
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+  li{
+    padding-bottom:0;
   }
 }
