@@ -49,11 +49,31 @@
 
 
   <body class="">
-    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Include this thing once just after the opening <body> tag -->
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
 
+    <!-- Organize alphabetically or by group -->
+
+    <symbol id="icon-circle-triangle" viewBox="0 0 24 24"  enable-background="new 0 0 24 24">
+      <!--
+      This is the part that designers will copy and paste from sketch, and we'll all have to manually tweak as code.
+      Sometimes there's a whole bunch of extra <g> wrappers you can delete. -->
+      <title>Circle Triangle</title>
+      <path id="Oval" fill="#979797" d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z"></path>
+      <polygon id="Triangle" fill="#D8D8D8" points="12 7 17 17 7 17"></polygon>
+    </symbol>
+
+    <!-- Add new symbols above this comment -->
   </defs>
 </svg>
+
+<!--
+  Use icons in html with this code:
+
+  <svg class="a base class (icon) to control width and height and any other class you like">
+    <use xlink:href="#icon-id"></use>
+  </svg> -->
 
     <!-- <button class='h5'>Toggle Grid</button> -->
     <div class="">
@@ -61,23 +81,7 @@
   
 </header>
 
-        <!-- Make Global Site Colors -->
-
-
-  <p>we got colors</p>
-
-
-
-<li>red</li>
-
-<li>green</li>
-
-<li>blue</li>
-
-
-
-
-<div class="px-m">
+        <div class="px-m">
   <p class="caps mb-m">Spacing Scale</p>
 
   <div class="bg-canvas-blue width-0 mb-xs mt-m pr-xs pb-xs"></div>
@@ -134,6 +138,19 @@
 <button>
   Button Text
 </button>
+
+</div>
+
+<div class="cf">
+  <!-- Make Global Site Colors -->
+  
+</div>
+
+<div class="cf px-s">
+  <!-- Use of a class on this svg display element is important to control the width / height -->
+  <svg class="icon">
+    <use xlink:href="#icon-circle-triangle"></use>
+  </svg>
 
 </div>
 

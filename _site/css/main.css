@@ -1218,14 +1218,12 @@ h6 {
 
 .icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
-  padding: 1rem 0; }
-
-@media screen and (min-width: 48em) {
-  .story-icon {
-    font-size: 2rem; } }
+  /* also optional, depending on structure, sometimes helpful for aligning with text content */
+  width: 1.5em;
+  /* 24px */
+  height: 1.5em;
+  /* 24px */
+  /* fill: currentColor; Optionally applied here, depending on design, and whether or not there are multiple colors in an icon */ }
 
 /*
    IMAGES
