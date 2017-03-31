@@ -1,5 +1,30 @@
+<!-- Include this thing once just after the opening <body> tag -->
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
 
+    <!-- Organize alphabetically or by group -->
+
+    <symbol id="icon-id" viewBox="0 0 24 24">
+      <title>icon-name</title>
+      <!--
+      This is the part that designers will copy and paste from sketch, and we'll all have to manually tweak as code.
+      Sometimes there's a whole bunch of extra <g> wrappers you can delete. -->
+      <path class="optionalpathname"
+      fill="currentColor"
+      stroke="currentColor"
+      stroke-width="0"
+      d="M 0 64 l 1080 120 sometimesareallyreallylongstring">
+
+    </symbol>
+
+    <!-- Add new symbols above this comment -->
   </defs>
 </svg>
+
+<!--
+  Use icons in html with this code:
+
+  <svg class="any class you like">
+    <use xlink:href="#icon-id"></use>
+  </svg>
+-->
