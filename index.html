@@ -1,23 +1,9 @@
 ---
 layout: default
 title: Amsterdam
-colors:
-  - red
-  - green
-  - blue
 ---
 
-<!-- Make Global Site Colors -->
 
-{% if page.colors %}
-  <p>we got colors</p>
-{% else %}
-  <p>no colors bro</p>
-{% endif %}
-
-{% for color in page.colors %}
-<li>{{color}}</li>
-{% endfor %}
 
 
 
@@ -74,4 +60,18 @@ colors:
 
 <div class="cf">
   {% include_relative components/buttons.html %}
+</div>
+
+<div class="cf">
+  <!-- Make Global Site Colors -->
+  {% if site.colors %}
+    <ul class="list-reset">
+      {% for color in site.colors %}
+      <li class="inline-block">
+        <div class="p-xl m-m" style="background-color:{{color}};"></div>
+        <p>{{color}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </div>
