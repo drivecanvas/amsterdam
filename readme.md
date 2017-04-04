@@ -17,7 +17,7 @@ The Canvas Design System Library
 
 ## Deploy
 
-* 1. Install Ruby (preferable use RVM or Rbenv):
+* 1. Install Ruby (preferable use Rbenv or RVM):
 
 ```
 brew install rbenv ruby-build
