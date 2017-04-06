@@ -1,22 +1,21 @@
-button{
-  background-color:$white;
+button, .button{
+  background-color:$canvas-blue;
+  color:$white;
   border:none;
   font-weight:600;
   font-size:$s-h5;
+  padding:$space-m $space-l;
+  border-radius:$border-radius;
+  letter-spacing:.02em;
 }
 
-.btn-circle{
-  display:block;
-  margin:auto;
-  border-radius:50%;
-  height:6rem;
-  width:6rem;
-  padding:1rem;
-}
-.btn
-.icon-big {
-  width: 4rem;
-  height: 4rem;
+a.button{
+  text-decoration:none;
+  padding:$space-m $space-l;
+  border:none;
+  color:$white!important;
 }
 
-.fill-black { fill: black;}
+a.btn-big{
+    padding:$space-l $space-xl;
+}
