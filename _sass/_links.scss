@@ -41,21 +41,7 @@ a:active {
   text-decoration:underline;
   text-decoration-skip: ink;
 }
-a.button{
-  //background-color:$black90;
-  //color:$white;
-  text-decoration:none;
-  padding:$space-m $space-l;
-  border:none;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  font-weight:600;
-  font-size:.875rem;
-  border-radius:2rem;
-}
-a.btn-big{
-    padding:$space-m $space-l;
-}
+
 .color-inherit {
   color: inherit;
 }
