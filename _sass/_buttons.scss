@@ -10,7 +10,9 @@ button, .button{
 }
 
 a.button{
+  display:inline-block;
   text-decoration:none;
+  text-align:center;
   padding:$space-m $space-l;
   border:none;
   color:$white!important;
