@@ -438,72 +438,72 @@ h6, .h6 {
  * .fw-weight
  * .italic (because all other instances default to normal)
  */
-.fs-s12 {
+.f-s12 {
   font-size: 0.75rem;
   line-height: 1rem; }
 
-.fs-s14 {
+.f-s14 {
   font-size: 0.875rem;
   line-height: 1.5rem; }
 
-.fs-s16 {
+.f-s16 {
   font-size: 1rem;
   line-height: 1.5rem; }
 
-.fs-s18 {
+.f-s18 {
   font-size: 18px;
   line-height: 1.5rem; }
 
-.fs-s20 {
+.f-s20 {
   font-size: 1.25rem;
   line-height: 2rem; }
 
-.fs-s24 {
-  font-size: 1rem;
+.f-s24 {
+  font-size: 1.5rem;
   line-height: 2rem; }
 
-.fs-s32 {
+.f-s32 {
   font-size: 2rem;
   line-height: 2.5rem; }
 
-.fs-s40 {
+.f-s40 {
   font-size: 2.5rem;
   line-height: 3rem; }
 
-.fs-s48 {
+.f-s48 {
   font-size: 3rem;
   line-height: 3rem; }
 
-.fs-s56 {
+.f-s56 {
   font-size: 3.5rem;
   line-height: 3.5rem; }
 
-.fs-s64 {
+.f-s64 {
   font-size: 4rem;
   line-height: 4rem; }
 
-.fw-100 {
+.f-w100 {
   font-weight: 100; }
 
-.fw-200 {
+.f-w200 {
   font-weight: 200; }
 
-.fw-300 {
+.f-w300 {
   font-weight: 300; }
 
-.fw-400 {
+.f-w400 {
   font-weight: 400; }
 
-.fw-500 {
+.f-w500 {
   font-weight: 500; }
 
-.fw-600 {
+.f-w600 {
   font-weight: 600; }
 
-.fw-700 {
+.f-w700 {
   font-weight: 700; }
 
-.fw-800 {
+.f-w800 {
   font-weight: 800; }
 
 .ajaxWrap {
@@ -3813,19 +3813,13 @@ img {
 
 a {
   transition: all .2s;
-  color: #000;
   text-decoration: none; }
-
-a:link,
-a:visited {
-  color: #000; }
 
 a:hover {
   transition: all .2s; }
 
 a:active {
-  transition: all .2s;
-  color: #000; }
+  transition: all .2s; }
 
 .link {
   text-decoration: none;
@@ -4435,6 +4429,16 @@ p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0; }
+
+.section-header {
+  padding-bottom: 1rem; }
+  .section-header:before {
+    content: ' ';
+    display: block;
+    height: 1rem;
+    border-top: 2px solid #ddd;
+    color: #ddd;
+    width: 4rem; }
 
 .measure, .mx {
   max-width: 32em; }

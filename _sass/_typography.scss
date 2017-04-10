@@ -12,6 +12,17 @@ dl, dd, ol, ul, figure {
 
 
 
+.section-header{
+  &:before{
+    content:' ';
+    display:block;
+    height:$space-m;
+    border-top:2px solid #ddd;
+    color: #ddd;
+    width:4rem;
+  }
+  padding-bottom:$space-m;
+}
 
 // Addtl Style & Weight Variables
 $caps-letter-spacing: .1em;
