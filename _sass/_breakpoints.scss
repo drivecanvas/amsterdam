@@ -2,6 +2,12 @@
   Media Queries
  */
 
+
+
+
+
+
+
 // Add or remove breakpoints as needed.
 // Currently using increments of 16 from base until l, 32 l through xxl
 // All default styles are applied before a breakpoint of 32em / 512px, which is the measure of ideal line length for our base font size.
@@ -13,10 +19,6 @@ $breakpoints:(
   xxl: 128em, /* 2048px */
 );
 
-//$breakpoint-s: min-width:32em;
-//$breakpoint-m: min-width:48em;
-//$breakpoint-m: min-width:48em;
-//$breakpoint-m: min-width:48em;
 
 /*
   To use a small screen specific style:
@@ -36,6 +38,7 @@ $breakpoints:(
      }
   }
 }
+
 /*
   Example using medium breakpoint (m).
   Setting the color to red for any device wider than medium breakpoint.
