@@ -1,12 +1,12 @@
-$link-color: $black;
-$link-color--hover: $black;
-$link-color--active: $black;
+$link-color: $canvas-blue!default;
+//$link-color--hover: $black;
+//$link-color--active: $black;
 
 
 
 a {
   transition: all .2s;
-  color:$link-color;
+//  color:$link-color;
   text-decoration:none;
   //box-shadow: 0 1px 0 0 $black50;
   //background-image: linear-gradient(to bottom, $black50 50%, rgba(0,0,0,0) 50%);
@@ -20,7 +20,7 @@ a {
 }
 a:link,
 a:visited {
-  color: $link-color;
+  //color: $link-color;
 }
 a:hover   {
   transition: all .2s;
@@ -28,7 +28,7 @@ a:hover   {
 }
 a:active {
   transition: all .2s;
-  color: $link-color--active;
+//  color: $link-color--active;
 }
 .link {
   text-decoration: none;

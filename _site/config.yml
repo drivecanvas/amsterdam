@@ -6,6 +6,12 @@ description: The Canvas Design Systems Library
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
+facebook-username: "" #
+instagram-username: "" #
+twitter-username: "" #
+
+
+
 # Build settings
 markdown: kramdown
 
@@ -32,4 +38,3 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
-
