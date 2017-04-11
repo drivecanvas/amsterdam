@@ -22,11 +22,10 @@ a.button, a.button-primary, a.button-secondary{
   background-color:$canvas-blue;
   color:$white!important;
   &:hover{
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    
   }
   &:active{
     background-color:$dark-blue;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -36,10 +35,10 @@ a.button, a.button-primary, a.button-secondary{
   color:$canvas-blue!important;
   background-color:$white;
   &:hover{
-    box-shadow: inset 0 0 0 2px $canvas-blue, 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 0 2px $canvas-blue;
   }
   &:active{
     color:$dark-blue!important;
-    box-shadow: inset 0 0 0 2px $dark-blue, 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 0 2px $dark-blue;
   }
 }
