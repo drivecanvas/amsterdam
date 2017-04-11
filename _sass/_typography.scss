@@ -8,7 +8,12 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+body{
+  color:$grey4;
+}
+p{
+  margin-bottom:$space-m;
+}
 
 
 
@@ -22,6 +27,7 @@ dl, dd, ol, ul, figure {
     width:4rem;
   }
   padding-bottom:$space-m;
+  margin-bottom:$space-m;
 }
 
 // Addtl Style & Weight Variables

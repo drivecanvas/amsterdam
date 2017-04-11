@@ -1,23 +1,45 @@
-button, .button{
-  background-color:$canvas-blue;
-  color:$white;
+button, %button{
+  transition: all .1s;
   border:none;
   font-weight:600;
   font-size:$s-h5;
   padding:$space-m $space-l;
   border-radius:$border-radius;
   letter-spacing:.02em;
-}
-
-a.button{
-  display:inline-block;
-  text-decoration:none;
   text-align:center;
-  padding:$space-m $space-l;
-  border:none;
-  color:$white!important;
+  &.disabled{
+    opacity:0.5;
+  }
 }
 
-a.btn-big{
-    padding:$space-l $space-xl;
+a.button, a.button-primary, a.button-secondary{
+  display:inline-block;
+
+}
+
+.button, .button-primary{
+  @extend %button;
+  background-color:$canvas-blue;
+  color:$white!important;
+  &:hover{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  &:active{
+    background-color:$dark-blue;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.button-secondary{
+  @extend %button;
+  box-shadow: inset 0 0 0 2px $canvas-blue;
+  color:$canvas-blue!important;
+  background-color:$white;
+  &:hover{
+    box-shadow: inset 0 0 0 2px $canvas-blue, 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  &:active{
+    color:$dark-blue!important;
+    box-shadow: inset 0 0 0 2px $dark-blue, 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
 }
