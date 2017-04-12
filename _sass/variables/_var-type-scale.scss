@@ -95,61 +95,61 @@ h6, .h6 { font-size: $s-h6; line-height:1.5rem; }
 // [size], [weight], [style] can be any of the following keys:
 
 $f-sizes: (
-  s12: (
+  12: (
     font-size: 0.75rem, //12px,
     line-height: 1rem, //16px,
   ),
-  s14: (
+  14: (
     font-size: 0.875rem, //14px,
     line-height: 1.5rem, //24px,
   ),
-  s16: (
+  16: (
     font-size: 1rem, //16px,
     line-height: 1.5rem, //24px,
   ),
-  s18: (
+  18: (
     font-size: 18px,
     line-height: 1.5rem, //24px,
   ),
-  s20: (
+  20: (
     font-size: 1.25rem, //20px,
     line-height: 2rem, //32px,
   ),
-  s24: (
+  24: (
     font-size: 1.5rem, //24px,
     line-height: 2rem //32px,
   ),
-  s32: (
+  32: (
     font-size: 2rem, //32px,
     line-height: 2.5rem, //40px,
   ),
-  s40: (
+  40: (
     font-size: 2.5rem, //40px,
     line-height: 3rem, //48px,
   ),
-  s48: (
+  48: (
     font-size: 3rem, //48px,
     line-height: 3rem, //48px,
   ),
-  s56: (
+  56: (
     font-size: 3.5rem, //56px,
     line-height: 3.5rem, //56px,
   ),
-  s64: (
+  64: (
     font-size: 4rem, //64px,
     line-height: 4rem, //64px,
   ),
 );
 
 $f-weights: (
-  w100: 100,
-  w200: 200,
-  w300: 300,
-  w400: 400,
-  w500: 500,
-  w600: 600,
-  w700: 700,
-  w800: 800,
+  100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+  800: 800,
 );
 
 .italic{
@@ -159,19 +159,19 @@ $f-weights: (
 /*
  * IMPORTANT, PLEASE READ
  * We have refactored the old model of using .f-size-weight-style combinations into more utilitarian classes
- * .fs-size
- * .fw-weight
+ * .fs-##
+ * .fw-###
  * .italic (because all other instances default to normal)
  */
 
 @each $size-name, $size in $f-sizes {
-  .f-#{$size-name} {
+  .fs-#{$size-name} {
     font-size: map-get($size, font-size);
     line-height: map-get($size, line-height);
   }
 }
 @each $weight-name, $weight in $f-weights {
-  .f-#{$weight-name} {
+  .fw-#{$weight-name} {
     font-weight: $weight;
   }
 }
