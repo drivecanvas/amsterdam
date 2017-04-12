@@ -548,6 +548,13 @@ h6, .h6 {
 .origin-lb {
   transform-origin: left bottom; }
 
+.affix {
+  position: fixed;
+  top: 0; }
+
+.affix-bottom {
+  position: absolute; }
+
 .bg-cover {
   background-size: cover; }
 

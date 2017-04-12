@@ -16,7 +16,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/syntax.css">
+  <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
@@ -29,10 +29,13 @@
   <script src="https://use.typekit.net/xxm6fsa.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/js/bootstrap_affix_scrollspy.js"></script>
+
 </head>
 
 
-  <body class="">
+  <body class="relative" data-spy="scroll" data-target="#scrollNav">
     <!-- Include this thing once just after the opening <body> tag -->
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -222,6 +225,17 @@
 
     </div>
     <script>
+      $('#stickyNav').affix({
+        offset: {
+          top: function (){
+            return (this.top = $('#hero').outerHeight(true))
+          },
+          bottom: function () {
+            return (this.bottom = $('.footer').outerHeight(true))
+          }
+        }
+      });
+
       const toggleGrid = e => {
         document.body.classList.toggle('grid8')
         document.body.classList.toggle('debug')

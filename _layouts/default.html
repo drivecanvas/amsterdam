@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="">
+  <body class="relative" data-spy="scroll" data-target="#scrollNav">
     {% include icons.html %}
     <!-- <button class='h5'>Toggle Grid</button> -->
     <div class="">
@@ -12,6 +12,17 @@
         {% include footer.html %}
     </div>
     <script>
+      $('#stickyNav').affix({
+        offset: {
+          top: function (){
+            return (this.top = $('#hero').outerHeight(true))
+          },
+          bottom: function () {
+            return (this.bottom = $('.footer').outerHeight(true))
+          }
+        }
+      });
+
       const toggleGrid = e => {
         document.body.classList.toggle('grid8')
         document.body.classList.toggle('debug')
