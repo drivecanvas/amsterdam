@@ -46,7 +46,7 @@ bundle install
 
 * 4. Add the remote:
 ```
-git remote add staging https://git.heroku.com/amsterdam-staging.git
+git remote add staging https://git.heroku.com/staging-amsterdam.git
 ```
 
 * 5. Then run the following command to deploy:
