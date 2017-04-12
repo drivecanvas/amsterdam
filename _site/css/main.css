@@ -548,6 +548,27 @@ h6, .h6 {
 .origin-lb {
   transform-origin: left bottom; }
 
+.bg-cover {
+  background-size: cover; }
+
+.bg-contain {
+  background-size: contain; }
+
+.bg-center {
+  background-position: center; }
+
+.bg-repeat {
+  background-repeat: repeat; }
+
+.bg-repeat-x {
+  background-repeat: repeat-x; }
+
+.bg-repeat-y {
+  background-repeat: repeat-y; }
+
+.bg-no-repeat {
+  background-repeat: no-repeat; }
+
 /*
   BOX SIZING
 
