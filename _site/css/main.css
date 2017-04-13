@@ -3941,6 +3941,11 @@ img {
   .nav a {
     line-height: 1; }
 
+.tabs a {
+  box-shadow: inset 0 -1px 0 0 #d7d8dd; }
+  .tabs a.active {
+    box-shadow: inset 0 -2px 0 0 #3857e7; }
+
 /*
   Base:
     p = padding
