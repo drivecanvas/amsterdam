@@ -35,7 +35,7 @@
 </head>
 
 
-  <body class="relative" data-spy="scroll" data-target="#scrollNav">
+  <body class="relative" data-spy="scroll" data-target="#stickyNav">
     <!-- Include this thing once just after the opening <body> tag -->
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -225,6 +225,26 @@
 
     </div>
     <script>
+      // Smooth Scrolling for Anchor Links
+      $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+
+      // Anchor Link highlighting using Boostrap "scrollspy"
+
+
+      // Sticky Sub Navigations using Boostrap "affix"
       $('#stickyNav').affix({
         offset: {
           top: function (){
@@ -236,6 +256,7 @@
         }
       });
 
+      // Toggle Baseline Grid and show element outlines
       const toggleGrid = e => {
         document.body.classList.toggle('grid8')
         document.body.classList.toggle('debug')

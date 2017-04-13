@@ -1,0 +1,15 @@
+.nav{
+  list-style:none;
+  margin:0;
+  padding:0;
+  li{
+    padding-bottom:0;
+    margin-bottom:0;
+  }
+  li.active{
+    box-shadow: inset 0 -2px 0 0 $canvas-blue;
+  }
+  a{
+    line-height:1;
+  }
+}

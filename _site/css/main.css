@@ -3929,6 +3929,18 @@ img {
   width: 100%;
   height: 100%; }
 
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .nav li {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .nav li.active {
+    box-shadow: inset 0 -2px 0 0 #3857e7; }
+  .nav a {
+    line-height: 1; }
+
 /*
   Base:
     p = padding
