@@ -35,7 +35,7 @@
 </head>
 
 
-  <body class="relative" data-spy="scroll" data-target="#stickyNav">
+  <body class="relative" data-spy="scroll" data-target=".scrollspy">
     <!-- Include this thing once just after the opening <body> tag -->
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -617,7 +617,7 @@
   </div>
 </section>
 
-        <footer class="bg-grey4 grey1 p-m container-fluid">
+        <footer id="site-footer" class="bg-grey4 grey1 p-m container-fluid">
   <div class="row">
     <div class="col-12 col-sm-3">
       <svg class="grey1 icon-logo-wordmark block"><use xlink:href="#icon-logo-wordmark"></use></svg>
@@ -669,43 +669,48 @@
         });
       });
 
-      // Anchor Link highlighting using Boostrap "scrollspy"
+      // Smooth Scrolling for Anchor Links in stickyNav
+      $(function() {
+        $('#hiwNav a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
 
+      // Anchor Link highlighting using Boostrap "scrollspy"
 
       // Sticky Sub Navigations using Boostrap "affix"
       $('#stickyNav').affix({
         offset: {
-          top: function (){
-            return (this.top = $('#hero').outerHeight(true))
-            // this is limiting, because "#hero" is a wrap around the content hero and the nav it includes, not very reusable
-            // I'd rather say, when the nav bar #stickyNav is == to the top of the window
-          },
-          bottom: function () {
-
-            // if window offset from top >=  $('#pricing').outerHeight() + $('#pricing').scrollTop()
-            // this is ok
-          // return (this).bottom = $().outerHeight(true))
-
-          }
+          top: $('#stickyNav').offset().top,
+          bottom:
+          (
+            $('body').outerHeight(true) -
+            $('#actions').offset().top
+          )
         }
       });
 
-      //Smart Scroll for how it works
-      // var options = {
-      //   mode: "vp", // "vp", "set"
-      //   autoHash: false,
-      //   sectionScroll: true,
-      //   initialScroll: true,
-      //   keepHistory: false,
-      //   sectionWrapperSelector: ".section-wrapper",
-      //   sectionClass: "section",
-      //   animationSpeed: 300,
-      //   headerHash: "header",
-      //   breakpoint: null,
-      //   eventEmitter: null,
-      //   dynamicHeight: false
-      // };
-      // $.smartscroll(options);
+      $('#hiwNav').affix({
+          offset: {
+            top: $('#howitworks').offset().top,
+            bottom:
+            (
+              $('body').outerHeight(true) -
+              $('#whycanvas').offset().top
+            )
+          }
+      });
+
+
 
       // Tabs for content in why canvas
       jQuery(document).ready(function(){

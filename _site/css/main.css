@@ -555,6 +555,9 @@ h6, .h6 {
 .affix-bottom {
   position: absolute; }
 
+#hiwNav.affix {
+  top: 202px; }
+
 .bg-cover {
   background-size: cover; }
 
@@ -4001,6 +4004,11 @@ img {
     box-shadow: inset 0 -2px 0 0 #3857e7; }
   .nav a {
     line-height: 1; }
+
+#hiwNav li.active {
+  box-shadow: none; }
+  #hiwNav li.active a {
+    color: #3857e7; }
 
 .tabs a {
   box-shadow: inset 0 -1px 0 0 #d7d8dd; }
