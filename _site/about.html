@@ -35,7 +35,7 @@
 </head>
 
 
-  <body class="relative" data-spy="scroll" data-target=".scrollspy">
+  <body class="relative" data-spy="scroll" data-target="#scrollspy" >
     <!-- Include this thing once just after the opening <body> tag -->
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -232,7 +232,11 @@
 
     </div>
     <script>
-      // Smooth Scrolling for Anchor Links in stickyNav
+    // IS EVERYBODY READY?
+    $(document).ready(function () {
+    // OK HERE WE GO
+
+      // Smooth Scrolling for Anchor Links between Sections (stickyNav)
       $(function() {
         $('#stickyNav a[href*="#"]:not([href="#"])').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -248,7 +252,7 @@
         });
       });
 
-      // Smooth Scrolling for Anchor Links in stickyNav
+      // Smooth Scrolling for Anchor Links in How It Works (hiwNav)
       $(function() {
         $('#hiwNav a[href*="#"]:not([href="#"])').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -265,6 +269,12 @@
       });
 
       // Anchor Link highlighting using Boostrap "scrollspy"
+
+
+
+
+
+
 
       // Sticky Sub Navigations using Boostrap "affix"
       $('#stickyNav').affix({
@@ -292,7 +302,7 @@
 
 
       // Tabs for content in why canvas
-      jQuery(document).ready(function(){
+
 
         jQuery('nav.tabs').each(function(){
           // For each set of tabs, we want to keep track of
@@ -330,7 +340,7 @@
 
           });
         });
-      });
+    });
 
       // Toggle Baseline Grid and show element outlines
       // const toggleGrid = e => {
