@@ -1,50 +1,56 @@
 $link-color: $canvas-blue!default;
-//$link-color--hover: $black;
-//$link-color--active: $black;
+$link-color--hover: $medium-blue;
+$link-color--active: $dark-blue;
 
-
+$nav-link-color: $grey3!default;
+$nav-link-color--hover: $grey4;
+$nav-link-color--active: $grey4;
 
 a {
-  transition: all .2s;
-//  color:$link-color;
-  text-decoration:none;
-  //box-shadow: 0 1px 0 0 $black50;
-  //background-image: linear-gradient(to bottom, $black50 50%, rgba(0,0,0,0) 50%);
-  //background-repeat: repeat-x;
-  //background-size: 2px .2em;
-  //background-position: 0 1.08em;
-  //border-bottom:2px solid;
-  //border-color:$link-color--hover;
-  //display:inline-block;
-  //position:relative;
+  transition: all .1s;
+  color:$link-color;
+  text-decoration:underline;
+  &:visited{
+  //  color: $link-color;
+  }
+  &:hover{
+    text-decoration:underline;
+    color:$link-color--hover;
+  }
+  &:active{
+    color:$link-color--active;
+  }
 }
 a:link,
 a:visited {
-  //color: $link-color;
+//  color: $link-color;
 }
-a:hover   {
-  transition: all .2s;
-  //box-shadow: 0 2px 0 0 $black;
-}
-a:active {
-  transition: all .2s;
-//  color: $link-color--active;
-}
+// Use .link class for standalone links
 .link {
   text-decoration: none;
-  box-shadow:none;
-  &:hover{
-    background-image:none;
-  }
 }
 .link-underline{
   text-decoration:underline;
   text-decoration-skip: ink;
 }
-
 .color-inherit {
   color: inherit;
 }
-.current{
-  box-shadow: 0 .05em 0 0 $black;
+
+nav{
+  a:link,
+  a:visited {
+    color: $nav-link-color;
+  }
+  a{
+    color:$nav-link-color;
+    text-decoration:none;
+    &:hover{
+      color:$nav-link-color--hover;
+      text-decoration:none;
+    }
+    &:active{
+      color:$nav-link-color--active;
+    }
+  }
 }
