@@ -333,7 +333,7 @@ title: Snowball
         </div>
 
         <div class="mileage-calc ">
-          <div class="row cursor-pointer ">
+          <div class="row cursor-pointer " data-mileage-package-name='Lite'>
             <div class="col-9">
               <h5 class="fw-600">Lite</h5>
               <h4 class="fs-32 fw-300 mb-0 canvass-blue">500 Miles/Month</h4>
@@ -345,7 +345,7 @@ title: Snowball
             </div>
             <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
           </div>
-          <div class="row cursor-pointer opacity-a3">
+          <div class="row cursor-pointer opacity-a3" data-mileage-package-name='Basic'>
             <div class="col-9">
               <h5 class="fw-600">Basic</h5>
               <h4 class="fs-32 fw-300 grey3 mb-0 ">850 Miles/Month</h4>
@@ -357,7 +357,7 @@ title: Snowball
             </div>
             <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
           </div>
-          <div class="row cursor-pointer opacity-a3">
+          <div class="row cursor-pointer opacity-a3" data-mileage-package-name='Plus'>
             <div class="col-9">
               <h5 class="fw-600">Plus</h5>
               <h4 class="fs-32 fw-300 grey3 mb-0 ">1250 Miles/Month</h4>
@@ -369,7 +369,7 @@ title: Snowball
             </div>
             <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
           </div>
-          <div class="row cursor-pointer opacity-a3">
+          <div class="row cursor-pointer opacity-a3" data-mileage-package-name='Unlimited'>
             <div class="col-9">
               <h5 class="fw-600">Unlimited</h5>
               <h4 class="fs-32 fw-300 grey3 mb-0 ">Unlimited Miles/Month</h4>
@@ -415,11 +415,11 @@ title: Snowball
               <div class="row py-l">
                 <div class="col-6">
                   <h4 class="fs-16 grey3">Month 1 Price </h4>
-                  <h5 class="fs-24">$#00</h5>
+                  <h5 class="fs-24 sliderFirstMonthValue">$#00</h5>
                 </div>
                 <div class="col-6 border-left-thin border-grey1">
                   <h4 class="fs-16 grey3">Month <span class="sliderStepValue">12</span> Price </h4>
-                  <h5 class="fs-24">$#00</h5>
+                  <h5 class="fs-24 sliderCurrentMonthValue">$#00</h5>
                 </div>
               </div>
               <div class="row bg-grey1-a3 rounded py-m mx-s my-s">
@@ -427,7 +427,7 @@ title: Snowball
                   <p>Average monthly price (<span class="sliderStepValue">12</span> months)</p>
                 </div>
                 <div class="col-auto text-right">
-                  <h3 class="canvas-blue">$#00</h3>
+                  <h3 class="canvas-blue sliderAverageMonthValue">$#00</h3>
                 </div>
               </div>
             </div>
