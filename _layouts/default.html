@@ -123,6 +123,7 @@
             $(this).removeClass('opacity-a3').siblings().addClass('opacity-a3');
             $(this).addClass('selected').siblings().removeClass('selected');
 
+            //Find numbers, the text content into integers, and add the mileage to base to get our total.
             var valueBase = parseInt($('.valueBase').text(), 10);
             var valueMileage = parseInt($('.mileage-calc .selected').find('.valueMileage').text(), 10);
             var valueTotal = valueBase + valueMileage;
@@ -131,14 +132,27 @@
 
         });
 
-        $('body').outerHeight(true) -
-        $('#actions').offset().top
 
-        $('.mileage-calc .selected .value').on('click', function(){
-            $(this).parent().addClass('current').siblings().removeClass('current');
+        // Slider Calculations
+
+        // This creates our slider, sets the increment, and start/end points
+        var stepSlider = document.getElementById('sliderStep');
+        noUiSlider.create(stepSlider, {
+        	start: [ 6 ],
+          connect: true,
+        	step: 1,
+        	range: {
+        		'min': [  1 ],
+        		'max': [ 24 ]
+        	}
         });
 
+        // This gives us a return on the current slider position and value
 
+          stepSlider.noUiSlider.on('update', function( values, handle ) {
+            var month = Math.round(values[handle])
+        	  $('.sliderStepValue').html(month);
+          });
 
     });
 

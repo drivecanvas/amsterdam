@@ -405,22 +405,25 @@ title: Snowball
             </div>
             <div class="p-m">
               <h3 class="fs-16 fw-300">Time In Car</h3>
-              <!-- Variable with slider -->
-              <h4 class="fs-16 fw-600">N Months</h4>
-              <div class="my-l mx-s border-top border-grey2"></div>
+
+
+              <h4 class="fs-16 fw-600"><span class="sliderStepValue">12</span> Months</h4>
+              <!-- Dynamic Slider -->
+              <div id="sliderStep" class="my-l mx-s"> </div>
+              <!-- <div class="my-l mx-s border-top border-grey2"></div> -->
               <div class="row py-l">
                 <div class="col-6">
-                  <h4 class="fs-16 grey3">Price 1st Month</h4>
+                  <h4 class="fs-16 grey3">Month 1 Price </h4>
                   <h5 class="fs-24">$#00</h5>
                 </div>
                 <div class="col-6 border-left-thin border-grey1">
-                  <h4 class="fs-16 grey3">Price Nth Month</h4>
+                  <h4 class="fs-16 grey3">Month <span class="sliderStepValue">12</span> Price </h4>
                   <h5 class="fs-24">$#00</h5>
                 </div>
               </div>
-              <div class="row bg-grey1 rounded py-m mx-s my-s">
+              <div class="row bg-grey1-a3 rounded py-m mx-s my-s">
                 <div class="col-auto pt-m">
-                  <p>Average monthly price (N months)</p>
+                  <p>Average monthly price (<span class="sliderStepValue">12</span> months)</p>
                 </div>
                 <div class="col-auto text-right">
                   <h3 class="canvas-blue">$#00</h3>
