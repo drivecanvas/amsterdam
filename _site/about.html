@@ -344,10 +344,187 @@
           });
         });
 
+        // Slider Setup
+        var currentMileagePackageName = 'priceForLite';
+
+
+        var pricePerMonths = [
+          {
+            month: 1,
+            priceForLite: 514.47,
+            priceForBasic: 544.31,
+            priceForPlus: 578.40,
+            priceForUnlimited: 612.50
+          },
+          { month: 2,
+            priceForLite: 488.57,
+            priceForBasic: 518.40,
+            priceForPlus: 552.50,
+            priceForUnlimited: 586.60
+          },
+          { month: 3,
+            priceForLite: 479.37,
+            priceForBasic: 509.20,
+            priceForPlus: 543.30,
+            priceForUnlimited: 577.40
+          },
+          { month: 4,
+            priceForLite: 470.17,
+            priceForBasic: 500.00,
+            priceForPlus: 534.10,
+            priceForUnlimited: 568.20
+          },
+          { month: 5,
+            priceForLite: 460.97,
+            priceForBasic: 490.80,
+            priceForPlus: 524.90,
+            priceForUnlimited: 559.00
+          },
+          { month: 6,
+            priceForLite: 451.76,
+            priceForBasic: 481.60,
+            priceForPlus: 515.70,
+            priceForUnlimited: 549.80
+          },
+          { month: 7,
+            priceForLite: 442.56,
+            priceForBasic: 472.40,
+            priceForPlus: 506.50,
+            priceForUnlimited: 540.60
+          },
+          { month: 8,
+            priceForLite: 433.36,
+            priceForBasic: 463.20,
+            priceForPlus: 497.30,
+            priceForUnlimited: 531.40
+          },
+          { month: 9,
+            priceForLite: 424.16,
+            priceForBasic: 454.00,
+            priceForPlus: 488.10,
+            priceForUnlimited: 522.20
+          },
+          { month: 10,
+            priceForLite: 414.96,
+            priceForBasic: 444.80,
+            priceForPlus: 478.90,
+            priceForUnlimited: 513.00
+          },
+          { month: 11,
+            priceForLite: 405.76,
+            priceForBasic: 435.60,
+            priceForPlus: 469.70,
+            priceForUnlimited: 503.79
+          },
+          { month: 12,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 13,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 14,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 15,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 16,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 17,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 18,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 19,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 20,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 21,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 22,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 23,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+          { month: 24,
+            priceForLite: 399.06,
+            priceForBasic: 428.90,
+            priceForPlus: 462.99,
+            priceForUnlimited: 497.09
+          },
+        ];
+
+        var calculateAverage = function calculateAverage(month, mileagePackageName) {
+          var sum = 0;
+          for (var i = 0; i < month; i++) {
+            sum += pricePerMonths[i][mileagePackageName];
+          }
+
+          return Math.round(sum / month, 10);
+        };
+
+        var renderNumbers = function renderNumbers(month, mileagePackageName) {
+          var firstMonthValue = pricePerMonths[0][currentMileagePackageName];
+          var currentMonthValue = pricePerMonths[month - 1][currentMileagePackageName];
+          var averageMonthValue = calculateAverage(month, currentMileagePackageName);
+
+          console.log(month, firstMonthValue, currentMonthValue, averageMonthValue);
+
+          $('.sliderStepValue').html(month);
+          $('.sliderFirstMonthValue').html('$' + firstMonthValue);
+          $('.sliderCurrentMonthValue').html('$' + currentMonthValue);
+          $('.sliderAverageMonthValue').html('$' + averageMonthValue);
+        };
+
         // Mileage Active States
         $('.mileage-calc .row').on('click', function(){
             $(this).removeClass('opacity-a3').siblings().addClass('opacity-a3');
             $(this).addClass('selected').siblings().removeClass('selected');
+            currentMileagePackageName = 'priceFor' + $(this).attr('data-mileage-package-name');
+
+            renderNumbers(1, currentMileagePackageName);
 
             //Find numbers, the text content into integers, and add the mileage to base to get our total.
             var valueBase = parseInt($('.valueBase').text(), 10);
@@ -355,59 +532,10 @@
             var valueTotal = valueBase + valueMileage;
             // console.log(valueTotal);
             $('.valueTotal').html(valueTotal);
-
         });
-
 
         // Slider Calculations
 
-        var pricePerMonths = [
-          10,
-          11,
-          12,
-          13,
-          14,
-
-        ];
-
-
-{
-  month: 1,
-  priceForLite:	514.47,
-  priceForBasic: 544.31,
-  priceForPlus: 578.40,
-  priceForUnlitimed: 612.50
-},
-{
-  month: 2,
-  priceForLite:,
-  priceForBasic:,
-  priceForPlus:,
-  priceForUnlitimed:,
-}
-2	 $488.57 	 $518.40 	 $552.50 	 $586.60 	 $(26)"
-3	 $479.37 	 $509.20 	 $543.30 	 $577.40 	 $(9)"
-4	 $470.17 	 $500.00 	 $534.10 	 $568.20 	 $(9)"
-5	 $460.97 	 $490.80 	 $524.90 	 $559.00 	 $(9)"
-6	 $451.76 	 $481.60 	 $515.70 	 $549.80 	 $(9)"
-7	 $442.56 	 $472.40 	 $506.50 	 $540.60 	 $(9)"
-8	 $433.36 	 $463.20 	 $497.30 	 $531.40 	 $(9)"
-9	 $424.16 	 $454.00 	 $488.10 	 $522.20 	 $(9)"
-10	 $414.96 	 $444.80 	 $478.90 	 $513.00 	 $(9)"
-11	 $405.76 	 $435.60 	 $469.70 	 $503.79 	 $(9)"
-12	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $(7)"
-13	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-14	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-15	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-16	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-17	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-18	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-19	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-20	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-21	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-22	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-23	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
-24	 $399.06 	 $428.90 	 $462.99 	 $497.09 	 $-   "
         // This creates our slider, sets the increment, and start/end points
         var stepSlider = document.getElementById('sliderStep');
         noUiSlider.create(stepSlider, {
@@ -420,12 +548,13 @@
         	}
         });
 
+
         // This gives us a return on the current slider position and value
 
           stepSlider.noUiSlider.on('update', function( values, handle ) {
             var month = Math.round(values[handle])
-        	  $('.sliderStepValue').html(month);
-          });
+            renderNumbers(month);
+          }.bind(this));
 
     });
 
