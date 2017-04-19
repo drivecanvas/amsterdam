@@ -482,6 +482,29 @@
 
           });
         });
+
+        // Mileage Active States
+        $('.mileage-calc .row').on('click', function(){
+            $(this).removeClass('opacity-a3').siblings().addClass('opacity-a3');
+            $(this).addClass('selected').siblings().removeClass('selected');
+
+            var valueBase = parseInt($('.valueBase').text(), 10);
+            var valueMileage = parseInt($('.mileage-calc .selected').find('.valueMileage').text(), 10);
+            var valueTotal = valueBase + valueMileage;
+            // console.log(valueTotal);
+            $('.valueTotal').html(valueTotal);
+
+        });
+
+        $('body').outerHeight(true) -
+        $('#actions').offset().top
+
+        $('.mileage-calc .selected .value').on('click', function(){
+            $(this).parent().addClass('current').siblings().removeClass('current');
+        });
+
+
+
     });
 
       // Toggle Baseline Grid and show element outlines

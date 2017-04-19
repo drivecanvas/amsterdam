@@ -3940,6 +3940,9 @@ nav a {
   nav a:active {
     color: #354052; }
 
+.cursor-pointer {
+  cursor: pointer; }
+
 /**
  * Lists
  */
