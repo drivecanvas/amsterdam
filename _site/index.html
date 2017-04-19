@@ -35,7 +35,7 @@
 </head>
 
 
-  <body class="relative" data-spy="scroll" data-target="#scrollspy" >
+  <body class="relative" data-spy="scroll" data-target=".scrollspy" >
     <!-- Include this thing once just after the opening <body> tag -->
 <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -202,19 +202,7 @@
 
 
 <div class="py-m">
-  <button class="cta-secondary fit">button.cta-secondary.fit </button>
-</div>
-
-<div class="py-m">
-  <a class="cta-secondary fit">a.cta-secondary.fit </a>
-</div>
-
-<div class="py-m">
   <input type="submit" class="cta-primary fit" value="input.cta-primary.fit"/>
-</div>
-
-<div class="py-m">
-  <input type="submit" class="cta-secondary fit" value="input.cta-secondary.fit">
 </div>
 
 <div class="py-m">
@@ -223,6 +211,19 @@
 
 <div class="py-m">
   <a class="cta-primary fit">a.cta-primary.fit </a>
+</div>
+
+
+<div class="py-m">
+  <button class="cta-secondary fit">button.cta-secondary.fit </button>
+</div>
+
+<div class="py-m">
+  <a class="cta-secondary fit">a.cta-secondary.fit </a>
+</div>
+
+<div class="py-m">
+  <input type="submit" class="cta-secondary fit" value="input.cta-secondary.fit">
 </div>
 
 
@@ -253,43 +254,65 @@
 <div id="icons" class="cf px-m py-xl">
   <p class="caps mb-m">Icons</p>
   <ul class="list-reset">
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-menu"></use> </svg>
+    icon-menu
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-close"></use> </svg>
+    icon-close
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-help"></use> </svg>
+    icon-help
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-arrow-left"></use> </svg>
+    icon-arrow-left
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-arrow-right"></use> </svg>
+    icon-arrow-right
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-arrow-up"></use> </svg>
+    icon-arrow-up
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-arrow-down"></use> </svg>
+    icon-arrow-down
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-chevron-left"></use> </svg>
+    icon-chevron-left
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-chevron-right"></use> </svg>
+    icon-chevron-right
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-chevron-up"></use> </svg>
+    icon-chevron-up
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-chevron-down"></use> </svg>
+    icon-chevron-down
   </li>
-  <li class="col p-m">
+  <li class="inline-block p-m">
     <svg class="icon"> <use xlink:href="#icon-check"></use> </svg>
+    icon-check
   </li>
 </ul>
+
+<button class="cta-primary">
+  <svg class="icon"> <use xlink:href="#icon-close"></use> </svg>
+  SVG in Button
+</button>
+
+<button class="cta-primary">
+  <svg class="icon"> <use xlink:href="#icon-close"></use> </svg>
+  ALL CAPS
+</button>
 
 </div>
 
@@ -391,9 +414,6 @@
       });
 
       // Anchor Link highlighting using Boostrap "scrollspy"
-
-
-
 
 
 
