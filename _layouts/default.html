@@ -16,6 +16,15 @@
     $(document).ready(function () {
     // OK HERE WE GO
 
+      // If not on desktop, you might need to open the navigation.
+      $('#globalNavToggle').click(function(e) {
+        e.preventDefault();
+        $('.offCanvasNav').toggleClass('left-100');
+        $('.offCanvasNav').toggleClass('left-0');
+        $('#menuToggle').toggleClass('rotate-180 opacity-0');
+        $('#closeToggle').toggleClass('rotate-180 opacity-0');
+      });
+
       // Smooth Scrolling for Anchor Links between Sections (stickyNav)
       $(function() {
         $('#stickyNav a[href*="#"]:not([href="#"])').click(function() {
