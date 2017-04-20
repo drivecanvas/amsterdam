@@ -8,6 +8,24 @@
   transition:all .3s;
 }
 
+.transition-ease{
+  transition-timing-function:ease;
+}
+.transition-ease-out{
+  transition-timing-function: ease-out;
+}
+.transition-ease-in{
+  transition-timing-function:ease-in;
+}
+.transition-ease-in-out{
+  transition-timing-function:ease-in-out;
+}
+.transition-cubic{
+  transition-timing-function:cubic-bezier(1,0,1,0);
+}
+
+
+
 .ajaxWrap{
   transition:all 300ms;
 }
