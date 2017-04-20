@@ -119,10 +119,7 @@
         });
 
         // Slider Setup
-        var currentMileagePackageName = 'priceForLite';
-
-
-        var pricePerMonths = [
+        var PRICE_PER_MONTHS = [
           {
             month: 1,
             priceForLite: 514.47,
@@ -270,23 +267,27 @@
           },
         ];
 
+        var currentMileagePackageName = 'priceForLite';
+        var currentMonth = 1;
+
         var calculateAverage = function calculateAverage(month, mileagePackageName) {
           var sum = 0;
           for (var i = 0; i < month; i++) {
-            sum += pricePerMonths[i][mileagePackageName];
+            sum += PRICE_PER_MONTHS[i][mileagePackageName];
           }
 
-          return Math.round(sum / month, 10);
+          return (sum / month).toFixed(2);
         };
 
         var renderNumbers = function renderNumbers(month, mileagePackageName) {
-          var firstMonthValue = pricePerMonths[0][currentMileagePackageName];
-          var currentMonthValue = pricePerMonths[month - 1][currentMileagePackageName];
-          var averageMonthValue = calculateAverage(month, currentMileagePackageName);
+          currentMonth = month;
+          var firstMonthValue = PRICE_PER_MONTHS[0][currentMileagePackageName];
+          var currentMonthValue = PRICE_PER_MONTHS[currentMonth - 1][currentMileagePackageName];
+          var averageMonthValue = calculateAverage(currentMonth, currentMileagePackageName);
 
-          console.log(month, firstMonthValue, currentMonthValue, averageMonthValue);
+          console.log(currentMonth, firstMonthValue, currentMonthValue, averageMonthValue);
 
-          $('.sliderStepValue').html(month);
+          $('.sliderStepValue').html(currentMonth);
           $('.sliderFirstMonthValue').html('$' + firstMonthValue);
           $('.sliderCurrentMonthValue').html('$' + currentMonthValue);
           $('.sliderAverageMonthValue').html('$' + averageMonthValue);
@@ -298,7 +299,7 @@
             $(this).addClass('selected').siblings().removeClass('selected');
             currentMileagePackageName = 'priceFor' + $(this).attr('data-mileage-package-name');
 
-            renderNumbers(1, currentMileagePackageName);
+            renderNumbers(currentMonth, currentMileagePackageName);
 
             //Find numbers, the text content into integers, and add the mileage to base to get our total.
             var valueBase = parseInt($('.valueBase').text(), 10);
