@@ -52,7 +52,9 @@ button, %button{
   @extend %global-cta;
   @extend %button;
   color:$grey4!important; //!important to overide default link behavior for a tags with cta applied
+  text-decoration:none;
   background-color:transparent;
+
   &:hover{
     text-decoration:underline;
   }

@@ -1100,6 +1100,7 @@ button, .cta-primary, .cta-secondary, .button, .button-outline-canvas-blue, .but
 
 .cta-secondary {
   color: #354052 !important;
+  text-decoration: none;
   background-color: transparent; }
   .cta-secondary:hover {
     text-decoration: underline; }
