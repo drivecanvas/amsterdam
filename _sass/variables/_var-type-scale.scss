@@ -164,12 +164,33 @@ $f-weights: (
  * .italic (because all other instances default to normal)
  */
 
-@each $size-name, $size in $f-sizes {
-  .fs-#{$size-name} {
-    font-size: map-get($size, font-size);
-    line-height: map-get($size, line-height);
-  }
-}
+ $breakpoints: (
+   xs: 0,
+   sm: 576px,
+   md: 768px,
+   lg: 992px,
+   xl: 1200px
+ ) !default;
+
+ @each $size-name, $size in $f-sizes {
+   .fs-#{$size-name} {
+     font-size: map-get($size, font-size);
+     line-height: map-get($size, line-height);
+   }
+ }
+
+ @each $breakpoint-name, $breakpoint in $breakpoints {
+   @each $size-name, $size in $f-sizes {
+     .#{$breakpoint-name}-fs-#{$size-name} {
+      @media screen and (min-width: $breakpoint){
+       font-size: map-get($size, font-size);
+       line-height: map-get($size, line-height);
+      }
+     }
+   }
+ }
+
+
 @each $weight-name, $weight in $f-weights {
   .fw-#{$weight-name} {
     font-weight: $weight;

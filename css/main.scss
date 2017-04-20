@@ -136,3 +136,19 @@ $padding-slider: 16px;
 .noUi-connect {
   background: $grey4;
 }
+
+
+
+
+
+
+// EXPERIMENTAL STYLES
+.bg-gradient-canvas-blue-dark-blue{
+    background-image: linear-gradient(90deg, $canvas-blue, $dark-blue);
+    //background-size: 8px 8px;
+}
+
+.bg-angle-canvas-blue{
+    background-image: linear-gradient(-45deg, $canvas-blue 1px, transparent 1px, transparent 5px, $canvas-blue 5px, $canvas-blue 7px, transparent 7px, transparent);
+    background-size: 8px 8px;
+}
