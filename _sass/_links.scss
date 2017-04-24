@@ -36,6 +36,15 @@ a:visited {
 .color-inherit {
   color: inherit;
 }
+a.white{
+  color:$white;
+  &:hover{
+    color:$white;
+  }
+  &:active{
+    color:$white;
+  }
+}
 
 nav{
   a:link,
