@@ -1,38 +1,34 @@
-<!-- <div class="notification bg-canvas-blue p-m white relative text-center">
-  <h5>Text notification with warning. <a href="#" class="white underline my-m bold">Action link text example.</a></h5>
-  <div class="absolute right-m top-m">
-    <span id="dismiss">
-      <svg class="icon white"><use xlink:href="#icon-close"></use></svg>
-    </span>
-  </div>
-</div> -->
 <header role="" class="bg-white shadow container-fluid relative z3">
   <div class="row">
     <div class="logo col-4 py-m">
-      <a href="{{site.baseurl}}/snowball.html" class="">
+      <a href="<%= root_path %>" class="">
         <svg class="canvas-blue icon-logo-wordmark block"><use xlink:href="#icon-logo-wordmark"></use></svg>
       </a>
     </div>
     <nav class="col-8 row justify-content-end s-hide s-m-hide" role="">
-      <a class="inline-block py-m px-m fs-16 grey3" href="#">Browse Cars</a>
-      <a class="inline-block py-m px-m fs-16 grey3" href="{{site.baseurl}}/about.html">About Us</a>
-      <a class="inline-block py-m px-m fs-16 grey3" href="#">FAQ</a>
-      <a class="inline-block py-m pl-m fs-14 caps grey3 bold" href="#">Sign In</a>
+      <a class="col-auto block py-m px-m h5 grey3" href="<%= inventory_path %>">Browse Cars</a>
+      <a class="col-auto block py-m px-m h5 grey3" href="{{site.baseurl}}/about.html">About Us</a>
+      <!-- <%= link_to 'About Us', about_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
+      <a class="col-auto block py-m px-m h5 grey3" href="#">FAQ</a>
+      <!-- <%= link_to 'FAQ', faq_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
+      <a class="col-auto block py-m px-m fs-14 caps grey3 bold" href="#">Sign In</a>
+      <!-- <%= link_to 'Sign In', new_user_session_path, class: 'col-auto block py-m px-m fs-14 caps grey3 bold' %> -->
     </nav>
     <nav class="col-8 row justify-content-end m-l-hide l-xl-hide xl-hide">
-      <a href="#offCanvasNav" id="globalNavToggle" class="py-m">
-        <svg id="menuToggle" class="transition-01s grey3 icon block absolute"><use xlink:href="#icon-menu"></use></svg>
-        <svg id="closeToggle" class="transition-01s grey3 icon block absolute opacity-0"><use xlink:href="#icon-close"></use></svg>
+      <a href="" class="py-m">
+        <svg class="grey3 icon block"><use xlink:href="#icon-menu"></use></svg>
       </a>
     </nav>
   </div>
 </header>
 
-<nav class="offCanvasNav fixed z2 top-0 bottom-0 left-100 transition-02s transition-ease-out overflow-y-scroll width-100 m-l-hide l-xl-hide xl-hide ">
-  <div class="bg-white shadow height-100 py-xl">
-    <a class="col-auto block py-m px-m h5 grey3" href="#">Browse Cars</a>
-    <a class="col-auto block py-m px-m h5 grey3" href="{{site.baseurl}}/about.html">About Us</a>
-    <a class="col-auto block py-m px-m h5 grey3" href="#">FAQ</a>
-    <a class="col-auto block py-m px-m fs-14 caps grey3 bold" href="#">Sign In</a>
-  </div>
+<nav class="offCanvasNav fixed z2 top-0 bottom-0 left-100 transition-02s transition-ease-out overflow-y-scroll width-100 m-l-hide l-xl-hide xl-hide">
+  <a class="col-auto block py-m px-m h5 grey3" href="#">Browse Cars</a>
+  <!-- <%= link_to 'Browse Cars', inventory_path,  class: 'col-auto block py-m px-m h5 grey3' %> -->
+  <a class="col-auto block py-m px-m h5 grey3" href="{{site.baseurl}}/about.html">About Us</a>
+  <!-- <%= link_to 'About Us', about_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
+  <a class="col-auto block py-m px-m h5 grey3" href="#">FAQ</a>
+  <!-- <%= link_to 'FAQ', faq_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
+  <a class="col-auto block py-m px-m fs-14 caps grey3 bold" href="#">Sign In</a>
+  <!-- <%= link_to 'Sign In', new_user_session_path, class: 'col-auto block py-m px-m fs-14 caps grey3 bold' %> -->
 </nav>
