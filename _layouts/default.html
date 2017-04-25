@@ -277,9 +277,9 @@
 
         var renderNumbers = function renderNumbers(month, mileagePackageName) {
           currentMonth = month;
-          var firstMonthValue = PRICE_PER_MONTHS[0][currentMileagePackageName];
-          var currentMonthValue = PRICE_PER_MONTHS[currentMonth - 1][currentMileagePackageName];
-          var averageMonthValue = calculateAverage(currentMonth, currentMileagePackageName);
+          var firstMonthValue = Math.round(PRICE_PER_MONTHS[0][currentMileagePackageName]);
+          var currentMonthValue = Math.round(PRICE_PER_MONTHS[currentMonth - 1][currentMileagePackageName]);
+          var averageMonthValue = Math.round(calculateAverage(currentMonth, currentMileagePackageName));
 
           console.log(currentMonth, firstMonthValue, currentMonthValue, averageMonthValue);
 
