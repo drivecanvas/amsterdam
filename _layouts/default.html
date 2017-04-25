@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="relative" data-spy="scroll" data-target=".scrollspy" >
+  <body class="relative" data-spy="scroll" data-target=".scrollspy" data-offset="48">
     {% include icons.html %}
     <!-- <button class='h5'>Toggle Grid</button> -->
     <div class="">
@@ -16,6 +16,15 @@
     $(document).ready(function () {
     // OK HERE WE GO
 
+      // If not on desktop, you might need to open the navigation.
+      $('#globalNavToggle').click(function(e) {
+        e.preventDefault();
+        $('.offCanvasNav').toggleClass('left-100');
+        $('.offCanvasNav').toggleClass('left-0');
+        $('#menuToggle').toggleClass('rotate-180 opacity-0');
+        $('#closeToggle').toggleClass('rotate-180 opacity-0');
+      });
+
       // Smooth Scrolling for Anchor Links between Sections (stickyNav)
       $(function() {
         $('#stickyNav a[href*="#"]:not([href="#"])').click(function() {
@@ -25,7 +34,7 @@
             if (target.length) {
               $('html, body').animate({
                 scrollTop: target.offset().top
-              }, 1000);
+              }, 400);
               return false;
             }
           }
@@ -34,14 +43,14 @@
 
       // Smooth Scrolling for Anchor Links in How It Works (hiwNav)
       $(function() {
-        $('#hiwNav a[href*="#"]:not([href="#"])').click(function() {
+        $('.scrollTo').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
               $('html, body').animate({
                 scrollTop: target.offset().top
-              }, 1000);
+              }, 200);
               return false;
             }
           }
@@ -49,9 +58,6 @@
       });
 
       // Anchor Link highlighting using Boostrap "scrollspy"
-
-
-
 
       // Sticky Sub Navigations using Boostrap "affix"
       $('#stickyNav').affix({
@@ -65,16 +71,6 @@
         }
       });
 
-      $('#hiwNav').affix({
-          offset: {
-            top: $('#howitworks').offset().top,
-            bottom:
-            (
-              $('body').outerHeight(true) -
-              $('#whycanvas').offset().top
-            )
-          }
-      });
 
 
 
@@ -281,9 +277,9 @@
 
         var renderNumbers = function renderNumbers(month, mileagePackageName) {
           currentMonth = month;
-          var firstMonthValue = PRICE_PER_MONTHS[0][currentMileagePackageName];
-          var currentMonthValue = PRICE_PER_MONTHS[currentMonth - 1][currentMileagePackageName];
-          var averageMonthValue = calculateAverage(currentMonth, currentMileagePackageName);
+          var firstMonthValue = Math.round(PRICE_PER_MONTHS[0][currentMileagePackageName]);
+          var currentMonthValue = Math.round(PRICE_PER_MONTHS[currentMonth - 1][currentMileagePackageName]);
+          var averageMonthValue = Math.round(calculateAverage(currentMonth, currentMileagePackageName));
 
           console.log(currentMonth, firstMonthValue, currentMonthValue, averageMonthValue);
 
@@ -315,7 +311,7 @@
         var stepSlider = document.getElementById('sliderStep');
         noUiSlider.create(stepSlider, {
         	start: [ 6 ],
-          connect: true,
+          connect: [true, false],
         	step: 1,
         	range: {
         		'min': [  1 ],
