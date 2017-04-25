@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="relative" data-spy="scroll" data-target=".scrollspy" >
+  <body class="relative" data-spy="scroll" data-target=".scrollspy" data-offset="48">
     {% include icons.html %}
     <!-- <button class='h5'>Toggle Grid</button> -->
     <div class="">
@@ -43,7 +43,7 @@
 
       // Smooth Scrolling for Anchor Links in How It Works (hiwNav)
       $(function() {
-        $('#hiwNav a[href*="#"]:not([href="#"])').click(function() {
+        $('.scrollTo').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -59,9 +59,6 @@
 
       // Anchor Link highlighting using Boostrap "scrollspy"
 
-
-
-
       // Sticky Sub Navigations using Boostrap "affix"
       $('#stickyNav').affix({
         offset: {
@@ -74,16 +71,6 @@
         }
       });
 
-      $('#hiwNav').affix({
-          offset: {
-            top: $('#howitworks').offset().top,
-            bottom:
-            (
-              $('body').outerHeight(true) -
-              $('#whycanvas').offset().top
-            )
-          }
-      });
 
 
 
@@ -324,7 +311,7 @@
         var stepSlider = document.getElementById('sliderStep');
         noUiSlider.create(stepSlider, {
         	start: [ 6 ],
-          connect: true,
+          connect: [true, false],
         	step: 1,
         	range: {
         		'min': [  1 ],

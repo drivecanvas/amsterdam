@@ -197,6 +197,16 @@ $f-weights: (
   }
 }
 
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  @each $weight-name, $weight in $f-weights {
+    .#{$breakpoint-name}-fw-#{$weight-name} {
+     @media screen and (min-width: $breakpoint){
+      font-weight: $weight!important;
+     }
+    }
+  }
+}
+
 @mixin font($name) {
   @extend .#{$name};
 }
