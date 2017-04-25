@@ -1,114 +1,106 @@
 <div class="container">
 <section class="row py-xl">
-  <div class="col-12 mb-xl">
+  <!-- <div class="col-12 mb-xl">
     <h2 class="grey4 fs-24 section-header">Pricing</h2>
-  </div>
-  <div class="col-12 col-md-8 offset-md-2">
-    <!-- <p class="py-l fs-24 fw-300">
-      Our price includes EVERYTHING.
-    </p> -->
-    <p class="fs-24 fw-300">Start with a base cost unique to each vehicle and select a mileage package to suit your driving needs. Don’t worry, you can change mileage at any time! </p>
-    <!-- <p class="fs-24 ">Our </p> -->
-    <!-- <h2>Example costs</h2> -->
-    <div class="row my-l">
-      <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
+  </div> -->
+  <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 align-self-end">
+    <h2 class="grey4 fs-24 fw-500 mb-m">Pricing</h2>
+    <p class="fs-16 sm-fs-18 md-fs-24 fw-300 grey3 mb-xl">Start with a base cost unique to each vehicle and select a mileage package to suit your driving needs. Don’t worry, you can change mileage at any time! </p>
 
-      <!-- BASE COST -->
-      <div class="col-9">
-        <p class="fs-18 fw-600">Base cost</p>
-        <!-- <p class="fw-600">What you get</p> -->
-        <ul class="list-reset row">
-          <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Vehicle </li>
-          <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Maintenance </li>
-          <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Warranty </li>
-          <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Insurance </li>
-          <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Registration </li>
-          <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Roadside Assistance </li>
-        </ul>
-      </div>
-      <div class="col-3 text-right">
-        <h4 class="fs-14 mb-0">Starting At</h4>
-        <h3 class="">$<span class="valueBase">515</span></h3>
-      </div>
-    </div>
+    <div class="bg-white ">
+        <div class="row my-l">
+          <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
+          <!-- BASE COST -->
+          <div class="col-9">
+            <p class="fs-16 fw-600">Base cost</p>
+            <ul class="list-reset row">
+              <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Vehicle </li>
+              <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Maintenance </li>
+              <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Warranty </li>
+              <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Insurance </li>
+              <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Registration </li>
+              <li class="left col-lg-6 px-0"> <svg class="icon block left mr-s canvas-blue"><use xlink:href="#icon-check"></use></svg> Roadside Assistance </li>
+            </ul>
+          </div>
+          <div class="col-3 text-right">
+            <h4 class="fs-14 mb-0">Starting At</h4>
+            <h3 class="">$<span class="valueBase">515</span></h3>
+          </div>
+        </div>
+        <!-- MILEAGE -->
+        <div class="row">
+          <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
+          <div class="col-9">
+            <p class="fs-16 fw-600">Mileage Package</p>
+          </div>
 
-    <!-- MILEAGE -->
-    <!-- <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div> -->
-    <div class="row">
-      <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
-      <div class="col-9">
-        <p class="fs-18 fw-600">Mileage Package</p>
-      </div>
-      <div class="col-3 text-right align-self-end">
-        <!-- Recalculate based on selection -->
+        </div>
 
-      </div>
-    </div>
+        <div class="mileage-calc">
+          <div class="row cursor-pointer " data-mileage-package-name='Lite'>
+            <div class="col-9">
+              <h5 class="fs-14 fw-600">Lite</h5>
+              <h4 class="fs-24 sm-fs-32 fw-300 mb-0">500 Miles/Month</h4>
+              <p class="fs-14 mb-0">6000 Miles/Year</p>
+            </div>
+            <div class="col-3 text-right align-self-end">
+              <!-- Recalculate based on selection -->
+              <p class="fs-32">+$<span class="valueMileage">0</span></p>
+            </div>
+            <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
+          </div>
+          <div class="row cursor-pointer opacity-a3" data-mileage-package-name='Basic'>
+            <div class="col-9">
+              <h5 class="fs-14 fw-600">Basic</h5>
+              <h4 class="fs-24 sm-fs-32 fw-300 mb-0 ">850 Miles/Month</h4>
+              <p class="fs-14 mb-0">10,200 Miles/Year</p>
+            </div>
+            <div class="col-3 text-right align-self-end">
+              <!-- Recalculate based on selection -->
+              <p class="fs-32">+$<span class="valueMileage">30</span></p>
+            </div>
+            <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
+          </div>
+          <div class="row cursor-pointer opacity-a3" data-mileage-package-name='Plus'>
+            <div class="col-9">
+              <h5 class="fs-14 fw-600">Plus</h5>
+              <h4 class="fs-24 sm-fs-32 fw-300 mb-0 ">1250 Miles/Month</h4>
+              <p class="fs-14 mb-0">15,000 Miles/Year</p>
+            </div>
+            <div class="col-3 text-right align-self-end">
+              <!-- Recalculate based on selection -->
+              <p class="fs-32">+$<span class="valueMileage">70</span></p>
+            </div>
+            <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
+          </div>
+          <div class="row cursor-pointer opacity-a3" data-mileage-package-name='Unlimited'>
+            <div class="col-9">
+              <h5 class="fs-14 fw-600">Unlimited</h5>
+              <h4 class="fs-24 sm-fs-32 fw-300 mb-0 ">Unlimited Miles/Month</h4>
+              <p></p>
+            </div>
+            <div class="col-3 text-right align-self-end">
+              <!-- Recalculate based on selection -->
+              <p class="fs-32">+$<span class="valueMileage">99</span></p>
+            </div>
+            <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
+          </div>
+        </div>
 
-    <div class="mileage-calc">
-      <div class="row cursor-pointer " data-mileage-package-name='Lite'>
-        <div class="col-9">
-          <h5 class="fw-600">Lite</h5>
-          <h4 class="fs-32 fw-300 mb-0">500 Miles/Month</h4>
-          <p class="mb-0">6000 Miles/Year</p>
+        <!-- TOTAL -->
+        <div class="row mt-l">
+          <div class="col-9">
+            <p class="fs-16 fw-600">Total First Month</p>
+          </div>
+          <div class="col-3 text-right align-self-end">
+            <h4 class="fs-14 mb-0">Starting At</h4>
+            <h3 class="mb-0">$<span class="valueTotal">515</span></h3>
+            <h4 class="fs-14 mb-0 fw-600">+ tax</h4>
+          </div>
         </div>
-        <div class="col-3 text-right align-self-end">
-          <!-- Recalculate based on selection -->
-          <p class="fs-32">+$<span class="valueMileage">0</span></p>
-        </div>
-        <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
-      </div>
-      <div class="row cursor-pointer opacity-a3" data-mileage-package-name='Basic'>
-        <div class="col-9">
-          <h5 class="fw-600">Basic</h5>
-          <h4 class="fs-32 fw-300 mb-0 ">850 Miles/Month</h4>
-          <p class="mb-0">10,200 Miles/Year</p>
-        </div>
-        <div class="col-3 text-right align-self-end">
-          <!-- Recalculate based on selection -->
-          <p class="fs-32">+$<span class="valueMileage">30</span></p>
-        </div>
-        <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
-      </div>
-      <div class="row cursor-pointer opacity-a3" data-mileage-package-name='Plus'>
-        <div class="col-9">
-          <h5 class="fw-600">Plus</h5>
-          <h4 class="fs-32 fw-300 mb-0 ">1250 Miles/Month</h4>
-          <p class="mb-0">15,000 Miles/Year</p>
-        </div>
-        <div class="col-3 text-right align-self-end">
-          <!-- Recalculate based on selection -->
-          <p class="fs-32">+$<span class="valueMileage">70</span></p>
-        </div>
-        <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
-      </div>
-      <div class="row cursor-pointer opacity-a3" data-mileage-package-name='Unlimited'>
-        <div class="col-9">
-          <h5 class="fw-600">Unlimited</h5>
-          <h4 class="fs-32 fw-300 mb-0 ">Unlimited Miles/Month</h4>
-          <p></p>
-        </div>
-        <div class="col-3 text-right align-self-end">
-          <!-- Recalculate based on selection -->
-          <p class="fs-32">+$<span class="valueMileage">99</span></p>
-        </div>
-        <div class="width-100 border-top-thin border-grey1 mx-m mb-s"></div>
-      </div>
-    </div>
-
-    <!-- TOTAL -->
-    <div class="row mt-l">
-      <div class="col-9">
-        <p class="fs-18 fw-600">Total First Month</p>
-      </div>
-      <div class="col-3 text-right align-self-end">
-        <h4 class="fs-14 mb-0">Starting At</h4>
-        <h3 class="mb-0">$<span class="valueTotal">515</span></h3>
-        <h4 class="fs-14 mb-0 fw-600">+ tax</h4>
-      </div>
     </div>
   </div>
-  <div class="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3 mt-xl">
+  <div class="col-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3 mt-xl align-self-end">
     <div class="my-l">
       <p> The longer you stay in your car, <em>the cheaper it gets.</em> Why’s that? It means less work for us and that’s a savings we want to pass along to you.</p>
     </div>
@@ -136,10 +128,10 @@
             </div>
           </div>
           <div class="row bg-grey1-a2 rounded py-m mx-s my-s align-items-center text-center">
-            <div class="col-auto pt-m">
+            <div class="col-6 pt-m">
               <p>Average monthly price <br> (<span class="sliderStepValue">12</span> months)</p>
             </div>
-            <div class="col-auto text-right">
+            <div class="col-6 ">
               <h3 class="canvas-blue fw-300 sliderAverageMonthValue">$#00</h3>
             </div>
           </div>
