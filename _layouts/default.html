@@ -25,9 +25,10 @@
         $('#closeToggle').toggleClass('rotate-180 opacity-0');
       });
 
-      // Smooth Scrolling for Anchor Links between Sections (stickyNav)
+
+      // Smooth Scrolling for Anchor Links in How It Works (hiwNav)
       $(function() {
-        $('#stickyNav a[href*="#"]:not([href="#"])').click(function() {
+        $('#stickyNav a[href*="#"]:not([href="#"]), .scrollTo').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -35,22 +36,6 @@
               $('html, body').animate({
                 scrollTop: target.offset().top
               }, 400);
-              return false;
-            }
-          }
-        });
-      });
-
-      // Smooth Scrolling for Anchor Links in How It Works (hiwNav)
-      $(function() {
-        $('.scrollTo').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html, body').animate({
-                scrollTop: target.offset().top
-              }, 200);
               return false;
             }
           }
