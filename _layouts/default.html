@@ -45,6 +45,7 @@
       // Anchor Link highlighting using Boostrap "scrollspy"
 
       // Sticky Sub Navigations using Boostrap "affix"
+
       $('#stickyNav').affix({
         offset: {
           top: $('#stickyNav').offset().top,
@@ -54,6 +55,19 @@
             $('#actions').offset().top
           )
         }
+      });
+
+      $(window).resize(function () {
+        $('#stickyNav').affix({
+          offset: {
+            top: $('#stickyNav').offset().top,
+            bottom:
+            (
+              $('body').outerHeight(true) -
+              $('#actions').offset().top
+            )
+          }
+        });
       });
 
 
@@ -266,7 +280,6 @@
           var currentMonthValue = Math.round(PRICE_PER_MONTHS[currentMonth - 1][currentMileagePackageName]);
           var averageMonthValue = Math.round(calculateAverage(currentMonth, currentMileagePackageName));
 
-          console.log(currentMonth, firstMonthValue, currentMonthValue, averageMonthValue);
 
           $('.sliderStepValue').html(currentMonth);
           $('.sliderFirstMonthValue').html('$' + firstMonthValue);
@@ -286,7 +299,6 @@
             var valueBase = parseInt($('.valueBase').text(), 10);
             var valueMileage = parseInt($('.mileage-calc .selected').find('.valueMileage').text(), 10);
             var valueTotal = valueBase + valueMileage;
-            // console.log(valueTotal);
             $('.valueTotal').html(valueTotal);
         });
 
