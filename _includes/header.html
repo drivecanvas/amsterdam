@@ -1,24 +1,28 @@
-<header role="" class="bg-white  container-fluid relative z3">
+<header role="" class="bg-white container-fluid relative z3">
   <div class="row">
     <div class="logo col-4 py-m">
       <a href="<%= root_path %>" class="">
         <svg class="canvas-blue icon-logo-wordmark block"><use xlink:href="#icon-logo-wordmark"></use></svg>
       </a>
     </div>
-    <nav class="col-8 row justify-content-end s-hide s-m-hide" role="">
-      <a class="col-auto block py-m px-m h6 grey3" href="<%= inventory_path %>">Browse Cars</a>
-      <a class="col-auto block py-m px-m h6 grey3" href="{{site.baseurl}}/about.html">About Us</a>
-      <!-- <%= link_to 'About Us', about_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
-      <a class="col-auto block py-m px-m h6 grey3" href="#">FAQ</a>
-      <!-- <%= link_to 'FAQ', faq_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
-      <a class="col-auto block py-m px-m h6 grey3" href="#">Sign In</a>
-      <!-- <%= link_to 'Sign In', new_user_session_path, class: 'col-auto block py-m px-m fs-14 caps grey3 bold' %> -->
+    <nav class="col-8 s-hide s-m-hide" role="">
+      <div class="row justify-content-end">
+        <a class="col-auto block py-m px-m h6 grey3" href="<%= inventory_path %>">Browse Cars</a>
+        <a class="col-auto block py-m px-m h6 grey3" href="{{site.baseurl}}/about.html">About Us</a>
+        <!-- <%= link_to 'About Us', about_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
+        <a class="col-auto block py-m px-m h6 grey3" href="#">FAQ</a>
+        <!-- <%= link_to 'FAQ', faq_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
+        <a class="col-auto block py-m px-m h6 grey3" href="#">Sign In</a>
+        <!-- <%= link_to 'Sign In', new_user_session_path, class: 'col-auto block py-m px-m fs-14 caps grey3 bold' %> -->
+      </div>
     </nav>
-    <nav class="col-8 row justify-content-end m-l-hide l-xl-hide xl-hide">
-      <a href="#" class="py-m" id="globalNavToggle">
-        <svg id="menuToggle" class="absolute transition-02s grey3 icon block"><use xlink:href="#icon-menu"></use></svg>
-        <svg id="closeToggle" class="absolute transition-02s opacity-0 grey3 icon block"><use xlink:href="#icon-close"></use></svg>
-      </a>
+    <nav class="col-8  m-l-hide l-xl-hide xl-hide">
+      <div class="row justify-content-end">
+        <a href="#" class="col-auto px-l py-m" id="globalNavToggle">
+          <svg id="menuToggle" class="absolute transition-02s grey3 icon block"><use xlink:href="#icon-menu"></use></svg>
+          <svg id="closeToggle" class="absolute transition-02s opacity-0 grey3 icon block"><use xlink:href="#icon-close"></use></svg>
+        </a>
+      </div>
     </nav>
   </div>
 </header>
