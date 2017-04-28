@@ -40,6 +40,11 @@ $measure-width:32em;
   max-width:$measure-width;
 }
 
+$measure-narrow:24em;
+.measure-narrow{
+  max-width:$measure-narrow;
+}
+
 /* Basscss Typography */
 .font-family-inherit { font-family: inherit }
 .font-size-inherit { font-size: inherit }
