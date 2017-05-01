@@ -23,8 +23,8 @@
         $('.offCanvasNav').toggleClass('left-0');
         $('#menuToggle').toggleClass('rotate-180 opacity-0');
         $('#closeToggle').toggleClass('rotate-180 opacity-0');
+        $('body').toggleClass('overflow-hidden');
       });
-
 
       // Smooth Scrolling for Anchor Links in How It Works (hiwNav)
       $(function() {
@@ -45,7 +45,6 @@
       // Anchor Link highlighting using Boostrap "scrollspy"
 
       // Sticky Sub Navigations using Boostrap "affix"
-
       $('#stickyNav').affix({
         offset: {
           top: $('#stickyNav').offset().top,
@@ -56,7 +55,6 @@
           )
         }
       });
-
       $(window).resize(function () {
         $('#stickyNav').affix({
           offset: {
@@ -70,17 +68,11 @@
         });
       });
 
-
-
-
       // Tabs for content in why canvas
-
-
         jQuery('nav.tabs').each(function(){
           // For each set of tabs, we want to keep track of
           // which tab is active and its associated content
           var $active, $content, $links = jQuery(this).find('a');
-
           // If the location.hash matches one of the links, use that as the active tab.
           // If no match is found, use the first link as the initial active tab.
           $active = jQuery($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
@@ -113,7 +105,7 @@
           });
         });
 
-        // Slider Setup
+        // Price Slider Setup
         var PRICE_PER_MONTHS = [
           {
             month: 1,
@@ -280,7 +272,6 @@
           var currentMonthValue = Math.round(PRICE_PER_MONTHS[currentMonth - 1][currentMileagePackageName]);
           var averageMonthValue = Math.round(calculateAverage(currentMonth, currentMileagePackageName));
 
-
           $('.sliderStepValue').html(currentMonth);
           $('.sliderFirstMonthValue').html('$' + firstMonthValue);
           $('.sliderCurrentMonthValue').html('$' + currentMonthValue);
@@ -316,22 +307,13 @@
         	}
         });
 
-
         // This gives us a return on the current slider position and value
-
           stepSlider.noUiSlider.on('update', function( values, handle ) {
             var month = Math.round(values[handle])
             renderNumbers(month);
           }.bind(this));
 
     });
-
-      // Toggle Baseline Grid and show element outlines
-      // const toggleGrid = e => {
-      //   document.body.classList.toggle('grid8')
-      //   document.body.classList.toggle('debug')
-      // }
-      // document.body.addEventListener('click', toggleGrid)
     </script>
   </body>
 
