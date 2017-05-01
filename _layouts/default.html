@@ -25,9 +25,10 @@
         $('#closeToggle').toggleClass('rotate-180 opacity-0');
       });
 
-      // Smooth Scrolling for Anchor Links between Sections (stickyNav)
+
+      // Smooth Scrolling for Anchor Links in How It Works (hiwNav)
       $(function() {
-        $('#stickyNav a[href*="#"]:not([href="#"])').click(function() {
+        $('#stickyNav a[href*="#"]:not([href="#"]), .scrollTo').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -41,25 +42,10 @@
         });
       });
 
-      // Smooth Scrolling for Anchor Links in How It Works (hiwNav)
-      $(function() {
-        $('.scrollTo').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html, body').animate({
-                scrollTop: target.offset().top
-              }, 200);
-              return false;
-            }
-          }
-        });
-      });
-
       // Anchor Link highlighting using Boostrap "scrollspy"
 
       // Sticky Sub Navigations using Boostrap "affix"
+
       $('#stickyNav').affix({
         offset: {
           top: $('#stickyNav').offset().top,
@@ -69,6 +55,19 @@
             $('#actions').offset().top
           )
         }
+      });
+
+      $(window).resize(function () {
+        $('#stickyNav').affix({
+          offset: {
+            top: $('#stickyNav').offset().top,
+            bottom:
+            (
+              $('body').outerHeight(true) -
+              $('#actions').offset().top
+            )
+          }
+        });
       });
 
 
@@ -281,7 +280,6 @@
           var currentMonthValue = Math.round(PRICE_PER_MONTHS[currentMonth - 1][currentMileagePackageName]);
           var averageMonthValue = Math.round(calculateAverage(currentMonth, currentMileagePackageName));
 
-          console.log(currentMonth, firstMonthValue, currentMonthValue, averageMonthValue);
 
           $('.sliderStepValue').html(currentMonth);
           $('.sliderFirstMonthValue').html('$' + firstMonthValue);
@@ -301,7 +299,6 @@
             var valueBase = parseInt($('.valueBase').text(), 10);
             var valueMileage = parseInt($('.mileage-calc .selected').find('.valueMileage').text(), 10);
             var valueTotal = valueBase + valueMileage;
-            // console.log(valueTotal);
             $('.valueTotal').html(valueTotal);
         });
 

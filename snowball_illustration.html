@@ -1,0 +1,151 @@
+---
+layout: default
+title: Snowball
+---
+
+
+<!-- INTRO SECTION -->
+<div id="hero">
+  <div class="container">
+    <section class="row no-gutter relative" style="min-height:calc(100vh - 3.5rem);">
+      <div class="col-12 col-lg-6 offset-lg-1 align-self-lg-center order-lg-last">
+          <div class="">
+            <img src="img/home/canvas_hero_illustration.jpg" alt="">
+          </div>
+      </div>
+      <div class="col-12 col-lg-5 align-self-lg-center  order-lg-first">
+        <h1 class="fs-32 md-fs-48 mb-m fw-200 ">A simple alternative <br class="m-hide"> to car ownership.</h1>
+        <p class="fw-300 grey4 measure-narrow">
+          Month-to-month car subscriptions.
+          Now available in the San Francisco Bay Area.</p>
+        <!-- <p class="grey3 fs-16">Now available in the San Francisco Bay Area.</p> -->
+        <div class="my-l">
+          <a href="#intro" class="scrollTo link button relative z2">
+            Learn More
+            <!-- <svg class="icon"><use xlink:href="#icon-chevron-down"></use></svg> -->
+          </a>
+          <!-- <span class="mx-m grey3">or</span>
+          <a href="#" class="standalone-link">Browse Cars</a> -->
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="absolute width-100 s-hide s-m-hide m-l-hide" style="transform:translateY(-50%);">
+    <div class="container">
+      <div class="row no-gutter relative align-items-center ">
+        <div class="col-6">
+
+        </div>
+        <div class="col-6 min-height-25 border-left-thin ">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- INTRO -->
+  <section id="intro" class="bg-grey1-a2">
+    <div class="container">
+      <section class="row min-height-75">
+        <!-- <div class="col-12 mb-xl">
+          <h2 class="grey4 fs-24 section-header">Canvas</h2>
+        </div> -->
+        <!-- <img src="" alt=""> -->
+        <div class="col-11 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 align-self-center">
+          <!-- <h2 class="grey4 fs-24 fw-500 mb-m">Canvas</h2> -->
+          <p class="fs-16 sm-fs-18 md-fs-24 fw-300">We are an online platform that offers easy access to pre-owned Ford vehicles on a monthly subscription basis. All of our cars come with everything you need to hit the road, like insurance, maintenance, and warranty coverage.</p>
+          <p class="mt-l">
+            <a href="https://staging-carmada.herokuapp.com/app/" class="link button border grey4 relative z2"> Browse Cars </a>
+            <!-- <span class="mx-m grey3">or</span>
+            <a href="#" class="standalone-link">See How it Works</a> -->
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+  <div class="" style="min-height:3rem;">
+    <nav id="stickyNav" class="scrollspy width-100 border-bottom-thin  border-grey1 z2 bg-white text-center" style="" role="navigation">
+      <div class="container">
+        <div class="row overflow-x-scroll">
+          <div class="col-auto ">
+            <ul class="nav row justify-content-center">
+              <!-- <li class="block mx-s"> <a class="block py-m h6 fw-400 grey3" href="#intro">Canvas</a> </li> -->
+              <li class="block mr-s"> <a class="block py-m fs-12 sm-fs-14 md-fs-16 fw-400 grey3" href="#howitworks">How It Works</a> </li>
+              <li class="block mx-s"> <a class="block py-m fs-12 sm-fs-14 md-fs-16 fw-400 grey3" href="#whycanvas">Why Canvas</a> </li>
+              <li class="block mx-s"> <a class="block py-m fs-12 sm-fs-14 md-fs-16 fw-400 grey3" href="#pricing">Pricing</a> </li>
+            </ul>
+          </div>
+          <nav class="nav col-auto ">
+            <a class="block py-m fs-12 sm-fs-14 md-fs-16 fw-500 canvas-blue" href="#"> <span class="grey4">Browse Cars</span> </a>
+          </nav>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+
+  <!-- HOW IT WORKS -->
+  <section id="howitworks" class="py-xl relative">
+    {% include_relative components/snowball/how-it-works.html %}
+  </section>
+
+  <!-- WHY CANVAS SECTION -->
+  <section id="whycanvas" class="bg-grey1-a2 py-xl">
+    {% include_relative components/snowball/why-canvas.html %}
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class=" py-xl">
+    {% include_relative components/snowball/pricing.html %}
+  </section>
+
+
+<!-- CTA SECTIONS -->
+<section id="actions">
+  <div class="container">
+  <section class="row justify-content-around">
+    <div class="col-12 col-md-6 col-lg-4 pt-xl">
+      <h2 class="grey4 fs-24 fw-500 mb-m">Check out our cars </h2>
+      <p class="mb-l"> Our inventory changes by the day. See for yourself! </p>
+      <p> <a href="https://staging-carmada.herokuapp.com/app/" class="button bg-canvas-blue">Browse Cars</a></p>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 pt-xl">
+      <h2 class="grey4 fs-24 fw-500 mb-m"> Questions? </h2>
+      <p class="mb-l"> We are here to answer any questions you have, plain and simple. </p>
+      <p>
+        <a href="https://drivecanvas.zendesk.com/hc/" class="link canvas-blue">Read Our FAQ</a>
+        <br>
+        <a href="mailto:support@drivecanvas.com" class="link canvas-blue">support@drivecanvas.com</a>
+      </p>
+    </div>
+  </section>
+  </div>
+</section>
+
+<!-- TESTIMONIAL SECTION -->
+<section id="testimonials">
+  <div class="container">
+
+  </div>
+</section>
+
+<!-- ABOUT & HIRING SECTIONS -->
+<section id="about">
+  <div class="container">
+  <section class="row justify-content-around pb-xl">
+    <div class="col-12 col-md-6 col-lg-4 pt-xl">
+      <h2 class="grey4 fs-24 fw-500 mb-m">About Us</h2>
+      <p class="mb-l"> At Canvas, our mission is simple: rethink car ownership to meet the needs of the modern day driver. </p>
+      <p> <a href="{{site.baseurl}}/about.html" class="link">Learn More</a></p>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 pt-xl">
+      <h2 class="grey4 fs-24 fw-500 mb-m"> We're Hiring </h2>
+      <p class="mb-l"> Eager to reshape car ownership? Interested in mobility? Think a little differently? We want to talk. </p>
+      <p>
+        <a href="{{site.baseurl}}/about.html" class="link canvas-blue">View current openings</a>
+      </p>
+    </div>
+  </section>
+  </div>
+</section>
