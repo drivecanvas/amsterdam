@@ -1,10 +1,14 @@
 ---
-layout: default
+layout: styleguide
 title: Amsterdam
 ---
-
+<div id="tables" class="cf px-m py-xl">
+  <p class="caps mb-m">Lists</p>
+  {% include_relative components/lists.html %}
+</div>
 
 <div class="px-m">
+
   <p class="caps mb-m">Spacing Scale</p>
 
   <div class="bg-canvas-blue width-0 mb-xs mt-m pr-xs pb-xs"></div>
@@ -60,14 +64,20 @@ title: Amsterdam
   {% include_relative components/buttons.html %}
 </div>
 
+<div id="tables" class="cf px-m py-xl">
+  <p class="caps mb-m">Tables</p>
+  {% include_relative components/tables.html %}
+</div>
+
+
 <div id="colors" class="cf px-m py-xl">
   <!-- Make Global Site Colors -->
   {% if site.colors %}
     <ul class="list-reset">
       {% for color in site.colors %}
       <li class="inline-block">
-        <div class="p-xl m-m" style="background-color:{{color}};"></div>
-        <p>{{color}}</p>
+        <div class="p-xl m-m" style="background-color:{{color-hex}};"></div>
+        <p>{{color-name}}:{{color-hex}}</p>
       </li>
       {% endfor %}
     </ul>
