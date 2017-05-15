@@ -2,12 +2,19 @@
  * Lists
  */
 ul, ol, dl {
-    padding-left: $space-m;
     margin-top:0;
-    margin-bottom: $space-after;
+    margin-bottom: $space-m;
 }
-
+ul, dl{
+  padding-left: 0;
+}
+ol{
+  padding-left:$space-m;
+  list-style-type: decimal-leading-zero;
+}
 li {
+  font-size:$s-h6;
+  line-height:1.5rem;
   padding-bottom: $space-s;
     > ul,
     > ol {
@@ -23,15 +30,19 @@ dl{
     padding: $space-s;
   }
   dd{
-    padding: $space-s;
+    padding-bottom: $space-s;
     margin:0;
   }
 }
 
 .list-reset {
   list-style: none;
-  padding-left: 0;
+}
+.list-check {
+  list-style: none;
   li{
-    padding-bottom:0;
+    &:before{
+      content:'';
+    }
   }
 }
