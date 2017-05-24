@@ -1,0 +1,196 @@
+/* Basscss Border */
+
+$border-width: 2px;
+$border-width-hover: .4rem;
+$border-width-thin: 1px;
+$border-width-thick: .5rem;
+$border-radius: 2px;
+
+
+// Borders
+// -------
+
+$borders: (
+  '',
+  '-left',
+  '-top',
+  '-right',
+  '-bottom',
+);
+
+@media only screen and (max-width : $screen-sm-min) {
+  @each $border in $borders {
+    .border-xs#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .no-border-xs#{$border} {
+      border#{$border}: 0;
+    }
+  }
+}
+
+@media only screen and (min-width : $screen-sm-min) {
+  @each $border in $borders {
+    .border-xs#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .border-sm#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .no-border-xs#{$border} {
+      border#{$border}: 0;
+    }
+
+    .no-border-sm#{$border} {
+      border#{$border}: 0;
+    }
+  }
+}
+
+@media only screen and (min-width : $screen-md-min) {
+  @each $border in $borders {
+    .border-xs#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .border-sm#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .border-md#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .no-border-xs#{$border} {
+      border#{$border}: 0;
+    }
+
+    .no-border-sm#{$border} {
+      border#{$border}: 0;
+    }
+
+    .no-border-md#{$border} {
+      border#{$border}: 0;
+    }
+  }
+}
+
+@media only screen and (min-width : $screen-lg-min) {
+  @each $border in $borders {
+    .border-xs#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .border-sm#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .border-md#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .border-lg#{$border} {
+      border#{$border}: solid 1px  ;
+    }
+
+    .no-border-xs#{$border} {
+      border#{$border}: 0;
+    }
+
+    .no-border-sm#{$border} {
+      border#{$border}: 0;
+    }
+
+    .no-border-md#{$border} {
+      border#{$border}: 0;
+    }
+
+    .no-border-lg#{$border} {
+      border#{$border}: 0;
+    }
+  }
+}
+
+// ALEX'S STYLES
+.border{
+  border-style:solid;
+  border-width:$border-width;
+}
+.border-top{
+  border-top-style:solid;
+  border-top-width:$border-width;
+}
+.border-right{
+  border-right-style:solid;
+  border-right-width:$border-width;
+}
+.border-bottom{
+  border-bottom-style:solid;
+  border-bottom-width:$border-width;
+}
+.border-left{
+  border-left-style:solid;
+  border-left-width:$border-width;
+}
+.border-thin{
+  border-style:solid;
+  border-width:$border-width-thin;
+}
+.border-top-thin{
+  border-top-style:solid;
+  border-top-width:$border-width-thin;
+}
+.border-right-thin{
+  border-right-style:solid;
+  border-right-width:$border-width-thin;
+}
+.border-bottom-thin{
+  border-bottom-style:solid;
+  border-bottom-width:$border-width-thin;
+}
+.border-left-thin{
+  border-left-style:solid;
+  border-left-width:$border-width-thin;
+}
+.border-thick{
+  border-style:solid;
+  border-width:$border-width-thick;
+}
+.border-top-thick{
+  border-top-style:solid;
+  border-top-width:$border-width-thick;
+}
+.border-right-thick{
+  border-right-style:solid;
+  border-right-width:$border-width-thick;
+}
+.border-bottom-thick{
+  border-bottom-style:solid;
+  border-bottom-width:$border-width-thick;
+}
+.border-left-thick{
+  border-left-style:solid;
+  border-left-width:$border-width-thick;
+}
+.border-dotted{
+  border-style:dotted;
+  border-width:1px;
+}
+.border-dotted{
+  border-style:dotted;
+  border-width:1px;
+}
+
+.border-none { border: 0 }
+
+.rounded { border-radius: $border-radius }
+.circle  { border-radius: 50% }
+
+.rounded-top    { border-radius: $border-radius $border-radius 0 0 }
+.rounded-right  { border-radius: 0 $border-radius $border-radius 0 }
+.rounded-bottom { border-radius: 0 0 $border-radius $border-radius }
+.rounded-left   { border-radius: $border-radius 0 0 $border-radius }
+.not-rounded { border-radius: 0 }

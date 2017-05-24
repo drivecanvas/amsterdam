@@ -37,3 +37,4 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
+  - lib

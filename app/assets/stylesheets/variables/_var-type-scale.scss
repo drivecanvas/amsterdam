@@ -1,0 +1,220 @@
+// Base Type Size
+$base-font-size:   1rem;
+$base-line-height: 1.5;
+
+
+/*
+
+  Previous Type Scales
+
+  s9: 9px,
+  s11: 11px,
+  s12: 12px,
+  s13: 13px,
+  s14: 14px,
+  s15: 15px,
+  s16: 16px,
+  s17: 17px,
+  s18: 18px,
+  s20: 20px,
+  s22: 22px,
+  s25: 25px,
+  s43: 43px,
+  */
+
+// Primary Type Scale -- Increments of 8px / .5rem with exceptions
+// Ideally all of these are a multiple of 8px / .5rem
+// At minimum, new sizes should be a multiple of of 4 / .25rem
+
+//0.75rem; /*12px*
+//0.875rem;/*14px*
+//1rem;   /*16px*/
+//1.25rem;/*20px wonky, ditching*/
+//1.5rem; /*24px*/
+//2rem;   /*32px*/
+//2.5rem; /*2.5rem, //40px*/
+//3rem;   /*48px*/
+//3.5rem; /*56px*/
+//4rem;   /*64px*/
+//4.5rem; /*72px*/
+
+//$f-sizes: (
+//  's-micro':   0.75rem,
+//  's-h6':      0.875rem,
+//  's-h5':      1rem,
+//  's-h4':      1.5rem,
+//  's-h3':      2rem,
+//  's-h2':      2.5rem,
+//  's-h1':      3rem,
+//  's-large':   3.5rem,
+//  's-xlarge':  4rem,
+//  's-xxlarge': 4.5rem
+//);
+
+// Defaults for unclassed elements.
+$s-h6: 0.875rem;
+$s-h5: 1rem;
+$s-h4: 1.5rem;
+$s-h3: 2rem;
+$s-h2: 2.5rem;
+$s-h1: 3rem;
+
+h1, .h1 { font-size: $s-h1 }
+h2, .h2 { font-size: $s-h2 }
+h3, .h3 { font-size: $s-h3 }
+h4, .h4 { font-size: $s-h4 }
+h5, .h5 { font-size: $s-h5; line-height:1.5rem; }
+h6, .h6 { font-size: $s-h6; line-height:1.5rem; }
+
+// /!\ This will define classes to control:
+// * font-size
+// * font-weight
+// * font-style
+//
+// Classes available:
+//
+// .f-[size]
+// .f-[weight]
+// .f-[style]
+//
+// .f-[size]-[weight]
+// .f-[size]-[style]
+//
+// .f-[size]-[weight]-[style]
+//
+// You can also use the mixin `font`, example:
+// @include font('[size]');
+// @include font('[weight]');
+// @include font('[style]');
+//
+// @include font('[size]-[weight]');
+// @include font('[size]-[style]');
+//
+// @include font('[size]-[weight]-[style]');
+//
+// [size], [weight], [style] can be any of the following keys:
+
+$f-sizes: (
+  12: (
+    font-size: 0.75rem, //12px,
+    line-height: 1rem, //16px,
+  ),
+  14: (
+    font-size: 0.875rem, //14px,
+    line-height: 1.5rem, //24px,
+  ),
+  16: (
+    font-size: 1rem, //16px,
+    line-height: 1.5rem, //24px,
+  ),
+  18: (
+    font-size: 18px,
+    line-height: 1.5rem, //24px,
+  ),
+  20: (
+    font-size: 1.25rem, //20px,
+    line-height: 2rem, //32px,
+  ),
+  24: (
+    font-size: 1.5rem, //24px,
+    line-height: 2rem //32px,
+  ),
+  32: (
+    font-size: 2rem, //32px,
+    line-height: 2.5rem, //40px,
+  ),
+  40: (
+    font-size: 2.5rem, //40px,
+    line-height: 3rem, //48px,
+  ),
+  48: (
+    font-size: 3rem, //48px,
+    line-height: 3rem, //48px,
+  ),
+  56: (
+    font-size: 3.5rem, //56px,
+    line-height: 3.5rem, //56px,
+  ),
+  64: (
+    font-size: 4rem, //64px,
+    line-height: 4rem, //64px,
+  ),
+  72: (
+    font-size: 5rem, //64px,
+    line-height: 5rem, //64px,
+  ),
+  96: (
+    font-size: 6rem, //64px,
+    line-height: 6rem, //64px,
+  ),
+);
+
+$f-weights: (
+  100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+  800: 800,
+);
+
+.italic{
+  font-style:italic;
+}
+
+/*
+ * IMPORTANT, PLEASE READ
+ * We have refactored the old model of using .f-size-weight-style combinations into more utilitarian classes
+ * .fs-##
+ * .fw-###
+ * .italic (because all other instances default to normal)
+ */
+
+ $breakpoints: (
+   xs: 0,
+   sm: 576px,
+   md: 768px,
+   lg: 992px,
+   xl: 1200px
+ ) !default;
+
+ @each $size-name, $size in $f-sizes {
+   .fs-#{$size-name} {
+     font-size: map-get($size, font-size);
+     line-height: map-get($size, line-height);
+   }
+ }
+
+ @each $breakpoint-name, $breakpoint in $breakpoints {
+   @each $size-name, $size in $f-sizes {
+     .#{$breakpoint-name}-fs-#{$size-name} {
+      @media screen and (min-width: $breakpoint){
+       font-size: map-get($size, font-size);
+       line-height: map-get($size, line-height);
+      }
+     }
+   }
+ }
+
+
+@each $weight-name, $weight in $f-weights {
+  .fw-#{$weight-name} {
+    font-weight: $weight;
+  }
+}
+
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  @each $weight-name, $weight in $f-weights {
+    .#{$breakpoint-name}-fw-#{$weight-name} {
+     @media screen and (min-width: $breakpoint){
+      font-weight: $weight!important;
+     }
+    }
+  }
+}
+
+@mixin font($name) {
+  @extend .#{$name};
+}

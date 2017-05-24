@@ -1,0 +1,17 @@
+// borders
+$border-color-default: $grey1;
+
+// background-colors
+$bg-default: #fafbfe;
+
+// box shadows
+$bs-color-default: rgba(0, 0, 0, 0.2);
+$bs-color-hex: #3c3c3c;
+
+
+.shadow{
+  box-shadow: 0 2px 4px 0 $bs-color-default;
+}
+.shadow-bold{
+  box-shadow: 0 2px 10px 0 $bs-color-default;
+}
