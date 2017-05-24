@@ -1,0 +1,19 @@
+{
+  "name": "amsterdam",
+  "version": "0.0.1",
+  "description": "Universal Canvas CSS & JS framework",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drivecanvas/amsterdam.git"
+  },
+  "author": "abloom@drivecanvas.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drivecanvas/amsterdam/issues"
+  },
+  "homepage": "https://github.com/drivecanvas/amsterdam#readme"
+}
