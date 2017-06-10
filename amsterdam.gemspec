@@ -1,12 +1,17 @@
-Gem::Specification.new do |s|
-  s.name     = 'amsterdam'
-  s.version  = '0.0.1d'
-  s.authors  = ['Alex Bloom']
-  s.email    = 'alex@drivecanvas.com'
-  s.summary  = 'amsterdam is CSS sanctuary of Canvas.'
-  s.homepage = 'https://github.com/drivecanvas/amsterdam'
-  s.license  = 'MIT'
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'amsterdam/version'
 
-  s.files      = `git ls-files`.split("\n")
-  s.test_files = `git ls-files -- test/*`.split("\n")
+Gem::Specification.new do |gem|
+  gem.name     = 'amsterdam'
+  gem.version  = Amsterdam::VERSION
+  gem.authors  = ['Alex Bloom']
+  gem.email    = 'alex@drivecanvas.com'
+  gem.summary  = 'amsterdam is CSS sanctuary of Canvas.'
+  gem.homepage = 'https://github.com/drivecanvas/amsterdam'
+  gem.license  = 'MIT'
+  gem.files = Dir["{lib,vendor}/**/*"] + ["MIT-LICENSE", "README.md"]
+
+  gem.files      = `git ls-files`.split("\n")
+  gem.test_files = `git ls-files -- test/*`.split("\n")
 end
