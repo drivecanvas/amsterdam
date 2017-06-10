@@ -1,6 +1,6 @@
 {
   "name": "amsterdam",
-  "version": "0.0.1",
+  "version": "0.0.1alpha-1",
   "description": "Universal Canvas CSS & JS framework",
   "main": "gulpfile.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/drivecanvas/amsterdam/issues"
   },
-  "homepage": "https://github.com/drivecanvas/amsterdam#readme"
+  "homepage": "https://github.com/drivecanvas/amsterdam#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
