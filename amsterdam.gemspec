@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = 'amsterdam'
-  s.version  = '0.0.1b'
+  s.version  = '0.0.1d'
   s.authors  = ['Alex Bloom']
   s.email    = 'alex@drivecanvas.com'
   s.summary  = 'amsterdam is CSS sanctuary of Canvas.'
