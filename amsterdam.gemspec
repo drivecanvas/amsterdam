@@ -1,6 +1,5 @@
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'amsterdam/version'
+# -*- encoding: utf-8 -*-
+require File.expand_path('../lib/amsterdam/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name     = 'amsterdam'
@@ -10,10 +9,8 @@ Gem::Specification.new do |gem|
   gem.summary  = 'amsterdam is CSS sanctuary of Canvas.'
   gem.homepage = 'https://github.com/drivecanvas/amsterdam'
   gem.license  = 'MIT'
-  gem.files = Dir["{lib,assets}/**/*"] + ["MIT-LICENSE", "README.md"]
 
   gem.add_dependency "railties", '5.0.1'
 
-  gem.files      = `git ls-files`.split("\n")
-  gem.test_files = `git ls-files -- test/*`.split("\n")
+  gem.files      = `git ls-files -- assets/*`.split("\n")
 end
