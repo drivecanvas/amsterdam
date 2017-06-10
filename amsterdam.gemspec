@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.summary  = 'amsterdam is CSS sanctuary of Canvas.'
   gem.homepage = 'https://github.com/drivecanvas/amsterdam'
   gem.license  = 'MIT'
-  gem.files = Dir["{lib,vendor}/**/*"] + ["MIT-LICENSE", "README.md"]
+  gem.files = Dir["{lib,assets}/**/*"] + ["MIT-LICENSE", "README.md"]
 
   gem.files      = `git ls-files`.split("\n")
   gem.test_files = `git ls-files -- test/*`.split("\n")
