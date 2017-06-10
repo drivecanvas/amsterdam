@@ -12,6 +12,8 @@ Gem::Specification.new do |gem|
   gem.license  = 'MIT'
   gem.files = Dir["{lib,assets}/**/*"] + ["MIT-LICENSE", "README.md"]
 
+  gem.add_dependency "railties", '5.0.1'
+
   gem.files      = `git ls-files`.split("\n")
   gem.test_files = `git ls-files -- test/*`.split("\n")
 end
