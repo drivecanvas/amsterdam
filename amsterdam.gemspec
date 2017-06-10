@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.homepage = 'https://github.com/drivecanvas/amsterdam'
   gem.license  = 'MIT'
 
-  gem.add_dependency "railties", '5.0.1'
+  gem.add_dependency "railties", '>= 5.0'
 
-  gem.files      = `git ls-files -- assets/*`.split("\n")
+  gem.files      = `git ls-files -- app/*`.split("\n")
 end
