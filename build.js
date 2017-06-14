@@ -23,7 +23,10 @@ var sass = require('metalsmith-sass');
 var browsersync = devBuild ? require('metalsmith-browser-sync') : null;
 
 // custom plugins
+var registerHandlerbarsHelpers = require(dir.plugins + 'handlebars-helpers');
 var debug = consoleLog ? require(dir.plugins + 'metalsmith-debug') : null;
+
+registerHandlerbarsHelpers();
 
 var siteMeta = {
   devBuild: devBuild,
