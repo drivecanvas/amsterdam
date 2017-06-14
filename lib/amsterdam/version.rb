@@ -1,3 +1,3 @@
 module Amsterdam
-  VERSION = '0.0.1alpha-1'
+  VERSION = '0.0.1'
 end
