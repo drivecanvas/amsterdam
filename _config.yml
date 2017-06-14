@@ -15,6 +15,7 @@ twitter-username: "" #
 markdown: kramdown
 
 sass:
+  sass_dir: /app/assets/stylesheets
   style: :expanded # When you want to minify, change to :compressed
 
 styles: # Add your styles by removing the comments.
@@ -37,3 +38,4 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
+  - lib
