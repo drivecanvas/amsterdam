@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.html
 title: Snowball
 ---
 
@@ -10,12 +10,12 @@ title: Snowball
     <section class="row relative py-l min-height-75" style="">
       <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 mb-m align-self-center order-lg-last">
           <img class="rounded"
-          src="img/home/canvas_hero.jpg"
+          src="/assets/images/home/canvas_hero.jpg"
           srcset="
-            img/home/canvas_hero_540.jpg 100vw,
-            img/home/canvas_hero_960.jpg 100vw,
-            img/home/canvas_hero_1440.jpg 100vw,
-            img/home/canvas_hero_1920.jpg 50vw,
+            /assets/images/home/canvas_hero_540.jpg 100vw,
+            /assets/images/home/canvas_hero_960.jpg 100vw,
+            /assets/images/home/canvas_hero_1440.jpg 100vw,
+            /assets/images/home/canvas_hero_1920.jpg 50vw,
           "
           alt="View from rear seat of sedan, Woman smiling in driver's seat with Canvas representative in front passenger seat.">
       </div>
@@ -71,17 +71,17 @@ title: Snowball
 
 <!-- HOW IT WORKS -->
 <section id="howitworks" class="py-xl relative">
-  {% include_relative components/snowball/how-it-works.html %}
+  {{> components/snowball/how-it-works }}
 </section>
 
 <!-- WHY CANVAS SECTION -->
 <section id="whycanvas" class="bg-grey1-a2 py-xl">
-  {% include_relative components/snowball/why-canvas.html %}
+  {{> components/snowball/why-canvas }}
 </section>
 
 <!-- PRICING -->
 <section id="pricing" class=" py-xl">
-  {% include_relative components/snowball/pricing.html %}
+  {{> components/snowball/pricing }}
 </section>
 
 <!-- CTA SECTIONS -->
@@ -117,7 +117,7 @@ title: Snowball
       <div class="col-12 col-md-6 col-lg-4 pt-xl">
         <h2 class="grey4 fs-24 fw-500 mb-m">About Us</h2>
         <p class="mb-l"> At Canvas, our mission is simple: rethink car ownership to meet the needs of the modern day driver. </p>
-        <p> <a href="{{site.baseurl}}/about.html" class="link">Learn More</a> </p>
+        <p> <a href="{{site.baseurl}}/about" class="link">Learn More</a> </p>
         <!-- <p> <%= link_to 'About Us', about_path, class: 'link' %> </p> -->
       </div>
       <div class="col-12 col-md-6 col-lg-4 pt-xl">
