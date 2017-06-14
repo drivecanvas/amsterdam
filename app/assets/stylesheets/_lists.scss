@@ -1,0 +1,48 @@
+/**
+ * Lists
+ */
+ul, ol, dl {
+    margin-top:0;
+    margin-bottom: $space-m;
+}
+ul, dl{
+  padding-left: 0;
+}
+ol{
+  padding-left:$space-m;
+  list-style-type: decimal-leading-zero;
+}
+li {
+  font-size:$s-h6;
+  line-height:1.5rem;
+  padding-bottom: $space-s;
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+/* Definition List Specific */
+dl{
+  list-style:square;
+  dt{
+    font-weight:bold;
+    padding: $space-s;
+  }
+  dd{
+    padding-bottom: $space-s;
+    margin:0;
+  }
+}
+
+.list-reset {
+  list-style: none;
+}
+.list-check {
+  list-style: none;
+  li{
+    &:before{
+      content:'';
+    }
+  }
+}

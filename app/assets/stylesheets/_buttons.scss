@@ -1,0 +1,288 @@
+// CTA or Call to Actions.
+
+/*
+ * These can be a combination of inputs, buttons, and <a> tags throughout the site.
+ * Ideally any of these classes apply to any element, to be flexible for developers and consistent for users.
+ * Simple utilities are created here to help apply the styles across multiple element types.
+*/
+
+// STYLES ARE USED LIKE THIS:
+// .button or .button-small to set size  .bg-{color} to set background-color .border to override background-color with .{color} to set color of text and border
+
+/*
+ * UNIVERSAL PROPERTIES:
+ *
+ * Transitions: .1 second
+ * No Borders, Instead using box shadow for baseline rhythm
+ * Semibold font-weight
+ * Slightly Open Letter Spacing
+ *
+ */
+%global-cta{
+  transition: all .1s;
+  border:none;
+  font-weight:500;
+  letter-spacing:.02em;
+}
+
+/*
+ * BUTTON PROPERTIES
+ *
+ * These are used for any CTA that looks like a button, whether filled or outlined in appearance.
+ *
+ */
+
+button, %button{
+  border-radius:$border-radius;
+  text-align:center;
+  line-height:1rem;
+}
+
+/*
+ * BUTTON SIZING PROPERTIES
+ *
+ * Default --  1rem/16px base over 1rem/16px line height with 16px padding top and bottom, and 32px padding left and right
+ * Small   -- .875rem/14px base over 1rem/16px line height with 8px padding top and bottom, and 16px padding left and right
+ *
+ */
+%button-size-default{
+  font-size:1rem;
+  padding:$space-m $space-l;
+}
+%button-size-small{
+  font-size:.875rem;
+  padding:$space-s $space-m;
+}
+
+/*
+ * BUTTON STYLING PROPERTIES
+ *
+ * Solid (default) --  No Declarations
+ * Border          -- Declare Transparent Background Color and Inset Box Shadow with no declared color (will inherit text color class)
+ *
+ */
+.button{
+  @extend %button-size-default;
+}
+.button-small{
+  @extend %button-size-small;
+}
+.button, .button-small{
+  @extend %global-cta;
+  @extend %button;
+  // Set Background colors for BG-classes
+  color:$white;
+  background-color:$canvas-blue;
+  text-decoration:none;
+  &:hover{
+    background-color:$medium-blue;
+    color:$white;
+    text-decoration:none;
+  }
+  &:active{
+    background-color:$dark-blue;
+    color:$white;
+    text-decoration:none;
+  }
+  // Set Greys
+  &.bg-grey1{
+    color:$grey4;
+    background-color:$grey1;
+    &:hover{
+      background-color:$grey2;
+    }
+    &:active{
+      background-color:$grey2;
+    }
+  }
+  &.bg-grey2{
+    color:$grey4;
+    background-color:$grey2;
+    &:hover{
+      background-color:$grey1;
+    }
+    &:active{
+      background-color:$grey2;
+    }
+  }
+  &.bg-grey3{
+    color:$white;
+    background-color:$grey3;
+    &:hover{
+      background-color:$grey4;
+    }
+    &:active{
+      background-color:$grey4;
+    }
+  }
+  &.bg-grey4{
+    color:$white;
+    background-color:$grey4;
+    &:hover{
+      background-color:$grey3;
+    }
+    &:active{
+      background-color:$grey4;
+    }
+  }
+  &.bg-grey3, &.bg-grey-4{
+
+  }
+  // Set Colors for Buttons with Border
+  &.border{
+    background-color:transparent;
+    border:none!important; // removing border and using box shadow to maintain baseline rhythm
+    box-shadow: inset 0 0 0 2px;
+    // Set Blues
+    &.canvas-blue{
+      color:$canvas-blue;
+    }
+    &.dark-blue{
+      color:$dark-blue;
+    }
+    &.canvas-blue, &.dark-blue{
+      &:hover{
+        color:$medium-blue;
+      }
+      &:active{
+        color:$dark-blue;
+      }
+    }
+    // Set Greys
+    &.grey1{
+      color:$grey1;
+    }
+    &.grey2{
+      color:$grey2;
+    }
+    &.grey3{
+      color:$grey3;
+    }
+    &.grey4{
+      color:$grey4;
+    }
+    &.grey1, &.grey2{
+      &:hover{
+        color:$grey1;
+      }
+      &:active{
+        color:$grey2;
+      }
+    }
+    &.grey3, &.grey4{
+      &:hover{
+        color:$grey3;
+      }
+      &:active{
+        color:$grey4;
+      }
+    }
+  }
+}
+
+/*
+ * STANDALONE LINKS
+ *
+ * Link Styles that live without a button but appear next to buttons
+ */
+
+.standalone-link, .standalone-link-small{
+  @extend %global-cta;
+  @extend %button;
+  text-decoration:none;
+}
+
+.standalone-link{
+  font-size:1rem;
+  padding-top:$space-m;
+  padding-bottom:$space-m;
+}
+.standalone-link-small{
+  font-size:.875rem;
+  padding-top:$space-s;
+  padding-bottom:$space-s;
+}
+/*
+ * SPECIAL INSTANCES
+ *
+ * <a> link tag overrides
+ * Layouts
+ *
+ */
+
+// Space Buttons When Stacked Horizontally
+// .button+.button, .button-small+.button-small, .button+.standalone-link, .standalone-link+.standalone-link{
+//   margin-left:$space-m;
+// }
+
+// Ensure a elements with button class behave like other inputs and buttons
+a.button, a.button-small, a.standalone-link{
+  display:inline-block;
+  &:hover{
+    text-decoration:none;
+  }
+  &:active{
+    text-decoration:none;
+  }
+}
+
+// a.button, a.cta-primary{
+//   text-decoration:none;
+//   cursor:pointer;
+//   &:hover{
+//     text-decoration:none;
+//   }
+//   &:active{
+//     text-decoration:none;
+//   }
+// }
+
+
+// .button-small{
+//   @extend %button;
+//   font-size:$h6;
+//   padding:$space-m $space-l;
+// }
+
+// PRIMARY CTA - Blue Button with White Text. This comes in two sizes
+// - a default which is 48px/3rem tall
+// - a small which is 32px/2rem tall
+
+.cta-primary{
+  @extend %global-cta;
+  @extend %button;
+  font-size:1rem;
+  padding:$space-m $space-l;
+  background-color:$canvas-blue;
+  color:$white!important;
+  &:hover{
+    background-color:$medium-blue;
+  }
+  &:active{
+    background-color:$dark-blue;
+  }
+}
+// SECONDARY CTA to appear as alternate in conjunction with primary - Dark Grey Text Link without Button.
+.cta-secondary{
+  @extend %global-cta;
+  @extend %button;
+  color:$grey4!important; //!important to overide default link behavior for a tags with cta applied
+  text-decoration:none;
+  background-color:transparent;
+
+  &:hover{
+    text-decoration:underline;
+  }
+  &:active{
+    text-decoration:underline;
+    color:$black;
+  }
+}
+
+
+
+// The disabled class can be added via javascript to any CTA in addition to a disabled utility.
+.disabled{
+  opacity:0.4;
+  filter: saturate(0);
+}

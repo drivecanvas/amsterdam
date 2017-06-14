@@ -1,0 +1,65 @@
+$colors: (
+  'canvas-blue': $canvas-blue,
+  'dark-blue': $dark-blue,
+  'grey1': $grey1,
+  'grey2': $grey2,
+  'grey3': $grey3,
+  'grey4': $grey4,
+  'red': $red,
+  'white': $white,
+  'black': $black
+);
+
+$opacities: (
+  'a1': 0.1,
+  'a2': 0.2,
+  'a3': 0.3,
+  'a4': 0.4,
+  'a5': 0.5,
+  'a6': 0.6,
+  'a7': 0.7,
+  'a8': 0.8,
+  'a9': 0.9,
+);
+
+// Aspen environment currently using "c-" modifier in color based class names ex ="bg-c-[var]" requesting removal for speed / simplicity
+
+@each $color-name, $color-value in $colors {
+  .#{$color-name} {
+    color: $color-value;
+  }
+
+  .bg-#{$color-name} {
+    background-color: $color-value;
+  }
+
+  .border-#{$color-name} {
+    border-color: $color-value;
+  }
+
+  @each $opacity-key, $opacity-value in $opacities {
+    .#{$color-name}-#{$opacity-key} {
+      color: rgba($color-value, $opacity-value);
+    }
+
+    .bg-#{$color-name}-#{$opacity-key} {
+      background-color: rgba($color-value, $opacity-value);
+    }
+
+    .border-#{$color-name}-#{$opacity-key} {
+      border-color: rgba($color-value, $opacity-value);
+    }
+  }
+}
+
+@each $opacity-name, $opacity-value in $opacities {
+  .opacity-#{$opacity-name} {
+    opacity: $opacity-value;
+  }
+}
+.opacity-0{
+  opacity:0;
+}
+.opacity-1{
+  opacity:1;
+}

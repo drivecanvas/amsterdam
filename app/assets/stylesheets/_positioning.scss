@@ -1,0 +1,57 @@
+/* Contents:
+   Position Utilities
+   XY Coordinate Utilities
+   Z-Index Coordinate Utilities
+ */
+
+/* Position adapted from Basscss */
+.relative { position: relative }
+.absolute { position: absolute }
+.fixed    { position: fixed }
+
+//XY Coordinates
+.top-0  { top:0}
+.top-s  { top:$space-s}
+.top-m  { top:$space-m}
+.top-l  { top:$space-l}
+.top-xl  { top:$space-xl}
+.top-xxl  { top:$space-xxl}
+.top-100{ top:100%}
+
+.bottom-0{ bottom:0}
+.bottom-s{ bottom:$space-s}
+.bottom-m{ bottom:$space-m}
+.bottom-l{ bottom:$space-l}
+.bottom-xl{ bottom:$space-xl}
+.bottom-xxl{ bottom:$space-xxl}
+.bottom-100{bottom:100%}
+
+.left-0{  left:0 }
+.left-s{  left:$space-s}
+.left-m{  left:$space-m}
+.left-l{  left:$space-l}
+.left-xl{  left:$space-xl}
+.left-xxl{  left:$space-xxl}
+.left-100{left:100%}
+
+.right-0{ right:0 }
+.right-s{ right:$space-s}
+.right-m{ right:$space-m}
+.right-l{ right:$space-l}
+.right-xl{ right:$space-xl}
+.right-xxl{ right:$space-xxl}
+.right-100{right:100% }
+
+// Positive z-index Coordinates
+.z1 { z-index:1}
+.z2 { z-index:2}
+.z3 { z-index:3}
+.z4 { z-index:4}
+.z4 { z-index:5}
+
+// Negative z-index Coordinates Naming Convention up for discussion
+.zn1 { z-index:-1}
+.zn2 { z-index:-2}
+.zn3 { z-index:-3}
+.zn4 { z-index:-4}
+.zn4 { z-index:-5}
