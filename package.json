@@ -7,7 +7,8 @@
   "homepage": "https://github.com/drivecanvas/amsterdam",
   "scripts": {
     "start": "node ./build.js",
-    "deploy": "git push staging-amsterdam `git rev-parse --abbrev-ref HEAD`:master && heroku restart -a staging-amsterdam"
+    "deploy": "git push staging-amsterdam `git rev-parse --abbrev-ref HEAD`:master && heroku restart -a staging-amsterdam",
+    "before_script": "yarn add --force node-sass"
   },
   "dependencies": {
     "handlebars": "^4.0.5",
