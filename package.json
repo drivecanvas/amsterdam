@@ -9,7 +9,7 @@
     "start": "node ./build.js",
     "deploy": "git push staging-amsterdam `git rev-parse --abbrev-ref HEAD`:master && heroku restart -a staging-amsterdam"
   },
-  "devDependencies": {
+  "dependencies": {
     "handlebars": "^4.0.5",
     "metalsmith": "^2.3.0",
     "metalsmith-browser-sync": "^1.1.1",
