@@ -10,8 +10,8 @@ var pkg = require('./package.json');
 var dir = {
   base: __dirname + '/',
   plugins: __dirname + '/plugins/',
-  source: './app/',
-  dest: './build/'
+  source: __dirname +'/app/',
+  dest: __dirname + '/build/'
 };
 
   // modules
