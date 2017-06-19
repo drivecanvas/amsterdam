@@ -6,7 +6,8 @@
   "license": "MIT",
   "homepage": "https://github.com/drivecanvas/amsterdam",
   "scripts": {
-    "start": "node ./build.js"
+    "start": "node ./build.js",
+    "deploy": "git push staging-amsterdam `git rev-parse --abbrev-ref HEAD`:master && heroku restart -a staging-amsterdam"
   },
   "devDependencies": {
     "handlebars": "^4.0.5",
