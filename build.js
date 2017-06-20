@@ -6,13 +6,12 @@ var consoleLog = false; // set true for metalsmith file and meta content logging
 var devBuild = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production');
 var pkg = require('./package.json');
 
-console.log(__dirname);
   // main directories
 var dir = {
   base: __dirname + '/',
   plugins: __dirname + '/plugins/',
-  source: __dirname +'/app/',
-  dest: __dirname + '/build/'
+  source: './app/',
+  dest: './build/'
 };
 
   // modules
