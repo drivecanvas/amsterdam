@@ -1,11 +1,10 @@
 ---
-layout: styleguide.html
+layout: styleguide
 title: Amsterdam
 ---
-
 <div id="tables" class="cf px-m py-xl">
-  <p class="caps mb-m">Lists!!</p>
-  {{> components/lists }}
+  <p class="caps mb-m">Lists</p>
+  {% include_relative components/lists.html %}
 </div>
 
 <div class="px-m">
@@ -62,37 +61,37 @@ title: Amsterdam
 
 <div id="buttons" class="cf px-m py-xl">
   <p class="caps mb-m">Buttons</p>
-  {{> components/buttons }}
+  {% include_relative components/buttons.html %}
 </div>
 
 <div id="tables" class="cf px-m py-xl">
   <p class="caps mb-m">Tables</p>
-  {{> components/tables }}
+  {% include_relative components/tables.html %}
 </div>
 
 
 <div id="colors" class="cf px-m py-xl">
   <!-- Make Global Site Colors -->
-  {{#if site.colors }}
+  {% if site.colors %}
     <ul class="list-reset">
-      {{#each color in site.colors}}
+      {% for color in site.colors %}
       <li class="inline-block">
         <div class="p-xl m-m" style="background-color:{{color-hex}};"></div>
         <p>{{color-name}}:{{color-hex}}</p>
       </li>
-      {{/each}}
+      {% endfor %}
     </ul>
-  {{/if}}
+  {% endif %}
 </div>
 
 <div id="icons" class="cf px-m py-xl">
   <p class="caps mb-m">Icons</p>
-  {{> components/icons }}
+  {% include_relative components/icons.html %}
 </div>
 
 <div class="cf px-m py-xl">
   <p class="caps mb-m">Grid</p>
-  {{> components/grid }}
+  {% include_relative components/grid.html %}
 </div>
 
 <div class="px-m my-xxl">
