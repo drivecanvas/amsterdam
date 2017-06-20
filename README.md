@@ -12,7 +12,6 @@ The Canvas Design System Library
 
 * [node](https://nodejs.org/en/)
 * [brew](https://brew.sh/)
-* [yarn](https://yarnpkg.com/en/)
 * [git](https://git-scm.com/)
 
 ### Installation
