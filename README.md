@@ -1,4 +1,4 @@
-# AMSTERDAM
+# Amsterdam
 
 The Canvas Design System Library
 
