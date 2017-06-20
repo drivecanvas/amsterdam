@@ -1,8 +1,4 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
 @charset "utf-8";
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "reset/normalize",
   "variables/global",
@@ -114,7 +110,7 @@ $padding-slider: 16px;
     //height: 1em;
     width:$slider-handle-width;
     height:$slider-handle-height;
-    background-image:url(../img/icon/icon-slider-control.svg);
+    background-image:url(../images/icon/icon-slider-control.svg);
     border: 0;
     box-shadow: none;
     left: calc(-#{$slider-handle-width / 2});
