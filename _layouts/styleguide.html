@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-  {{> head }}
+  {% include head.html %}
 
   <body class="relative" data-spy="scroll" data-target=".scrollspy" data-offset="48">
-    {{> icons }}
+    {% include icons.html %}
     <!-- <button class='h5'>Toggle Grid</button> -->
     <div class="">
-        {{> header }}
-        {{{ contents }}}
-        {{> footer }}
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
     </div>
     <script>
       //Toggle Baseline Grid and show element outlines

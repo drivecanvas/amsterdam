@@ -1,4 +1,2 @@
-build/
-node_modules/*
-.sass-cache/*
+.sass-cache
 _site/*

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-  {{> head }}
+  {% include head.html %}
 
   <body class="relative" data-spy="scroll" data-target=".scrollspy" data-offset="48">
-    {{> icons }}
+    {% include icons.html %}
     <!-- <button class='h5'>Toggle Grid</button> -->
     <div class="">
-        {{> header }}
-        {{{ contents }}}
-        {{> footer }}
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
     </div>
     <script>
     // IS EVERYBODY READY?
@@ -298,13 +298,13 @@
         // This creates our slider, sets the increment, and start/end points
         var stepSlider = document.getElementById('sliderStep');
         noUiSlider.create(stepSlider, {
-          start: [ 6 ],
+        	start: [ 6 ],
           connect: [true, false],
-          step: 1,
-          range: {
-            'min': [  1 ],
-            'max': [ 24 ]
-          }
+        	step: 1,
+        	range: {
+        		'min': [  1 ],
+        		'max': [ 24 ]
+        	}
         });
 
         // This gives us a return on the current slider position and value
