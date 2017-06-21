@@ -19,6 +19,7 @@ var express = require('express');
 var Metalsmith = require('metalsmith');
 var permalinks = require('metalsmith-permalinks');
 var inplace = require('metalsmith-in-place');
+
 var layouts = require('metalsmith-layouts');
 var sass = require('metalsmith-sass');
 var browsersync = devBuild ? require('metalsmith-browser-sync') : null;
