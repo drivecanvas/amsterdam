@@ -18,6 +18,7 @@ var dir = {
 var express = require('express');
 var Metalsmith = require('metalsmith');
 var permalinks = require('metalsmith-permalinks');
+var collections = require('metalsmith-collections');
 var inplace = require('metalsmith-in-place');
 var layouts = require('metalsmith-layouts');
 var sass = require('metalsmith-sass');
@@ -51,6 +52,11 @@ var ms = Metalsmith(dir.base)
   .source(dir.source)
   .destination(dir.dest)
   .metadata(siteMeta)
+  .use(collections({
+    components: {
+      sortBy: 'title',
+    },
+  }))
   .use(sass({
     outputStyle: 'expanded'
   }))

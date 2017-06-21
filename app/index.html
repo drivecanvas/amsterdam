@@ -3,50 +3,22 @@ layout: styleguide.html
 title: Amsterdam
 ---
 
-<div class="cf">
-
-
-<div id="typography" class="cf px-m py-xl">
-  <h2 class="fw-bold">Typography</h2>
-  {{> components/typography}}
-</div>
+<ul>
+  {{#each components as |component|}}
+    <li><a href="/{{component.path}}">{{component.title}}</a></li>
+  {{/each}}
+</ul>
 
 <div id="colors" class="cf px-m py-xl">
-  <h2 class="fw-bold">Colors</h2>
-  {{> components/colors}}
-</div>
-
-<div class="px-m">
-  <h2 class="fw-bold">Spacing Scale</h2>
-  {{> components/spacing}}
-</div>
-
-<div id="buttons" class="cf px-m py-xl">
-  <h2 class="fw-bold">Buttons</h2>
-  {{> components/buttons }}
-</div>
-
-<div id="tables" class="cf px-m py-xl">
-  <h2 class="fw-bold">Tables</h2>
-  {{> components/tables }}
-</div>
-
-<div id="tables" class="cf px-m py-xl">
-  <h2 class="fw-bold">Lists</h2>
-  {{> components/lists }}
-</div>
-
-<div id="icons" class="cf px-m py-xl">
-  <h2 class="fw-bold">Icons</h2>
-  {{> components/icons }}
-</div>
-
-<div class="cf px-m py-xl">
-  <h2 class="fw-bold">Grid</h2>
-  {{> components/grid }}
-</div>
-
-<div class="cf px-m py-xl">
-  <h2 class="fw-bold">Shadows</h2>
-  {{> components/shadows }}
+  <!-- Make Global Site Colors -->
+  {{#if site.colors }}
+    <ul class="list-reset">
+      {{#each color in site.colors}}
+      <li class="inline-block">
+        <div class="p-xl m-m" style="background-color:{{color-hex}};"></div>
+        <p>{{color-name}}:{{color-hex}}</p>
+      </li>
+      {{/each}}
+    </ul>
+  {{/if}}
 </div>
