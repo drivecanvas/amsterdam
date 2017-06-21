@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {{> head }}
+
+  <body class="relative" data-spy="scroll" data-target=".scrollspy" data-offset="48">
+    {{> icons }}
+    <!-- <button class='h5'>Toggle Grid</button> -->
+    <div class="">
+        {{> header }}
+
+        <a href="/{{previous.path}}"><< {{previous.title}}</a>
+        <a href="/{{next.path}}">{{next.title}} >></a>
+
+        {{{ contents }}}
+        {{> footer }}
+    </div>
+    <script>
+      //Toggle Baseline Grid and show element outlines
+      const toggleGrid = e => {
+        document.body.classList.toggle('grid8')
+        document.body.classList.toggle('debug')
+      }
+      document.body.addEventListener('click', toggleGrid)
+    </script>
+  </body>
+</html>
