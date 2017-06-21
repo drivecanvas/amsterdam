@@ -27,7 +27,6 @@ var browsersync = devBuild ? require('metalsmith-browser-sync') : null;
 
 // custom plugins
 var registerHandlerbarsHelpers = require(dir.plugins + 'handlebars-helpers');
-var bsLoader = require(dir.plugins + 'metalsmith-boostrap-sass-loader');
 var debug = consoleLog ? require(dir.plugins + 'metalsmith-debug') : null;
 
 registerHandlerbarsHelpers();
@@ -53,7 +52,6 @@ var ms = Metalsmith(dir.base)
   .clean(!devBuild)
   .source(dir.source)
   .destination(dir.dest)
-  .use(bsLoader())
   .metadata(siteMeta)
 
   .use(sass({
