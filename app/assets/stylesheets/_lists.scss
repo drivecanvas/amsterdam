@@ -13,7 +13,6 @@ ol{
   list-style-type: decimal-leading-zero;
 }
 li {
-  font-size:$s-h6;
   line-height:1.5rem;
   padding-bottom: $space-s;
     > ul,
@@ -35,14 +34,21 @@ dl{
   }
 }
 
-.list-reset {
+.list-reset, .list-style-none{
   list-style: none;
 }
 .list-check {
   list-style: none;
   li{
     &:before{
-      content:'';
+      content:' ';
+      background-image:url(../icons/icon-checkmark.svg);
+      width:1em;
+      height:1em;
+      margin-right:$space-s;
+      background-size:contain;
+      background-position:0 2px;
+      display:inline-block;
     }
   }
 }

@@ -1,5 +1,5 @@
 /**
- * Reset our vertical rhthym
+ * Vertical rhthym resets / defaults
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -7,39 +7,26 @@ dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
-
-body{
-  color:$grey4;
+// Set Global Default on Body
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color:$grey4-a;
+    font-weight: normal;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
-p{
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote{
   margin-bottom:$space-m;
 }
-
-
-
-.section-header{
-  &:before{
-    content:' ';
-    display:block;
-    height:$space-m;
-    //border-top:4px solid #ddd;
-    color: #ddd;
-    width:4rem;
-  }
-  padding-bottom:$space-m;
-  margin-bottom:$space-m;
-}
-
-// Addtl Style & Weight Variables
-$caps-letter-spacing: .1em;
-
-
-
+// Line lengths / measure
 $measure-width:32em;
 .measure, .mx{
   max-width:$measure-width;
 }
-
 $measure-narrow:24em;
 .measure-narrow{
   max-width:$measure-narrow;
@@ -49,7 +36,6 @@ $measure-narrow:24em;
 .font-family-inherit { font-family: inherit }
 .font-size-inherit { font-size: inherit }
 .text-decoration-none { text-decoration: none }
-
 .quote{
   box-sizing:border-box;
   box-shadow: -2px 0 0 0;
@@ -58,18 +44,44 @@ $measure-narrow:24em;
   padding-bottom: $space-s;
   margin-bottom: $space-m;
 }
-.regular { font-weight: normal }
-.italic  { font-style: italic }
-.caps    { text-transform: uppercase; letter-spacing: $caps-letter-spacing; }
+
+/*
+ * Font Face Family declarations for style
+ */
+// Normal
+.fw-normal {
+  font-family:'Avenir LT W01_55 Roman1475520';
+  font-weight: normal
+}
+// Italic
+.italic {
+  font-family:'Avenir LT W01_55 Obliqu1475526';
+  font-style:italic;
+}
+// Bold
+.fw-bold, strong, .strong{
+  font-family:'Avenir LT W01_85 Heavy1475544';
+  font-weight: bold;
+}
+// Specialized font to handle weight and italic
+.fw-bold.italic{
+  font-family:"Avenir LT W01_85 Heavy_1475550";
+}
+
+
+/*
+ * Utilities
+ */
+.caps{
+  text-transform: uppercase;
+  letter-spacing: .1em; }
 .uppercase{ text-transform:uppercase; }
-.bold {font-weight:$bold-font-weight;}
 .text-left   { text-align: left }
 .text-center { text-align: center }
 .text-right  { text-align: right }
 .text-justify{ text-align: justify }
 .nowrap { white-space: nowrap }
 .break-word { word-wrap: break-word }
-.list-style-none { list-style: none }
 .underline { text-decoration: underline }
 .truncate {
   max-width: 100%;
@@ -89,45 +101,21 @@ $measure-narrow:24em;
 .kern2{
   letter-spacing:-.2em;
 }
-
-
 small, .small{
   font-size:0.875rem;
   line-height:1.5rem;
   margin-top:0.125rem;
-}
-strong { font-weight: $bold-font-weight}
-
-
-
-
-
-
-
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure, small,
-%vertical-rhythm {
-    margin-top:0;
-    //margin-bottom: $space-s;
+  color:$grey3-a;
 }
 
-
-
-// Set Global Default on Body
-body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: normal;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
+hr{
+  height:7px;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  border-bottom:1px solid $grey1-a;
+  margin-bottom:$space-s;
+  width:100%;
 }
 
 @import
