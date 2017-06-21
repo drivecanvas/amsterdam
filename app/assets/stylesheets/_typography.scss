@@ -13,7 +13,7 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     color:$grey4-a;
-    font-weight: normal;
+    //font-weight: normal;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
 }
@@ -51,7 +51,7 @@ $measure-narrow:24em;
 // Normal
 .fw-normal {
   font-family:'Avenir LT W01_55 Roman1475520';
-  font-weight: normal
+  font-weight: normal;
 }
 // Italic
 .italic {
