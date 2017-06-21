@@ -54,8 +54,7 @@ var ms = Metalsmith(dir.base)
   .metadata(siteMeta)
   .use(collections({
     components: {
-      sortBy: 'date',
-      reverse: true,
+      sortBy: 'title',
     },
   }))
   .use(sass({
