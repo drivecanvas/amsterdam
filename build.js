@@ -17,14 +17,17 @@ var dir = {
 // modules
 var express = require('express');
 var Metalsmith = require('metalsmith');
+var assets = require('metalsmith-assets');
 var permalinks = require('metalsmith-permalinks');
 var inplace = require('metalsmith-in-place');
+
 var layouts = require('metalsmith-layouts');
 var sass = require('metalsmith-sass');
 var browsersync = devBuild ? require('metalsmith-browser-sync') : null;
 
 // custom plugins
 var registerHandlerbarsHelpers = require(dir.plugins + 'handlebars-helpers');
+var bsLoader = require(dir.plugins + 'metalsmith-boostrap-sass-loader');
 var debug = consoleLog ? require(dir.plugins + 'metalsmith-debug') : null;
 
 registerHandlerbarsHelpers();
@@ -50,7 +53,9 @@ var ms = Metalsmith(dir.base)
   .clean(!devBuild)
   .source(dir.source)
   .destination(dir.dest)
+  .use(bsLoader())
   .metadata(siteMeta)
+
   .use(sass({
     outputStyle: 'expanded'
   }))
