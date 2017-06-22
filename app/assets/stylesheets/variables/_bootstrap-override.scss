@@ -42,12 +42,22 @@ $grid-gutter-widths: (
 ) !default;
 
 $screen-xs-min: 320px;
+$screen-xs-max: 767px;
 $screen-sm-min: 768px;
+$screen-sm-max: 1023px;
 $screen-md-min: 1024px;
+$screen-md-max: 1439px;
 $screen-lg-min: 1440px;
+$screen-lg-max: 1535px;
+$screen-xlg-min: 1536px;
+$screen-xlg-max: 1792px;
+$screen-xxlg-min: 1793px;
+
 
 $grid-gutter-width: 32px;
 
 $container-tablet: calc(#{$screen-sm-min} + #{$grid-gutter-width});
 $container-desktop: calc(#{$screen-md-min} + #{$grid-gutter-width});
 $container-large-desktop: calc(#{$screen-lg-min} + #{$grid-gutter-width});
+
+$navbar-height: 48px;

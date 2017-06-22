@@ -40,6 +40,12 @@ button, %button{
   border-radius:$border-radius;
   text-align:center;
   line-height:1rem;
+  background-color: transparent;
+  padding: 0;
+}
+
+button:focus {
+  outline: 0 ;
 }
 
 /*
@@ -78,60 +84,77 @@ button, %button{
   color:$white;
   background-color:$canvas-blue;
   text-decoration:none;
-  &:hover{
+  &:disabled,
+  &:disabled:hover {
+    background-color: $grey2;
+  }
+  &:hover {
     background-color:$medium-blue;
     color:$white;
     text-decoration:none;
   }
-  &:active{
+  &:active {
     background-color:$dark-blue;
     color:$white;
     text-decoration:none;
   }
   // Set Greys
-  &.bg-grey1{
+  &.bg-grey1 {
     color:$grey4;
     background-color:$grey1;
-    &:hover{
+
+    &:hover {
       background-color:$grey2;
     }
-    &:active{
+    &:active {
       background-color:$grey2;
     }
   }
-  &.bg-grey2{
+  &.bg-grey2 {
     color:$grey4;
     background-color:$grey2;
-    &:hover{
+
+    &:hover {
       background-color:$grey1;
     }
-    &:active{
+    &:active {
       background-color:$grey2;
     }
   }
-  &.bg-grey3{
+  &.bg-grey2-a {
+    color: $white;
+    background-color:$grey2-a;
+
+    &:hover {
+      background-color:$grey1-a;
+    }
+    &:active {
+      background-color:$grey2-a;
+    }
+  }
+  &.bg-grey3 {
     color:$white;
     background-color:$grey3;
-    &:hover{
+
+    &:hover {
       background-color:$grey4;
     }
-    &:active{
+    &:active {
       background-color:$grey4;
     }
   }
-  &.bg-grey4{
+  &.bg-grey4 {
     color:$white;
     background-color:$grey4;
-    &:hover{
+
+    &:hover {
       background-color:$grey3;
     }
-    &:active{
+    &:active {
       background-color:$grey4;
     }
   }
-  &.bg-grey3, &.bg-grey-4{
 
-  }
   // Set Colors for Buttons with Border
   &.border{
     background-color:transparent;
@@ -255,7 +278,8 @@ a.button, a.button-small, a.standalone-link{
 .cta-primary{
   @extend %global-cta;
   @extend %button;
-  font-size:1rem;
+  font-size: 1rem;
+  font-weight: 700;
   padding:$space-m $space-l;
   background-color:$canvas-blue;
   color:$white!important;
@@ -264,6 +288,10 @@ a.button, a.button-small, a.standalone-link{
   }
   &:active{
     background-color:$dark-blue;
+  }
+  &:disabled,
+  &:disabled:hover {
+    background-color: $grey2;
   }
 }
 // SECONDARY CTA to appear as alternate in conjunction with primary - Dark Grey Text Link without Button.
@@ -285,7 +313,7 @@ a.button, a.button-small, a.standalone-link{
 
 
 // The disabled class can be added via javascript to any CTA in addition to a disabled utility.
-.disabled{
-  opacity:0.4;
-  filter: saturate(0);
+.disabled,
+.disabled:hover {
+  background-color: $grey2;
 }
