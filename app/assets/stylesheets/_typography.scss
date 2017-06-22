@@ -9,7 +9,7 @@ dl, dd, ol, ul, figure {
 }
 // Set Global Default on Body
 body {
-    font-family: $base-font-family;
+    font-family: 'Avenir LT W01_55 Roman1475520', $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
     color:$grey4-a;
@@ -50,17 +50,17 @@ $measure-narrow:24em;
  */
 // Normal
 .fw-normal {
-  font-family:'Avenir LT W01_55 Roman1475520';
+  font-family:'Avenir LT W01_55 Roman1475520', $base-font-family;
   font-weight: normal;
 }
 // Italic
 .italic {
-  font-family:'Avenir LT W01_55 Obliqu1475526';
+  font-family:'Avenir LT W01_55 Obliqu1475526', $base-font-family;
   font-style:italic;
 }
 // Bold
 .fw-bold, strong, .strong{
-  font-family:'Avenir LT W01_85 Heavy1475544';
+  font-family:'Avenir LT W01_85 Heavy1475544', $base-font-family;
   font-weight: bold;
 }
 // Specialized font to handle weight and italic
