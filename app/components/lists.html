@@ -3,41 +3,71 @@ layout: components.html
 collection: components
 title: Lists
 ---
-<div id="tables" class="cf px-m py-xl">
-  <p class="caps mb-m">Lists</p>
-  <div class="col-12 col-md-6">
-    <ul>
-      <li>Air Conditioning </li>
-      <li>Backup Camera </li>
-      <li>Cruise Control </li>
-      <li>Parking Sensors </li>
-      <li>Power Windows </li>
-    </ul>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h4 class="fw-bold">Default ul</h4>
+        <ul>
+          <li>Air Conditioning </li>
+          <li>Backup Camera </li>
+          <li>Cruise Control </li>
+          <li>Parking Sensors </li>
+          <li>Power Windows </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <h4 class="fw-bold">ul.list-reset</h4>
+        <ul class="list-reset">
+          <li>Air Conditioning </li>
+          <li>Backup Camera </li>
+          <li>Cruise Control </li>
+          <li>Parking Sensors </li>
+          <li>Power Windows </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <h4 class="fw-bold">ul.list-check</h4>
+        <ul class="list-check">
+          <li>Air Conditioning </li>
+          <li>Backup Camera </li>
+          <li>Cruise Control </li>
+          <li>Parking Sensors </li>
+          <li>Power Windows </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <h4 class="fw-bold">Default ol</h4>
+        <ol>
+          <li>Air Conditioning </li>
+          <li>Backup Camera </li>
+          <li>Cruise Control </li>
+          <li>Parking Sensors </li>
+          <li>Power Windows </li>
+        </ol>
+      </div>
+      <div class="col-12 col-md-4">
+        <h4 class="fw-bold">Default dl</h4>
+        <dl>
+          <li>Air Conditioning </li>
+          <li>Backup Camera </li>
+          <li>Cruise Control </li>
+          <li>Parking Sensors </li>
+          <li>Power Windows </li>
+        </dl>
+      </div>
+    </div>
   </div>
-  <div class="col-12 col-md-6">
-    <ul class="list-reset">
-      <li>Air Conditioning </li>
-      <li>Backup Camera </li>
-      <li>Cruise Control </li>
-      <li>Parking Sensors </li>
-      <li>Power Windows </li>
-    </ul>
-  </div>
 
-
-  <ol>
-    <li>Air Conditioning </li>
-    <li>Backup Camera </li>
-    <li>Cruise Control </li>
-    <li>Parking Sensors </li>
-    <li>Power Windows </li>
-  </ol>
-
-  <dl>
-    <li>Air Conditioning </li>
-    <li>Backup Camera </li>
-    <li>Cruise Control </li>
-    <li>Parking Sensors </li>
-    <li>Power Windows </li>
-  </dl>
-</div>
+  <button id="toggleGrid" class="button button-small border grey4">Toggle Grid</button>
+  <script>
+    //Toggle Baseline Grid and show element outlines
+    const toggleGrid = e => {
+      document.body.classList.toggle('grid8')
+      document.body.classList.toggle('debug')
+    }
+    document.getElementById('toggleGrid').addEventListener('click', toggleGrid)
+  </script>

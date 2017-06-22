@@ -4,18 +4,51 @@
   That file turns these into classes for text, border, and background.
 */
 
-$white: #fff;
 $canvas-blue: #3857e7; //AA
 $medium-blue: #304CCA; //AA
 $dark-blue: #2c45b7; //AAA
-$teal: #23CFB1; //AAA on dark, Fail on white
-$teal-medium: #29A395; // AA large on white,
-$teal-dark:#22877B; // AA on white
-$gold:#F5C229; // Fail on White, AA on dark
-$gold-dark: #BB8D02; // AA large on white
-$grey1: #d7d8dd; // Fail on white
-$grey2: #9ca2ac; // Fail on white AA on dark
-$grey3: #6d7582; // AA
-$grey4: #354052; // AAA
+$teal: #37E6C8; //AAA on dark, Fail on white
+$gold: #FFD966; // Fail on White, AA on dark
+
+// Solids
+$grey0: #F2F5FA;
+$grey1: #D3D6DE;
+$grey2: #91959E;
+$grey3: #626A7A;
+$grey4: #373E4D;
+$grey5: #1C2230;
+
+// Alphas
+$grey0-a: rgba(21,50,115,0.05);
+$grey1-a: rgba(29,45,82,0.2);
+$grey2-a: rgba(33,43,64,0.5);
+$grey3-a: rgba(33,43,64,0.7);
+$grey4-a: rgba(33,41,59,0.9);
+$grey5-a: rgba(15,23,38,0.95);
+
 $red: #e63147; // AA Large
 $black: #000;
+$white: #fff;
+
+$colors: (
+  'canvas-blue': $canvas-blue,
+  'medium-blue': $medium-blue,
+  'dark-blue': $dark-blue,
+  'teal':$teal,
+  'gold':$gold,
+  'grey0': $grey0,
+  'grey1': $grey1,
+  'grey2': $grey2,
+  'grey3': $grey3,
+  'grey4': $grey4,
+  'grey5': $grey5,
+  'grey0-a': $grey0-a,
+  'grey1-a': $grey1-a,
+  'grey2-a': $grey2-a,
+  'grey3-a': $grey3-a,
+  'grey4-a': $grey4-a,
+  'grey5-a': $grey5-a,
+  'red': $red,
+  'white': $white,
+  'black': $black
+);

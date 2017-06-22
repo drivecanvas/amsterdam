@@ -8,26 +8,33 @@
     <!-- <button class='h5'>Toggle Grid</button> -->
     <div class="">
         {{> header }}
-
-
-        {{#if previous}}
-          <a href="/{{previous.path}}"><< {{previous.title}}</a>
-        {{/if}}
-
-        {{#if next}}
-          <a href="/{{next.path}}">{{next.title}} >></a>
-        {{/if}}
-
-        {{{ contents }}}
+        <div class="container py-xl">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="fw-bold">{{title}}</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              {{{ contents }}}
+            </div>
+          </div>
+        </div>
+        <div class="cf container-fluid text-center">
+          <div class="row">
+            <div class="col-6 bg-grey0">
+              {{#if previous}}
+                <a class="py-m block fw-bold" href="/{{previous.path}}"><svg class="icon"> <use xlink:href="#icon-arrow-left"></use> </svg> {{previous.title}} </a>
+              {{/if}}
+            </div>
+            <div class="col-6 bg-grey0">
+              {{#if next}}
+                <a class="py-m block fw-bold" href="/{{next.path}}">{{next.title}} <svg class="icon"> <use xlink:href="#icon-arrow-right"></use> </svg></a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
         {{> footer }}
     </div>
-    <script>
-      //Toggle Baseline Grid and show element outlines
-      const toggleGrid = e => {
-        document.body.classList.toggle('grid8')
-        document.body.classList.toggle('debug')
-      }
-      document.body.addEventListener('click', toggleGrid)
-    </script>
   </body>
 </html>
