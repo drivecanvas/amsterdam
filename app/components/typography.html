@@ -26,3 +26,13 @@ title: Typography
   <p class="fs-14">.fs-14 </p> <p class="fs-14 fw-bold">.fs-14 .fw-bold</p>
   <p class="fs-12">.fs-12 </p> <p class="fs-12 fw-bold">.fs-12 .fw-bold</p>
 </div>
+
+<button id="toggleGrid" class="button button-small border grey4">Toggle Grid</button>
+<script>
+  //Toggle Baseline Grid and show element outlines
+  const toggleGrid = e => {
+    document.body.classList.toggle('grid8')
+    document.body.classList.toggle('debug')
+  }
+  document.getElementById('toggleGrid').addEventListener('click', toggleGrid)
+</script>
