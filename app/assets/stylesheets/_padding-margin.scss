@@ -1,166 +1,56 @@
+$properties: (
+  'm': 'margin',
+  'p': 'padding',
+);
 
-/*
-  Base:
-    p = padding
-    m = margin
+$directions: (
+ '':  (''),
+ 'y': ('-bottom', '-top'),
+ 'x': ('-left', '-right'),
+ 'l': ('-left'),
+ 'r': ('-right'),
+ 't': ('-top'),
+ 'b': ('-bottom')
+);
 
-  Modifiers:
-    no modifier = all
-    x = horizontal
-    y = vertical
-    t = top
-    r = right
-    b = bottom
-    l = left
-*/
+$positive-spaces: (
+  '0': 0,
+  'xs': $space-xs,
+  's': $space-s,
+  'm': $space-m,
+  'l': $space-l,
+  'xl': $space-xl,
+  'xxl': $space-xxl,
+  'xxxl': $space-xxxl
+);
 
-//Padding
-.p-0 {padding:0;}
+$negative-spaces: (
+'xs': $space-xs,
+'s': $space-s,
+'m': $space-m,
+'l': $space-l,
+'xl': $space-xl,
+'xxl': $space-xxl,
+'xxxl': $space-xxxl
+);
 
-.p-xs {padding:$space-xs;}
-.p-s  {padding:$space-s;}
-.p-m  {padding:$space-m;}
-.p-l  {padding:$space-l;}
-.p-xl {padding:$space-xl;}
-.p-xxl{padding:$space-xxl;}
-.p-xxxl{padding:$space-xxxl;}
-
-
-
-.pt-xs {padding-top:$space-xs;}
-.pt-s  {padding-top:$space-s;}
-.pt-m  {padding-top:$space-m;}
-.pt-l  {padding-top:$space-l;}
-.pt-xl {padding-top:$space-xl;}
-.pt-xxl{padding-top:$space-xxl;}
-.pt-xxxl{padding-top:$space-xxxl;}
-
-.pb-xs {padding-bottom:$space-xs;}
-.pb-s  {padding-bottom:$space-s;}
-.pb-m  {padding-bottom:$space-m;}
-.pb-l  {padding-bottom:$space-l;}
-.pb-xl {padding-bottom:$space-xl;}
-.pb-xxl{padding-bottom:$space-xxl;}
-.pb-xxxl{padding-bottom:$space-xxxl;}
-
-.py-xs {padding-top:$space-xs;padding-bottom:$space-xs;}
-.py-s  {padding-top:$space-s;padding-bottom:$space-s;}
-.py-m  {padding-top:$space-m;padding-bottom:$space-m;}
-.py-l  {padding-top:$space-l;padding-bottom:$space-l;}
-.py-xl {padding-top:$space-xl;padding-bottom:$space-xl;}
-.py-xxl{padding-top:$space-xxl;padding-bottom:$space-xxl;}
-.py-xxxl{padding-top:$space-xxxl;padding-bottom:$space-xxxl;}
-
-.pl-xs {padding-left:$space-xs;}
-.pl-s  {padding-left:$space-s;}
-.pl-m  {padding-left:$space-m;}
-.pl-l  {padding-left:$space-l;}
-.pl-xl {padding-left:$space-xl;}
-.pl-xxl{padding-left:$space-xxl;}
-.pl-xxxl{padding-left:$space-xxxl;}
-
-.pr-xs {padding-right:$space-xs;}
-.pr-s  {padding-right:$space-s;}
-.pr-m  {padding-right:$space-m;}
-.pr-l  {padding-right:$space-l;}
-.pr-xl {padding-right:$space-xl;}
-.pr-xxl{padding-right:$space-xxl;}
-.pr-xxxl{padding-right:$space-xxxl;}
-
-.px-xs {padding-left:$space-xs;padding-right:$space-xs;}
-.px-s  {padding-left:$space-s;padding-right:$space-s;}
-.px-m  {padding-left:$space-m;padding-right:$space-m;}
-.px-l  {padding-left:$space-l;padding-right:$space-l;}
-.px-xl {padding-left:$space-xl;padding-right:$space-xl;}
-.px-xxl{padding-left:$space-xxl;padding-right:$space-xxl;}
-.px-xxxl{padding-left:$space-xxxl;padding-right:$space-xxxl;}
-
-
-
-
-/*
-   Margins
-*/
-
-.m-0 {margin:0;}
-
-.mt-n-m {margin-top:-$space-m;}
-.mt-n-l {margin-top:-$space-l;}
-
-.m-n-xs {margin:-$space-xs;}
-.m-n-s  {margin:-$space-s;}
-.m-n-m  {margin:-$space-m;}
-.m-n-l  {margin:-$space-l;}
-.m-n-xl {margin:-$space-xl;}
-.m-n-xxl{margin:-$space-xxl;}
-.m-n-xxxl{margin:-$space-xxxl;}
-
-
-
-.m-xs {margin:$space-xs;}
-.m-s  {margin:$space-s;}
-.m-m  {margin:$space-m;}
-.m-l  {margin:$space-l;}
-.m-xl {margin:$space-xl;}
-.m-xxl{margin:$space-xxl;}
-.m-xxxl{margin:$space-xxxl;}
-
-.mt-xs {margin-top:$space-xs;}
-.mt-s  {margin-top:$space-s;}
-.mt-m  {margin-top:$space-m;}
-.mt-l  {margin-top:$space-l;}
-.mt-xl {margin-top:$space-xl;}
-.mt-xxl{margin-top:$space-xxl;}
-.mt-xxxl{margin-top:$space-xxxl;}
-
-.mb-xs {margin-bottom:$space-xs;}
-.mb-s  {margin-bottom:$space-s;}
-.mb-m  {margin-bottom:$space-m;}
-.mb-l  {margin-bottom:$space-l;}
-.mb-xl {margin-bottom:$space-xl;}
-.mb-xxl{margin-bottom:$space-xxl;}
-.mb-xxxl{margin-bottom:$space-xxl;}
-
-.my-xs {margin-top:$space-xs;margin-bottom:$space-xs;}
-.my-s  {margin-top:$space-s;margin-bottom:$space-s;}
-.my-m  {margin-top:$space-m;margin-bottom:$space-m;}
-.my-l  {margin-top:$space-l;margin-bottom:$space-l;}
-.my-xl {margin-top:$space-xl;margin-bottom:$space-xl;}
-.my-xxl{margin-top:$space-xxl;margin-bottom:$space-xxl;}
-.my-xxxl{margin-top:$space-xxxl;margin-bottom:$space-xxxl;}
-
-.ml-xs {margin-left:$space-xs;}
-.ml-s  {margin-left:$space-s;}
-.ml-m  {margin-left:$space-m;}
-.ml-l  {margin-left:$space-l;}
-.ml-xl {margin-left:$space-xl;}
-.ml-xxl{margin-left:$space-xxl;}
-.ml-xxxl{margin-left:$space-xxxl;}
-
-.mr-xs {margin-right:$space-xs;}
-.mr-s  {margin-right:$space-s;}
-.mr-m  {margin-right:$space-m;}
-.mr-l  {margin-right:$space-l;}
-.mr-xl {margin-right:$space-xl;}
-.mr-xxl{margin-right:$space-xxl;}
-.mr-xxxl{margin-right:$space-xxxl;}
-
-.mx-xs {margin-left:$space-xs;margin-right:$space-xs;}
-.mx-s  {margin-left:$space-s;margin-right:$space-s;}
-.mx-m  {margin-left:$space-m;margin-right:$space-m;}
-.mx-l  {margin-left:$space-l;margin-right:$space-l;}
-.mx-xl {margin-left:$space-xl;margin-right:$space-xl;}
-.mx-xxl{margin-left:$space-xxl;margin-right:$space-xxl;}
-.mx-xxxl{margin-left:$space-xxxl;margin-right:$space-xxxl;}
-
-
-.m-mx-auto{
-  @include breakpoint(m){
-    margin-left: auto; margin-right: auto;
+@each $property-name, $property-value in $properties {
+  @each $direction-name, $direction-values in $directions {
+    @each $space-name, $space-value in $positive-spaces {
+      .#{$property-name}#{$direction-name}-#{$space-name} {
+        @each $direction-value in $direction-values {
+          #{$property-value}#{$direction-value}: #{$space-value};
+        }
+      }
+    }
   }
 }
 
-
+.m-mx-auto {
+  @include breakpoint(m) {
+    margin-left: auto; margin-right: auto;
+  }
+}
 
 .ml-auto { margin-left: auto }
 .mr-auto { margin-right: auto }

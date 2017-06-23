@@ -21,7 +21,7 @@ $borders: (
 @media only screen and (max-width : $screen-sm-min) {
   @each $border in $borders {
     .border-xs#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .no-border-xs#{$border} {
@@ -33,11 +33,11 @@ $borders: (
 @media only screen and (min-width : $screen-sm-min) {
   @each $border in $borders {
     .border-xs#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .border-sm#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .no-border-xs#{$border} {
@@ -53,15 +53,15 @@ $borders: (
 @media only screen and (min-width : $screen-md-min) {
   @each $border in $borders {
     .border-xs#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .border-sm#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .border-md#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .no-border-xs#{$border} {
@@ -81,19 +81,19 @@ $borders: (
 @media only screen and (min-width : $screen-lg-min) {
   @each $border in $borders {
     .border-xs#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .border-sm#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .border-md#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .border-lg#{$border} {
-      border#{$border}: solid 1px  ;
+      border#{$border}: solid 1px;
     }
 
     .no-border-xs#{$border} {
