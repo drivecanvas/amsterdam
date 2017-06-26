@@ -40,6 +40,12 @@ button, %button{
   border-radius:$border-radius;
   text-align:center;
   line-height:1rem;
+  background-color: transparent;
+  padding: 0;
+}
+
+button:focus {
+  outline: 0 ;
 }
 
 /*

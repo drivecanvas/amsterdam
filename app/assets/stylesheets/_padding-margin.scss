@@ -24,15 +24,15 @@ $positive-spaces: (
   'xxxl': $space-xxxl
 );
 
-$negative-spaces: (
-'xs': $space-xs,
-'s': $space-s,
-'m': $space-m,
-'l': $space-l,
-'xl': $space-xl,
-'xxl': $space-xxl,
-'xxxl': $space-xxxl
-);
+// $negative-spaces: (
+// 'xs': -$space-xs,
+// 's': -$space-s,
+// 'm': -$space-m,
+// 'l': -$space-l,
+// 'xl': -$space-xl,
+// 'xxl': -$space-xxl,
+// 'xxxl': -$space-xxxl
+// );
 
 @each $property-name, $property-value in $properties {
   @each $direction-name, $direction-values in $directions {
@@ -45,6 +45,18 @@ $negative-spaces: (
     }
   }
 }
+
+// @each $property-name, $property-value in $properties {
+//   @each $direction-name, $direction-values in $directions {
+//     @each $space-name, $space-value in $negative-spaces {
+//       .n#{$property-name}#{$direction-name}-#{$space-name} {
+//         @each $direction-value in $direction-values {
+//           #{$property-value}#{$direction-value}: #{$space-value};
+//         }
+//       }
+//     }
+//   }
+// }
 
 .m-mx-auto {
   @include breakpoint(m) {
