@@ -84,6 +84,10 @@ button:focus {
   color:$white;
   background-color:$canvas-blue;
   text-decoration:none;
+  &:disabled,
+  &:disabled:hover {
+    background-color: $grey2;
+  }
   &:hover{
     background-color:$medium-blue;
     color:$white;
@@ -291,7 +295,7 @@ a.button, a.button-small, a.standalone-link{
 
 
 // The disabled class can be added via javascript to any CTA in addition to a disabled utility.
-.disabled{
-  opacity:0.4;
-  filter: saturate(0);
+.disabled,
+.disabled:hover {
+  background-color: $grey2;
 }
