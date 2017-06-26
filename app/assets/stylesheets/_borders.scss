@@ -1,3 +1,8 @@
+[class^='border-'],
+[class*=' border-'] {
+  border-color: $grey1-a;
+}
+
 /* Basscss Border */
 
 $border-width: 2px;
@@ -113,6 +118,12 @@ $borders: (
     }
   }
 }
+
+.b-w-xs { border-width: $space-xs; }
+.b-w-s { border-width: $space-s; }
+
+.b-tl-rad { border-top-left-radius: $border-radius; }
+.b-tr-rad { border-top-right-radius: $border-radius; }
 
 // ALEX'S STYLES
 .border{
