@@ -49,7 +49,7 @@ $measure-narrow:24em;
  * Font Face Family declarations for style
  */
 // Normal
-.fw-normal {
+.normal {
   font-family:'Avenir LT W01_55 Roman1475520', $base-font-family;
   font-weight: normal;
 }
@@ -60,13 +60,13 @@ $measure-narrow:24em;
 }
 // Bold
 // @todo: deprecate fw-bold
-.bold, .fw-bold, strong, .strong{
+.bold, strong, .strong{
   font-family:'Avenir LT W01_85 Heavy1475544', $base-font-family;
   font-weight: bold;
 }
 // Specialized font to handle weight and italic
 // @todo: deprecate fw-bold
-.bold.italic, .fw-bold.italic{
+.bold.italic {
   font-family:"Avenir LT W01_85 Heavy_1475550";
 }
 
