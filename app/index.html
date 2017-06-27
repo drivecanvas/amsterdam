@@ -7,9 +7,22 @@ title: Amsterdam
   <h1 class="fw-bold">Canvas Living Style Guide</h1>
   <h2>The Canvas Design System</h2>
   <p>This serves as a repository for style guidelines, resources, and html+css components for Canvas.</p>
-  <ul>
-    {{#each components as |component|}}
-      <li><a href="/{{component.path}}">{{component.title}}</a></li>
-    {{/each}}
-  </ul>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h3>Components</h3>
+      <ul class="list-reset">
+        {{#each components as |component|}}
+          <li><a class="link" href="/{{component.path}}">{{component.title}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-12 col-md-6">
+      <h3>Resources</h3>
+      <ul class="list-reset">
+        {{#each resources as |resource|}}
+          <li><a class="link" href="/{{resource.path}}">{{resource.title}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 </div>

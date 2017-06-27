@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  {{> head }}
+
+  <body class="relative" data-spy="scroll" data-target=".scrollspy" data-offset="48">
+    {{> icons }}
+    <!-- <button class='h5'>Toggle Grid</button> -->
+    <div class="">
+        {{> header }}
+        <div class="container py-xl">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="fw-bold">{{title}}</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              {{{ contents }}}
+            </div>
+          </div>
+        </div>
+        <div class="cf container-fluid text-center">
+          <div class="row">
+            <div class="col-6 bg-grey0">
+              {{#if previous}}
+                <a class="py-m block fw-bold" href="/{{previous.path}}"><svg class="icon"> <use xlink:href="#icon-arrow-left"></use> </svg> {{previous.title}} </a>
+              {{/if}}
+            </div>
+            <div class="col-6 bg-grey0">
+              {{#if next}}
+                <a class="py-m block fw-bold" href="/{{next.path}}">{{next.title}} <svg class="icon"> <use xlink:href="#icon-arrow-right"></use> </svg></a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+        {{> footer }}
+    </div>
+  </body>
+</html>

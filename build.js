@@ -55,10 +55,14 @@ var ms = Metalsmith(dir.base)
   .use((files, metalsmith, done) => {
     metalsmith._metadata.collections = null;
     metalsmith._metadata.components = null;
+    metalsmith._metadata.resources = null;
     done()
   })
   .use(collections({
     components: {
+      sortBy: 'title',
+    },
+    resources: {
       sortBy: 'title',
     },
   }))
