@@ -61,7 +61,7 @@ html{
 
 $slider-handle-width: 40px;
 $slider-handle-height: 24px;
-$slider-track-height: 2px;
+$slider-track-height: 4px;
 $padding-slider: 16px;
 
 
@@ -75,7 +75,7 @@ $padding-slider: 16px;
   position: relative;
 
   &:not(.is-single-handle)::after {
-    background: $grey1;
+    background: $grey3;
     content: '';
     height: $slider-track-height;
     position: absolute;
@@ -84,7 +84,7 @@ $padding-slider: 16px;
   }
 
   &.is-single-handle::after {
-    background: $grey1;
+    background: $grey3;
     content: '';
     height: $slider-track-height;
     position: absolute;
@@ -94,7 +94,7 @@ $padding-slider: 16px;
   }
 
   &.is-single-handle::before {
-    background: $grey4;
+    background: $teal;
     content: '';
     height: $slider-track-height;
     left: 0;
@@ -120,12 +120,12 @@ $padding-slider: 16px;
     border: 0;
     box-shadow: none;
     left: calc(-#{$slider-handle-width / 2});
-    top: calc(-#{$slider-handle-height / 2});
+    top: calc(-#{$slider-handle-height / 2} + #{$slider-track-height / 2});
   }
 }
 
 .noUi-target {
-  background-color: $grey1;
+  background-color: $grey3;
   box-shadow: none;
   margin: 24px $padding-slider;
 }
@@ -136,7 +136,7 @@ $padding-slider: 16px;
 }
 
 .noUi-connect {
-  background: $grey4;
+  background: $teal;
 }
 
 
