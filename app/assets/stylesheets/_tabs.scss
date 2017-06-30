@@ -1,0 +1,47 @@
+.tabs-parent-container {
+  border-bottom: 1px solid $grey1;
+  position: relative;
+  height: 2.5rem;
+
+  .tabs-container {
+    position: absolute;
+    height: 2.5rem;
+
+    a {
+      background-color: $grey0-a;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border: 1px solid transparent;
+      color: $grey4-a;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5rem;
+      margin-right: 0.5rem;
+      padding: 0.5rem 1rem;
+
+        &.active {
+        background-color: $white;
+        box-shadow: 0 2px 4px 0 $bs-color-default;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.inner {
+    a {
+      &.active {
+        border: 1px solid $grey0;
+        border-bottom-color: transparent;
+        box-shadow: none;
+      }
+
+      &:first-of-type {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
