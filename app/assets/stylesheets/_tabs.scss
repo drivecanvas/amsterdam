@@ -5,6 +5,14 @@
   .tabs-container {
     position: absolute;
     height: 2.5rem;
+    list-style: none;
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0;
+    }
 
     a {
       background-color: $grey0-a;
@@ -16,10 +24,9 @@
       font-size: 1rem;
       font-weight: 500;
       line-height: 1.5rem;
-      margin-right: 0.5rem;
       padding: 0.5rem 1rem;
 
-        &.active {
+      &.active {
         background-color: $white;
         box-shadow: 0 2px 4px 0 $bs-color-default;
       }
@@ -32,16 +39,22 @@
 
   &.inner {
     border-bottom: 1px solid $grey1;
+    margin-top: 2px;
 
-    a {
-      &.active {
-        border: 1px solid $grey0;
-        border-bottom-color: transparent;
-        box-shadow: none;
-      }
+    li {
+      position: relative;
+      top: -2px;
 
       &:first-of-type {
         margin-left: 1rem;
+      }
+    }
+
+    a {
+      &.active {
+        border: 1px solid $grey1;
+        border-bottom-color: transparent;
+        box-shadow: none;
       }
     }
   }
