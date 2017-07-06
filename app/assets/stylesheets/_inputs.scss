@@ -18,7 +18,9 @@ textarea.form-control {
 }
 
 .form-control {
+  font-size: 1rem;
   padding: 0;
+
   @include placeholder-style {
     color: $grey2-a;
   }

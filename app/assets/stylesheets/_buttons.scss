@@ -265,7 +265,8 @@ a.button, a.button-small, a.standalone-link{
 .cta-primary{
   @extend %global-cta;
   @extend %button;
-  font-size:1rem;
+  font-size: 1rem;
+  font-weight: 700;
   padding:$space-m $space-l;
   background-color:$canvas-blue;
   color:$white!important;
@@ -274,6 +275,10 @@ a.button, a.button-small, a.standalone-link{
   }
   &:active{
     background-color:$dark-blue;
+  }
+  &:disabled,
+  &:disabled:hover {
+    background-color: $grey2;
   }
 }
 // SECONDARY CTA to appear as alternate in conjunction with primary - Dark Grey Text Link without Button.
