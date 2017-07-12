@@ -243,12 +243,13 @@ button:focus {
 // }
 
 // Ensure a elements with button class behave like other inputs and buttons
-a.button, a.button-small, a.standalone-link{
+a.button, a.button-small, a.standalone-link, a.cta-primary, a.cta-secondary {
   display:inline-block;
-  &:hover{
+
+  &:hover {
     text-decoration:none;
   }
-  &:active{
+  &:active {
     text-decoration:none;
   }
 }
