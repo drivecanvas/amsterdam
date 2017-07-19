@@ -1,4 +1,6 @@
 .tabs-parent-container {
+  position: relative;
+
   .tabs-container {
     list-style: none;
     margin-bottom: 0;
@@ -50,6 +52,7 @@
       right: 0;
       z-index: 0;
       height: 1px;
+      width: 100%;
     }
 
     li {
