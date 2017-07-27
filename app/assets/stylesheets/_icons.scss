@@ -1,14 +1,13 @@
-
 .icon {
-	display: inline-block; /* also optional, depending on structure, sometimes helpful for aligning with text content */
-	width: 1.5rem; /* 24px */
-	height: 1.5rem; /* 24px */
-	vertical-align: -.4em;
-	/* fill: currentColor; Optionally applied here, depending on design, and whether or not there are multiple colors in an icon */
+  display: inline-block; /* also optional, depending on structure, sometimes helpful for aligning with text content */
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+  vertical-align: -.4em;
+  /* fill: currentColor; Optionally applied here, depending on design, and whether or not there are multiple colors in an icon */
 }
 
-.icon-logo-wordmark{
-	display: inline-block;
-	height:1.5em;
-	width:7.5em;
+.icon-logo-wordmark {
+  display: inline-block;
+  height: 1.5em;
+  width: 7.5em;
 }
