@@ -1,54 +1,69 @@
 /**
  * Lists
  */
+
 ul, ol, dl {
-    margin-top:0;
     margin-bottom: $space-m;
+    margin-top: 0;
 }
-ul, dl{
+
+ul, dl {
   padding-left: 0;
 }
-ol{
-  padding-left:$space-m;
+
+ol {
   list-style-type: decimal-leading-zero;
+  padding-left: $space-m;
 }
+
 li {
-  line-height:1.5rem;
+  line-height: 1.5rem;
   padding-bottom: $space-s;
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }
 
 /* Definition List Specific */
-dl{
-  list-style:square;
-  dt{
-    font-weight:bold;
+
+dl {
+  list-style: square;
+
+  dt {
+    font-weight: bold;
     padding: $space-s;
   }
-  dd{
+
+  dd {
+    margin: 0;
     padding-bottom: $space-s;
-    margin:0;
   }
 }
 
-.list-reset, .list-style-none{
+.list-reset,
+.list-style-none {
   list-style: none;
 }
+
 .list-check {
   list-style: none;
-  li{
-    &:before{
-      content:' ';
-      background-image:url(../icons/icon-checkmark.svg);
-      width:1em;
-      height:1em;
-      margin-right:$space-s;
-      background-size:contain;
-      background-position:0 2px;
-      display:inline-block;
+
+  li {
+    padding-left: 1.5rem;
+    position: relative;
+
+    &:before {
+      background-image: url('../icons/icon-checkmark.svg');
+      background-position: 0 2px;
+      background-size: contain;
+      content: ' ';
+      display: block;
+      height: 1em;
+      left: 0;
+      position: absolute;
+      width: 1em;
     }
   }
 }
