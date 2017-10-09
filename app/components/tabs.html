@@ -1,0 +1,110 @@
+---
+layout: components.html
+collection: components
+title: Tabs
+---
+
+<div class="bg-grey0 p-m">
+  <div class="col-12">
+    <nav class="tabs tabs-parent-container row">
+      <ul class="tabs-container">
+        <li>
+          <a href="#tab1">Driving with Canvas</a>
+        </li>
+        <li>
+          <a href="#tab2">Owning a Car</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="tab1" class="col-12 bg-white shadow-x-b p-l">
+    <p>
+      Lorem Khaled Ipsum is a major key to success. Wraith talk. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I’m never giving up, I’m just getting started. We the best.
+    </p>
+  </div>
+
+  <div id="tab2" class="col-12 bg-white shadow-x-b p-l">
+    <p>
+      I’m up to something. Learning is cool, but knowing is better, and I know the key to success. Egg whites, turkey sausage, wheat toast, water. Of course they don’t want us to eat our breakfast, so we are going to enjoy our breakfast.
+    </p>
+  </div>
+</div>
+
+<div class="bg-white mt-m pt-m border-xs">
+  <div class="col-12">
+    <nav class="tabs tabs-parent-container inner row">
+      <ul class="tabs-container">
+        <li>
+          <a href="#tab3">Driving with Canvas</a>
+        </li>
+        <li>
+          <a href="#tab4">Owning a Car</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="tab3" class="col-12 p-l">
+    <p>
+      Lorem Khaled Ipsum is a major key to success. Wraith talk. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I’m never giving up, I’m just getting started. We the best.
+    </p>
+  </div>
+
+  <div id="tab4" class="col-12 p-l">
+    <p>
+      I’m up to something. Learning is cool, but knowing is better, and I know the key to success. Egg whites, turkey sausage, wheat toast, water. Of course they don’t want us to eat our breakfast, so we are going to enjoy our breakfast.
+    </p>
+  </div>
+</div>
+
+<div class="py-m"></div>
+
+<button id="toggleGrid" class="button button-small border grey4">Toggle Grid</button>
+
+<script>
+  //Toggle Baseline Grid and show element outlines
+  const toggleGrid = e => {
+    document.body.classList.toggle('grid8')
+    document.body.classList.toggle('debug')
+  };
+
+  document.getElementById('toggleGrid').addEventListener('click', toggleGrid)
+
+  jQuery('nav.tabs').each(function(){
+    // For each set of tabs, we want to keep track of
+    // which tab is active and its associated content
+    var $active, $content, $links = jQuery(this).find('a');
+    // If the location.hash matches one of the links, use that as the active tab.
+    // If no match is found, use the first link as the initial active tab.
+    $active = jQuery($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+    $active.addClass('active');
+
+    $content = jQuery($active[0].hash);
+
+    // Hide the remaining content
+    $links.not($active).each(function () {
+      jQuery(this.hash).hide();
+    });
+
+    // Bind the click event handler
+    jQuery(this).on('click', 'a', function(e){
+      // Make the old tab inactive.
+      $active.removeClass('active');
+      $content.hide();
+
+      // Update the variables with the new link and content
+      $active = jQuery(this);
+      $content = jQuery(this.hash);
+
+      // Make the tab active.
+      $active.addClass('active');
+      $content.show();
+
+      // Prevent the anchor's default click action
+      e.preventDefault();
+
+    });
+  });
+
+</script>

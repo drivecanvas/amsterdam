@@ -1,0 +1,62 @@
+// scss-lint:disable PseudoElement
+@mixin placeholder-style {
+  &:-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+// scss-lint:enable PseudoElement
+
+textarea.form-control {
+  border: 2px solid $grey2;
+  box-shadow: none;
+  padding: 0.5rem;
+
+  &:focus {
+    border-color: $canvas-blue;
+  }
+}
+
+.form-control {
+  font-size: 1rem;
+  padding: 0;
+  line-height: 2rem;
+
+  @include placeholder-style {
+    color: $grey2-a;
+  }
+
+  &label {
+    line-height: 1.5rem;
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+  }
+
+  &:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &[type="text"],
+  &[type="tel"],
+  &[type="password"],
+  &[type="email"],
+  &[type="date"] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $grey2;
+    border-radius: 0;
+    box-shadow: none;
+    color: $grey4-a;
+    font-weight: 400;
+
+    &:focus {
+      border-bottom: 2px solid $canvas-blue;
+    }
+
+    @include placeholder-style {
+      color: $grey2-a;
+    }
+  }
+}

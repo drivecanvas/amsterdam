@@ -1,17 +1,28 @@
+$link-color: $canvas-blue;
+$link-color--hover: $canvas-blue;
+$link-color--active: $dark-blue;
+
+$nav-link-color: $grey4-a !default;
+$nav-link-color--hover: $grey4;
+$nav-link-color--active: $grey4;
+
 a {
   transition: all .1s;
-  color:var(--link-color);
-  text-decoration:underline;
-  &:visited{
-    color:var(--link-color);
+  color: $link-color;
+  text-decoration: none;
+
+  &:visited {
+   // color: $link-color;
   }
-  &:hover{
-    color:var(--link-color--hover);
+  &:hover {
+    color: $link-color--hover;
+    text-decoration: underline;
   }
-  &:active{
-    color:var(--link-color--active);
+  &:active {
+    color: $link-color--active;
   }
 }
+
 a:link,
 a:visited {
   color: var(--link-color);
@@ -27,4 +38,40 @@ a:visited {
 .link-underline{
   text-decoration:underline;
   text-decoration-skip: ink;
+}
+.color-inherit {
+  color: inherit;
+}
+nav{
+  a:link,
+  a:visited {
+    color: $nav-link-color;
+  }
+  a{
+    color:$nav-link-color;
+    text-decoration:none;
+    &:hover{
+      color:$nav-link-color--hover;
+      text-decoration:none;
+    }
+    &:active{
+      color:$nav-link-color--active;
+    }
+  }
+}
+.cursor-pointer{
+  cursor:pointer;
+}
+
+
+@each $color-name, $color-value in $colors {
+  a.#{$color-name} {
+    color: $color-value;
+    &:hover{
+      color: $color-value;
+    }
+    &:active{
+      color: $color-value;
+    }
+  }
 }

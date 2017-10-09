@@ -19,16 +19,16 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-p, blockquote{
+p, blockquote {
   margin-bottom:$space-m;
 }
 // Line lengths / measure
 $measure-width:32em;
-.measure, .mx{
+.measure, .mx {
   max-width:$measure-width;
 }
 $measure-narrow:24em;
-.measure-narrow{
+.measure-narrow {
   max-width:$measure-narrow;
 }
 
@@ -36,7 +36,7 @@ $measure-narrow:24em;
 .font-family-inherit { font-family: inherit }
 .font-size-inherit { font-size: inherit }
 .text-decoration-none { text-decoration: none }
-.quote{
+.quote {
   box-sizing:border-box;
   box-shadow: -2px 0 0 0;
   padding-left: $space-m;
@@ -49,37 +49,36 @@ $measure-narrow:24em;
  * Font Face Family declarations for style
  */
 // Normal
-.fw-normal {
-  font-family:'Avenir LT W01_55 Roman1475520', $base-font-family;
+.normal {
+  font-family: 'Avenir LT W01_55 Roman1475520', $base-font-family;
   font-weight: normal;
 }
 // Italic
 .italic {
-  font-family:'Avenir LT W01_55 Obliqu1475526', $base-font-family;
-  font-style:italic;
+  font-family: 'Avenir LT W01_55 Obliqu1475526', $base-font-family;
+  font-style: italic;
 }
 // Bold
-.fw-bold, strong, .strong{
-  font-family:'Avenir LT W01_85 Heavy1475544', $base-font-family;
-  font-weight: bold;
+.bold, strong, .strong {
+  font-family: 'Avenir LT W01_85 Heavy1475544', $base-font-family;
 }
 // Specialized font to handle weight and italic
-.fw-bold.italic{
-  font-family:"Avenir LT W01_85 Heavy_1475550";
+.bold.italic {
+  font-family: 'Avenir LT W01_85 Heavy_1475550', $base-font-family;
 }
 
 
 /*
  * Utilities
  */
-.caps{
+.caps {
   text-transform: uppercase;
   letter-spacing: .1em; }
-.uppercase{ text-transform:uppercase; }
-.text-left   { text-align: left }
+.uppercase { text-transform:uppercase; }
+.text-left { text-align: left }
 .text-center { text-align: center }
-.text-right  { text-align: right }
-.text-justify{ text-align: justify }
+.text-right { text-align: right }
+.text-justify { text-align: justify }
 .nowrap { white-space: nowrap }
 .break-word { word-wrap: break-word }
 .underline { text-decoration: underline }
@@ -89,26 +88,26 @@ $measure-narrow:24em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.ls-1{
+.ls-1 {
   letter-spacing:.1em;
 }
-.ls-2{
+.ls-2 {
   letter-spacing:.2em;
 }
-.kern1{
+.kern1 {
   letter-spacing:-.1em;
 }
-.kern2{
+.kern2 {
   letter-spacing:-.2em;
 }
-small, .small{
+small, .small {
   font-size:0.875rem;
   line-height:1.5rem;
   margin-top:0.125rem;
   color:$grey3-a;
 }
 
-hr{
+hr {
   height:7px;
   border-top:none;
   border-left:none;

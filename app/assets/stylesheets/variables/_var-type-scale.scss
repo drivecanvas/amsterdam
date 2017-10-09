@@ -21,19 +21,25 @@ $base-line-height: 1.5;
 //4.5rem; /*72px*/
 
 // Defaults for unclassed elements.
-$s-h6: 0.875rem;
-$s-h5: 1rem;
-$s-h4: 1.5rem;
-$s-h3: 2rem;
-$s-h2: 2.5rem;
-$s-h1: 3rem;
+$s-h6: 0.75rem;
+$s-h5: 0.875rem;
+$s-h4: 1rem;
+$s-h3: 1.25rem;
+$s-h2: 1.5rem;
+$s-h1: 2rem;
 
-h1, .h1 { font-size: $s-h1 }
-h2, .h2 { font-size: $s-h2 }
-h3, .h3 { font-size: $s-h3 }
-h4, .h4 { font-size: $s-h4 }
+h1, .h1 { font-size: $s-h1; font-weight: bold; }
+h2, .h2 { font-size: $s-h2; font-weight: bold; }
+h3, .h3 { font-size: $s-h3; font-weight: bold; }
+h4, .h4 { font-size: $s-h4; font-weight: bold; }
 h5, .h5 { font-size: $s-h5; line-height:1.5rem; }
-h6, .h6 { font-size: $s-h6; line-height:1.5rem; }
+h6, .h6 {
+  font-size: $s-h6;
+  line-height:1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
 // /!\ This will define classes to control:
 // * font-size
@@ -98,62 +104,33 @@ $f-sizes: (
   ),
 );
 
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
 
-/*
- * IMPORTANT, PLEASE READ
- * We have refactored the old model of using .f-size-weight-style combinations into more utilitarian classes
- * .fs-##
- * .fw-###
- * .italic (because all other instances default to normal)
- */
+@each $size-name, $size in $f-sizes {
+ .fs-#{$size-name} {
+    font-size: map-get($size, font-size);
+    line-height: map-get($size, line-height);
+  }
+}
 
- $breakpoints: (
-   xs: 0,
-   sm: 576px,
-   md: 768px,
-   lg: 992px,
-   xl: 1200px
- ) !default;
-
- @each $size-name, $size in $f-sizes {
-   .fs-#{$size-name} {
-     font-size: map-get($size, font-size);
-     line-height: map-get($size, line-height);
-   }
- }
-
- @each $breakpoint-name, $breakpoint in $breakpoints {
-   @each $size-name, $size in $f-sizes {
-     .#{$breakpoint-name}-fs-#{$size-name} {
-      @media screen and (min-width: $breakpoint){
-       font-size: map-get($size, font-size);
-       line-height: map-get($size, line-height);
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  @each $size-name, $size in $f-sizes {
+    .#{$breakpoint-name}-fs-#{$size-name} {
+      @media screen and (min-width: $breakpoint) {
+        font-size: map-get($size, font-size);
+        line-height: map-get($size, line-height);
       }
-     }
-   }
- }
+    }
+  }
+}
 
 // END OF SIZING
-
-
-
-// $f-weights: (
-//   100: 100,
-//   200: 200,
-//   300: 300,
-//   400: 400,
-//   500: 500,
-//   600: 600,
-//   700: 700,
-//   800: 800,
-// );
-
-// @each $weight-name, $weight in $f-weights {
-//   .fw-#{$weight-name} {
-//     font-weight: $weight;
-//   }
-// }
-
 
 @mixin font($name) {
   @extend .#{$name};
