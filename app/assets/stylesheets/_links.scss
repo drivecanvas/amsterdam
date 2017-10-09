@@ -1,30 +1,22 @@
-$link-color: $canvas-blue!default;
-$link-color--hover: $medium-blue;
-$link-color--active: $dark-blue;
-
-$nav-link-color: $grey3!default;
-$nav-link-color--hover: $grey4;
-$nav-link-color--active: $grey4;
-
 a {
   transition: all .1s;
-  color:$link-color;
+  color:var(--link-color);
   text-decoration:underline;
   &:visited{
-  //  color: $link-color;
+    color:var(--link-color);
   }
   &:hover{
-    // text-decoration:underline;
-    color:$link-color--hover;
+    color:var(--link-color--hover);
   }
   &:active{
-    color:$link-color--active;
+    color:var(--link-color--active);
   }
 }
 a:link,
 a:visited {
-//  color: $link-color;
+  color: var(--link-color);
 }
+
 // Use .link class for standalone links
 .link {
   text-decoration: none;
@@ -35,37 +27,4 @@ a:visited {
 .link-underline{
   text-decoration:underline;
   text-decoration-skip: ink;
-}
-.color-inherit {
-  color: inherit;
-}
-a.white{
-  color:$white;
-  &:hover{
-    color:$white;
-  }
-  &:active{
-    color:$white;
-  }
-}
-
-nav{
-  a:link,
-  a:visited {
-    color: $nav-link-color;
-  }
-  a{
-    color:$nav-link-color;
-    text-decoration:none;
-    &:hover{
-      color:$nav-link-color--hover;
-      text-decoration:none;
-    }
-    &:active{
-      color:$nav-link-color--active;
-    }
-  }
-}
-.cursor-pointer{
-  cursor:pointer;
 }
