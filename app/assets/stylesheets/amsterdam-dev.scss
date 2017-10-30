@@ -1,0 +1,28 @@
+/**
+ * This file should not be included by other projects.
+ * It includes utilities for prototyping within Amsterdam.
+ *
+ */
+
+// Debugging Styles
+
+:root {
+  --orange: #f90;
+  --pink: rgba(255, 63, 0, .5);
+  --cyan: rgba(0, 191, 255, .25);
+
+  --debug1: var(--pink);
+  --debug2: var(--cyan);
+}
+.debug,
+.debug * {
+  outline: 1px solid var(--cyan);
+  mix-blend-mode: multiply;
+}
+.grid8 {
+  background-image:
+    linear-gradient(transparent 7px, var(--cyan) 8px, transparent 8px),
+    linear-gradient(90deg, transparent 7px, var(--cyan) 8px, transparent 8px);
+  background-size: 8px 8px;
+  background-position: left top;
+}
