@@ -112,9 +112,9 @@ $padding-slider: 16px;
   img{
     transform:rotate(13deg);
   }
-  right:15%;
+  right:10%;
   top:0;
-  width:12rem;
+  width:11rem;
   @include breakpoint(s) {
     right:20%;
     bottom:2%;
@@ -127,8 +127,8 @@ $padding-slider: 16px;
   };
 }
 .homeHeroCards{
-  width:14rem;
-  right:15%;
+  width:13rem;
+  right:0%;
   bottom:10%;
   @include breakpoint(s) {
     right:22%;
