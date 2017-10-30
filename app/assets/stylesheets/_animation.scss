@@ -117,3 +117,85 @@ border-radius:1em;
 #hiwNav.affix{
   top: 202px;
 }
+
+// Homepage Animations
+@keyframes floatingEffect{
+  0% {
+    transform:translate3d(0, 0, 0);
+  }
+  33% {
+    transform:translate3d(0, 2rem, 0);
+  }
+  80% {
+    transform:translate3d(0, -1.5rem, 0);
+  }
+  100% {
+    transform:translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes floatingEffect{
+  0% {
+    transform:translate3d(0, 0, 0);
+  }
+  33% {
+    transform:translate3d(0, 2rem, 0);
+  }
+  80% {
+    transform:translate3d(0, -1.5rem, 0);
+  }
+  100% {
+    transform:translate3d(0, 0, 0);
+  }
+}
+.a-floatingEffect{
+  animation: floatingEffect 60s ease infinite;
+}
+
+@keyframes radarEffect {
+  0% {
+    opacity:1;
+    transform:scale(.5, .5);
+  }
+  40% {
+    opacity:0;
+    transform:scale(2, 2);
+  }
+  100% {
+    opacity:0;
+    transform:scale(2, 2);
+  }
+}
+@-webkit-keyframes radarEffect {
+  0% {
+    opacity:1;
+    transform:scale(.5);
+  }
+  40% {
+    opacity:0;
+    transform:scale(2);
+  }
+  100% {
+    opacity:0;
+    transform:scale(2);
+  }
+}
+
+.a-radarEffect{
+  animation: radarEffect 5s ease infinite;
+}
+
+
+
+// Animation Utilities
+.a-reverse{
+  animation-direction:reverse;
+}
+.a-delay1s{
+  animation-delay:1s;
+}
+.a-delay2s{
+  animation-delay:2s;
+}
+.a-delay3s{
+  animation-delay:3s;
+}
