@@ -39,23 +39,23 @@ title: Canvas
       <div class="homeHeroBackgroundOffset">
         <div class="width-100 relative height-100 flex z1" style="min-width:100vh;">
           <!-- The Phone -->
-          <div class="homeHeroPhone relative a-floatingEffect z3  mx-auto my-auto d-none d-lg-flex">
-            <img src="assets/images/home/hero/phone.png" class="max-width-100" alt="" style="">
+          <div class="homeHeroPhone relative a-floatingEffect z3  mx-auto my-auto d-none d-lg-block">
+            <img src="assets/images/home/hero/phone.png" class="" alt="" style="">
           </div>
           <!-- Animated circle -->
-          <div class="absolute a-radarEffect flex top-0 left-0 right-0 bottom-0 z2">
+          <div class="absolute a-radarEffect flex top-0 left-0 right-0 bottom-0 z2 d-none-ie">
             <div class="circle p-xxl mx-auto my-auto border border-teal"  style="padding:32vh;"> </div>
           </div>
           <!-- Small Circle -->
-          <div class="absolute flex top-0 left-0 right-0 bottom-0 z2">
+          <div class="absolute flex top-0 left-0 right-0 bottom-0 z2 d-none-ie">
             <div class="circle p-xxl mx-auto my-auto border border-teal"  style="padding:16vh; opacity:.6;"> </div>
           </div>
           <!-- Medium Circle -->
-          <div class="absolute flex top-0 left-0 right-0 bottom-0 z2">
+          <div class="absolute flex top-0 left-0 right-0 bottom-0 z2 d-none-ie">
             <div class="circle p-xxl mx-auto my-auto border border-teal" style="padding:32vh; opacity:.4"> </div>
           </div>
           <!-- Large Circle -->
-          <div class="absolute flex top-0 left-0 right-0 bottom-0 z1">
+          <div class="absolute flex top-0 left-0 right-0 bottom-0 z1 d-none-ie">
             <div class="circle p-xxxl mx-auto my-auto border border-teal" style="padding:48vh; opacity:.2;"> </div>
           </div>
         </div>
@@ -68,35 +68,35 @@ title: Canvas
 
 
 <script type="text/javascript">
-      var floatingContainer = document.querySelector('.floating-container');
+      //var floatingContainer = document.querySelector('.floating-container');
 
       // Find our SVG Lines
       // var lineA = document.getElementById('lineA');
       // var lineB = document.getElementById('lineB');
-      var phone = document.getElementById('phone-marker');
+      //var phone = document.getElementById('phone-marker');
       // Setup the constant return timing
-      setInterval(function() {
+      //setInterval(function() {
 
         // Return the position of the phone for line a and b, also browser resizing
-        var positionPhone = phone.getBoundingClientRect();
+        //var positionPhone = phone.getBoundingClientRect();
         // lineA.setAttribute('x2', positionPhone.left + window.scrollX +32);
         // lineA.setAttribute('y2', positionPhone.top + window.scrollY -32);
         // lineB.setAttribute('x2', positionPhone.left + window.scrollX +32);
         // lineB.setAttribute('y2', positionPhone.top + window.scrollY -32);
 
         // Return the position of the keys for line a
-        var elementA = document.getElementById('position-marker-a');
-        var positionA = elementA.getBoundingClientRect();
+        //var elementA = document.getElementById('position-marker-a');
+        //var positionA = elementA.getBoundingClientRect();
         // lineA.setAttribute('x1', positionA.left + window.scrollX +24);
         // lineA.setAttribute('y1', positionA.top + window.scrollY -64);
 
         // Return the position of the cards for line b
-        var elementB = document.getElementById('position-marker-b');
-        var positionB = elementB.getBoundingClientRect();
+        //var elementB = document.getElementById('position-marker-b');
+        //var positionB = elementB.getBoundingClientRect();
         // lineB.setAttribute('x1', positionB.left + window.scrollX +32);
         // lineB.setAttribute('y1', positionB.top + window.scrollY -72);
 
-      }, 24);
+      //}, 24);
       // 24fps for smoothness, reduce speed to ease up the CPU
 
     </script>
