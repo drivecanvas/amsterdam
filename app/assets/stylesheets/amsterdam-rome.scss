@@ -22,9 +22,6 @@ $padding-slider: 16px;
   height: $slider-track-height;
 
   .noUi-handle {
-    //@extend .icon-slider-sm;
-    //width:1em;
-    //height: 1em;
     width: $slider-handle-width;
     height: $slider-handle-height;
     background-image: url(../images/icon/icon-slider-control.svg);
@@ -52,70 +49,142 @@ $padding-slider: 16px;
   box-shadow: none;
 }
 
-// Homepage Specific Styles
+$homepage-container: 50rem;
+$homepage-container-padding-top: 10rem;
+$circle-width-large: 40rem;
+$circle-width-medium: 30rem;
+$circle-width-small: 20rem;
+$mobile-padding-right: 35%;
+$mobile-padding-left: -10%;
 
+.homeHeroBackgroundOffset{
+  transform: translateX(35%);
+  width: $homepage-container;
+  height: $homepage-container;
+  right: 0;
+  position: absolute;
+}
+
+// Homepage Specific Styles
 .homeHeroKeys{
-  img{
+  position: absolute;
+  top: -10%;
+  left: $mobile-padding-left;
+  width: 16rem;
+
+  img {
     transform: rotate(13deg);
   }
-  right: 10%;
-  top: 0;
-  width: 11rem;
-  @include breakpoint(s) {
-    right: 20%;
-    bottom: 2%;
-    width: 16rem;
-  };
-  @include breakpoint(m) {
-    right: 25%;
-    top: 0%;
-    width: 16rem;
-  };
+
+  @media(max-width: map-get($grid-breakpoints, 'md')) {
+    right: $mobile-padding-right;
+    left: auto;
+  }
 }
 
 .homeHeroCards{
-  width: 13rem;
-  right: 0%;
-  bottom: 10%;
-  @include breakpoint(s) {
-    right: 22%;
-    bottom: 3%;
-    width: 20rem;
-  };
-  @include breakpoint(m) {
-    right: 30%;
-    bottom: 5%;
-    width: 20rem;
-  };
+  position: absolute;
+  width: 20rem;
+  left: $mobile-padding-left;
+  bottom: 5%;
+
+  @media(max-width: map-get($grid-breakpoints, 'md')) {
+    right: $mobile-padding-right;
+    left: auto;
+  }
 }
 
-.homeHeroPhone{
+.homeHeroPhone {
   max-width: 24rem;
+
   img{
     transform: rotate(5deg);
   }
 }
 
-.homeHeroBackgroundOffset{
-  transform: translateX(60%);
-  @include breakpoint(l) {
-    transform: translateX(36%);
+.homepage-container {
+  height: $homepage-container;
+
+  .homepage-circle {
+    border-radius: 100%;
+    border: 1px solid $teal;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    &.small {
+      height: $circle-width-small;
+      width: $circle-width-small;
+      opacity: .6;
+    }
+
+    &.medium {
+      height: $circle-width-medium;
+      width: $circle-width-medium;
+      opacity: .4;
+    }
+
+    &.animated {
+      height: $circle-width-medium;
+      width: $circle-width-medium;
+      opacity: .6;
+    }
+
+    &.large {
+      height: $circle-width-large;
+      width: $circle-width-large;
+      opacity: .2;
+    }
+  }
+}
+
+.homepage-illustration-container {
+  position: absolute;
+  height: $homepage-container;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+// Homepage MediaQueries
+
+@media (min-width: 576px) {
+  .homepage-illustration-container {
+    padding-left: calc((100vw - 540px) / 2);
+    padding-right: calc((100vw - 540px) / 2);
+  }
+}
+
+@media (min-width: 768px) {
+  .homepage-illustration-container {
+    padding-left: calc((100vw - 720px) / 2);
+    padding-right: calc((100vw - 720px) / 2);
+  }
+}
+
+@media (min-width: 992px) {
+  .homepage-illustration-container {
+    padding-left: calc((100vw - 960px) / 2);
+    padding-right: calc((100vw - 960px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .homepage-illustration-container {
+    padding-left: calc((100vw - 1140px) / 2);
+    padding-right: calc((100vw - 1140px) / 2);
   }
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-     /* IE10+ CSS styles go here */
-     .d-none-ie{
-       display: none run-in!important;
-     }
+  /* IE10+ CSS styles go here */
+  .d-none-ie{
+    display: none run-in!important;
+  }
 
-     .homeHeroPhone{
-       padding-top: 10%;
-       max-width: 24rem;
-
-       img{
-         transform: rotate(5deg);
-       }
-     }
-
+  .homeHeroPhone{
+    padding-top: 10%;
+    max-width: 24rem;
+  }
 }
