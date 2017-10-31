@@ -3,11 +3,11 @@ layout: default.html
 title: Canvas
 ---
 
-<section class="relative height-100">
+<section class="relative">
 
   <!-- THIS IS THE TEXT CONTENT -->
-  <div class="container relative z2">
-    <div class="row height-100">
+  <div class="container relative z2 overflow-visible">
+    <div class="row homepage-container">
       <div class="col-12 col-md-8 align-self-center">
         <div class="">
           <h1 class="md-fs-48 lg-fs-64 bold">A simple alternative <br> to car ownership.</h1>
@@ -23,45 +23,42 @@ title: Canvas
   </div>
 
   <!--  THIS IS THE BACKGROUND CONTENT-->
-  <div class="absolute top-0 left-0 right-0 bottom-0 z1">
-    <!-- Keys -->
-    <div class="homeHeroKeys a-floatingEffect a-delay2s overflow-visible absolute z4" style="">
-      <img src="assets/images/home/hero/keys.png" class="relative z3"  alt="">
-    </div>
-
-    <!-- Cards -->
-    <div class="homeHeroCards a-floatingEffect a-reverse overflow-visible absolute z4" style="">
-      <img src="assets/images/home/hero/cards.png" class="relative z3" alt="">
-    </div>
-
-  <!-- Phone & Rings -->
-    <div class="overflow-hidden absolute width-100 height-100 top-0 left-0 z1">
+  <div class="homepage-illustration-container z1">
+    <div class="relative">
       <div class="homeHeroBackgroundOffset">
-        <div class="width-100 relative height-100 flex z1" style="min-width:100vh;">
+        <!-- Keys -->
+        <div class="homeHeroKeys a-floatingEffect a-delay2s overflow-visible z4" style="">
+          <img src="assets/images/home/hero/keys.png" class="relative z3" alt="">
+        </div>
+
+        <!-- Cards -->
+        <div class="homeHeroCards a-floatingEffect a-reverse overflow-visible z4" style="">
+          <img src="assets/images/home/hero/cards.png" class="relative z3" alt="">
+        </div>
+
+        <div class="relative homepage-container overflow-hidden flex z1">
           <!-- The Phone -->
-          <div class="homeHeroPhone relative a-floatingEffect z3  mx-auto my-auto d-none d-lg-block">
+          <div class="homeHeroPhone relative a-floatingEffect z3 mx-auto my-auto d-none d-lg-block">
             <img src="assets/images/home/hero/phone.png" class="" alt="" style="">
           </div>
           <!-- Animated circle -->
-          <div class="absolute a-radarEffect flex top-0 left-0 right-0 bottom-0 z2 d-none d-lg-flex d-none-ie">
-            <div class="circle p-xxl mx-auto my-auto border border-teal"  style="padding:32vh;"> </div>
+          <div class="absolute a-radarEffect top-0 left-0 right-0 bottom-0 z2 d-none d-lg-flex d-none-ie">
+            <div class="homepage-circle animated"></div>
           </div>
           <!-- Small Circle -->
-          <div class="absolute flex top-0 left-0 right-0 bottom-0 z2 d-none-ie">
-            <div class="circle p-xxl mx-auto my-auto border border-teal"  style="padding:16vh; opacity:.6;"> </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2 d-flex d-none-ie">
+            <div class="homepage-circle small"></div>
           </div>
           <!-- Medium Circle -->
-          <div class="absolute flex top-0 left-0 right-0 bottom-0 z2 d-none-ie">
-            <div class="circle p-xxl mx-auto my-auto border border-teal" style="padding:32vh; opacity:.4"> </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z2 d-flex d-none-ie">
+            <div class="homepage-circle medium"></div>
           </div>
           <!-- Large Circle -->
-          <div class="absolute flex top-0 left-0 right-0 bottom-0 z1 d-none-ie">
-            <div class="circle p-xxxl mx-auto my-auto border border-teal" style="padding:48vh; opacity:.2;"> </div>
+          <div class="absolute top-0 left-0 right-0 bottom-0 z1 d-flex d-none-ie">
+            <div class="homepage-circle large"></div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
 </section>
