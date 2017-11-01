@@ -28,7 +28,7 @@
 // BUTTON PROPERTIES
 //
 // These are used for any CTA that looks like a button, whether filled or outlined in appearance.
-@mixin button {
+@mixin default-button {
   border-radius: $border-radius;
   text-align: center;
   line-height: 1rem;
@@ -37,7 +37,7 @@
 }
 
 button {
-  @include button;
+  @include default-button;
 }
 
 button:focus {
@@ -63,17 +63,19 @@ button:focus {
 // Solid (default) --  No Declarations
 // Border          -- Declare Transparent Background Color and Inset Box Shadow with no declared color (will inherit text color class)
 .button {
+  @include default-button;
+  @include global-cta;
   @include button-size-default;
 }
 
 .button-small {
+  @include default-button;
+  @include global-cta;
   @include button-size-small;
 }
 
 .button,
 .button-small {
-  @include global-cta;
-  @include button;
   // Set Background colors for BG-classes
   color: $white;
   background-color: $canvas-blue;
@@ -233,7 +235,7 @@ button:focus {
 .standalone-link,
 .standalone-link-small {
   @include global-cta;
-  @include button;
+  @include default-button;
   text-decoration: none;
 }
 
@@ -300,7 +302,7 @@ a.cta-secondary {
 
 .cta-primary {
   @include global-cta;
-  @include button;
+  @include default-button;
   font-size: 1rem;
   font-weight: 700;
   padding: $space-m $space-l;
@@ -323,7 +325,7 @@ a.cta-secondary {
 // SECONDARY CTA to appear as alternate in conjunction with primary - Dark Grey Text Link without Button.
 .cta-secondary {
   @include global-cta;
-  @include button;
+  @include default-button;
   color: $grey4 !important; //!important to overide default link behavior for a tags with cta applied
   text-decoration: none;
   background-color: transparent;
