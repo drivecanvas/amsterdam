@@ -1,10 +1,10 @@
-/*
-  BOX SIZING
+//
+// BOX SIZING
+//
+// A saner box-model.
+// Only applied to unqualified elements where this model makes sense.
+// Apply .border-box where needed.
 
-  A saner box-model.
-  Only applied to unqualified elements where this model makes sense.
-  Apply .border-box where needed.
-*/
 nav,
 main,
 section,
@@ -25,56 +25,56 @@ input[type="email"],
 input[type="search"],
 input[type="number"],
 input[type="password"],
-nav:before,
-main:before,
-section:before,
-article:before,
-aside:before,
-header:before,
-footer:before,
-div:before,
-details:before,
-summary:before,
-form:before,
-fieldset:before,
-textarea:before,
-input[type="text"]:before,
-input[type="tel"]:before,
-input[type="url"]:before,
-input[type="email"]:before,
-input[type="search"]:before,
-input[type="number"]:before,
-input[type="password"]:before,
-nav:after,
-main:after,
-section:after,
-article:after,
-aside:after,
-header:after,
-footer:after,
-div:after,
-details:after,
-summary:after,
-form:after,
-fieldset:after,
-textarea:after,
-input[type="text"]:after,
-input[type="tel"]:after,
-input[type="url"]:after,
-input[type="email"]:after,
-input[type="search"]:after,
-input[type="number"]:after,
-input[type="password"]:after,
+nav::before,
+main::before,
+section::before,
+article::before,
+aside::before,
+header::before,
+footer::before,
+div::before,
+details::before,
+summary::before,
+form::before,
+fieldset::before,
+textarea::before,
+input[type="text"]::before,
+input[type="tel"]::before,
+input[type="url"]::before,
+input[type="email"]::before,
+input[type="search"]::before,
+input[type="number"]::before,
+input[type="password"]::before,
+nav::after,
+main::after,
+section::after,
+article::after,
+aside::after,
+header::after,
+footer::after,
+div::after,
+details::after,
+summary::after,
+form::after,
+fieldset::after,
+textarea::after,
+input[type="text"]::after,
+input[type="tel"]::after,
+input[type="url"]::after,
+input[type="email"]::after,
+input[type="search"]::after,
+input[type="number"]::after,
+input[type="password"]::after,
 .border-box,
-.border-box:before,
-.border-box:after {
+.border-box::before,
+.border-box::after {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
 // html {
-//   box-sizing: border-box;
+//   box-sizing:: border-box;
 // }
-// *, *:before, *:after {
-//   box-sizing: inherit;
+// *, *::before, *::after {
+//   box-sizing:: inherit;
 // }

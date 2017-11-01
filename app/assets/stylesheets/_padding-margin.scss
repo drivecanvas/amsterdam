@@ -5,8 +5,8 @@ $properties: (
 
 $directions: (
  '':  (''),
- 'y': ('-bottom', '-top'),
- 'x': ('-left', '-right'),
+ 'y': ("-bottom", "-top"),
+ 'x': ("-left", "-right"),
  'l': ('-left'),
  'r': ('-right'),
  't': ('-top'),
@@ -64,7 +64,22 @@ $positive-spaces: (
   }
 }
 
-.ml-auto { margin-left: auto }
-.mr-auto { margin-right: auto }
-.my-auto, .vertical-center { margin-top:auto; margin-bottom:auto}
-.mx-auto, .float-center { margin-left: auto; margin-right: auto; }
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.my-auto,
+.vertical-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mx-auto,
+.float-center {
+  margin-left: auto;
+  margin-right: auto;
+}

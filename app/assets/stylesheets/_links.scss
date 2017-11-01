@@ -14,10 +14,12 @@ a {
   &:visited {
    // color: $link-color;
   }
+
   &:hover {
     color: $link-color--hover;
     text-decoration: underline;
   }
+
   &:active {
     color: $link-color--active;
   }
@@ -30,46 +32,55 @@ a:visited {
 // Use .link class for standalone links
 .link {
   text-decoration: none;
-  &:hover{
-    text-decoration:none;
+
+  &:hover {
+    text-decoration: none;
   }
 }
-.link-underline{
-  text-decoration:underline;
-  text-decoration-skip: ink;
+
+.link-underline {
+  text-decoration: underline;
 }
+
 .color-inherit {
   color: inherit;
 }
-nav{
+
+nav {
   a:link,
   a:visited {
     color: $nav-link-color;
   }
-  a{
-    color:$nav-link-color;
-    text-decoration:none;
-    &:hover{
-      color:$nav-link-color--hover;
-      text-decoration:none;
+
+  a {
+    color: $nav-link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $nav-link-color--hover;
+      text-decoration: none;
     }
-    &:active{
-      color:$nav-link-color--active;
+
+    &:active {
+      color: $nav-link-color--active;
     }
   }
 }
-.cursor-pointer{
-  cursor:pointer;
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 
 @each $color-name, $color-value in $colors {
   a.#{$color-name} {
     color: $color-value;
-    &:hover{
+
+    &:hover {
       color: $color-value;
     }
-    &:active{
+
+    &:active {
       color: $color-value;
     }
   }

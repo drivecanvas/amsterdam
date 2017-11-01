@@ -1,43 +1,74 @@
-/**
- * Vertical rhthym resets / defaults
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
-// Set Global Default on Body
-body {
-    font-family: 'Avenir LT W01_55 Roman1475520', $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    color:$grey4-a;
-    //font-weight: normal;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
+// Vertical rhthym resets / defaults
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, blockquote {
-  margin-bottom:$space-m;
+// Set Global Default on Body
+body {
+  font-family: 'Avenir LT W01_55 Roman1475520', $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $grey4-a;
+  //font-weight: normal;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+  margin-bottom: $space-m;
 }
 // Line lengths / measure
 $measure-width:32em;
-.measure, .mx {
-  max-width:$measure-width;
-}
-$measure-narrow:24em;
-.measure-narrow {
-  max-width:$measure-narrow;
+
+.measure,
+.mx {
+  max-width: $measure-width;
 }
 
-/* Basscss Typography */
-.font-family-inherit { font-family: inherit }
-.font-size-inherit { font-size: inherit }
-.text-decoration-none { text-decoration: none }
+$measure-narrow:24em;
+
+.measure-narrow {
+  max-width: $measure-narrow;
+}
+
+// Basscss Typography
+.font-family-inherit {
+  font-family: inherit;
+}
+
+.font-size-inherit {
+  font-size: inherit;
+ }
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
 .quote {
-  box-sizing:border-box;
+  box-sizing: border-box;
   box-shadow: -2px 0 0 0;
   padding-left: $space-m;
   padding-top: $space-m;
@@ -45,9 +76,9 @@ $measure-narrow:24em;
   margin-bottom: $space-m;
 }
 
-/*
- * Font Face Family declarations for style
- */
+//
+// Font Face Family declarations for style
+//
 // Normal
 .normal {
   font-family: 'Avenir LT W01_55 Roman1475520', $base-font-family;
@@ -59,7 +90,9 @@ $measure-narrow:24em;
   font-style: italic;
 }
 // Bold
-.bold, strong, .strong {
+.bold,
+strong,
+.strong {
   font-family: 'Avenir LT W01_85 Heavy1475544', $base-font-family;
 }
 // Specialized font to handle weight and italic
@@ -68,56 +101,83 @@ $measure-narrow:24em;
 }
 
 
-/*
- * Utilities
- */
+//
+// Utilities
+//
 .caps {
   text-transform: uppercase;
-  letter-spacing: .1em; }
-.uppercase { text-transform:uppercase; }
-.text-left { text-align: left }
-.text-center { text-align: center }
-.text-right { text-align: right }
-.text-justify { text-align: justify }
-.nowrap { white-space: nowrap }
-.break-word { word-wrap: break-word }
-.underline { text-decoration: underline }
+  letter-spacing: .1em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 .truncate {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .ls-1 {
-  letter-spacing:.1em;
+  letter-spacing: 0.1em;
 }
+
 .ls-2 {
-  letter-spacing:.2em;
+  letter-spacing: 0.2em;
 }
+
 .kern1 {
-  letter-spacing:-.1em;
+  letter-spacing: -0.1em;
 }
+
 .kern2 {
-  letter-spacing:-.2em;
+  letter-spacing: -0.2em;
 }
-small, .small {
-  font-size:0.875rem;
-  line-height:1.5rem;
-  margin-top:0.125rem;
-  color:$grey3-a;
+
+small,
+.small {
+  color: $grey3-a;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-top: 0.125rem;
 }
 
 hr {
-  height:7px;
-  border-top:none;
-  border-left:none;
-  border-right:none;
-  border-bottom:1px solid $grey1-a;
-  margin-bottom:$space-s;
-  width:100%;
+  border-bottom: 1px solid $grey1-a;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  height: 7px;
+  margin-bottom: $space-s;
+  width: 100%;
 }
-
-@import
-"headings",
-"lists"
-;
