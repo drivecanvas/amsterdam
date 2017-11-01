@@ -54,38 +54,39 @@ $padding-slider: 16px;
 
 // Homepage Specific Styles
 
-.homeHeroKeys{
-  img{
-    transform: rotate(13deg);
+.homeHeroKeys {
+  img {
+    transform:rotate(13deg);
   }
-  right: 10%;
-  top: 0;
-  width: 11rem;
+  right:10%;
+  top:0;
+  width:11rem;
   @include breakpoint(s) {
-    right: 20%;
-    bottom: 2%;
+    //bottom:2%;
     width: 16rem;
   };
   @include breakpoint(m) {
-    right: 25%;
-    top: 0%;
-    width: 16rem;
+    right:15%;
+  };
+  @include breakpoint(l) {
+    right:30%;
+    //bottom:5%;
   };
 }
-
-.homeHeroCards{
-  width: 13rem;
-  right: 0%;
-  bottom: 10%;
+.homeHeroCards {
+  width:13rem;
+  right:0%;
+  bottom:10%;
   @include breakpoint(s) {
-    right: 22%;
-    bottom: 3%;
+    bottom:3%;
     width: 20rem;
   };
   @include breakpoint(m) {
-    right: 30%;
-    bottom: 5%;
-    width: 20rem;
+    right:10%;
+    bottom:5%;
+  };
+  @include breakpoint(l) {
+    right:30%;
   };
 }
 
