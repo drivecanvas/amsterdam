@@ -61,9 +61,6 @@ $padding-slider: 16px;
   right: 5%;
   top: 0;
   width: 11rem;
-  @include breakpoint('sm') {
-    //right: 5%;
-  };
   @include breakpoint('md') {
     right: 10%;
     width: 16rem;
@@ -84,7 +81,6 @@ $padding-slider: 16px;
   };
   @include breakpoint('md') {
     width: 20rem;
-  //  top:65%;
   };
   @include breakpoint('lg') {
     right:35%;
