@@ -148,7 +148,7 @@ $padding-slider: 16px;
   }
 }
 .homeHeroBackgroundOffset{
-  transform:translateX(60%);
+  transform:translateX(50%);
   @include breakpoint(l) {
     transform:translateX(36%);
   }
