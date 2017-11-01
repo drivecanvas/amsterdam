@@ -103,17 +103,17 @@
 .flex-wrap    { flex-wrap: wrap }
 .flex-row     { flex-direction:row }
 .m-flex-row   {
-  @include breakpoint(m) {
+  @include breakpoint('md') {
     flex-direction:row;
   };
 }
 .l-flex-row   {
-  @include breakpoint(l) {
+  @include breakpoint('lg') {
     flex-direction:row;
   };
 }
 .xl-flex-row   {
-  @include breakpoint(xl) {
+  @include breakpoint('xl') {
     flex-direction:row;
   };
 }
@@ -280,7 +280,7 @@ $width-xxxl: 128rem;
 
 
 .column-count-2{
-  @include breakpoint(m) {
+  @include breakpoint('md') {
   -webkit-column-count: 2;
      -moz-column-count: 2;
   }

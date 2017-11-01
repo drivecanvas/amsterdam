@@ -11,14 +11,22 @@
 // Add or remove breakpoints as needed.
 // Currently using increments of 16 from base until l, 32 l through xxl
 // All default styles are applied before a breakpoint of 32em / 512px, which is the measure of ideal line length for our base font size.
-$breakpoints:(
-  s: 32em,    /* 512px */
-  m: 48em,    /* 768px */
-  l: 64em,    /* 1024px */
-  xl: 96em,   /* 1536px */
-  xxl: 128em, /* 2048px */
-);
+// $breakpoints:(
+//   s: 32em,    /* 512px */
+//   m: 48em,    /* 768px */
+//   l: 64em,    /* 1024px */
+//   xl: 96em,   /* 1536px */
+//   xxl: 128em, /* 2048px */
+// );
 
+/*
+ The above breakpoints are currently
+ nullified and we're using the
+ grid-breakpoints variables in
+ _bootstrap-override.scss
+
+ In an ideal world, we'll return to the em basis of our 32em line length.
+ */ 
 
 /*
   To use a small screen specific style:
@@ -30,9 +38,9 @@ $breakpoints:(
 */
 
 @mixin breakpoint($size){
-  @each $breakpoint, $value in $breakpoints {
+  @each $breakpoint, $value in $grid-breakpoints {
      @if $size == $breakpoint {
-       @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+       @media screen and (min-width: map-get($grid-breakpoints, $breakpoint)){
          @content;
        }
      }
@@ -43,7 +51,7 @@ $breakpoints:(
   Example using medium breakpoint (m).
   Setting the color to red for any device wider than medium breakpoint.
   .m-red {
-     @include breakpoint(m) {
+     @include breakpoint('md') {
        color: red;
      };
    }
