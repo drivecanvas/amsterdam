@@ -1,12 +1,4 @@
-/*
-  Media Queries
- */
-
-
-
-
-
-
+// Media Queries
 
 // Add or remove breakpoints as needed.
 // Currently using increments of 16 from base until l, 32 l through xxl
@@ -19,41 +11,35 @@
 //   xxl: 128em, /* 2048px */
 // );
 
-/*
- The above breakpoints are currently
- nullified and we're using the
- grid-breakpoints variables in
- _bootstrap-override.scss
+// The above breakpoints are currently
+// nullified and we're using the
+// grid-breakpoints variables in
+// _bootstrap-override.scss
+//
+// In an ideal world, we'll return to the em basis of our 32em line length.
+//
+//  To use a small screen specific style:
+//  @media screen and ($breakpoint-s){
+//    .s-class{
+//      property: value;
+//    }
+//  }
 
- In an ideal world, we'll return to the em basis of our 32em line length.
- */ 
-
-/*
-  To use a small screen specific style:
-  @media screen and ($breakpoint-s){
-    .s-class{
-      property: value;
-    }
-  }
-*/
-
-@mixin breakpoint($size){
+@mixin breakpoint($size) {
   @each $breakpoint, $value in $grid-breakpoints {
-     @if $size == $breakpoint {
-       @media screen and (min-width: map-get($grid-breakpoints, $breakpoint)){
-         @content;
-       }
-     }
+    @if $size == $breakpoint {
+      @media screen and (min-width: map-get($grid-breakpoints, $breakpoint)){
+        @content;
+      }
+    }
   }
 }
 
-/*
-  Example using medium breakpoint (m).
-  Setting the color to red for any device wider than medium breakpoint.
-  .m-red {
-     @include breakpoint('md') {
-       color: red;
-     };
-   }
-   In html, this could look like class="blue m-red" and the color would be blue on all devices smaller than the medium width.
-*/
+// Example using medium breakpoint (m).
+// Setting the color to red for any device wider than medium breakpoint.
+// .m-red {
+//    @include breakpoint('md') {
+//      color: red;
+//    };
+//  }
+//  In html, this could look like class="blue m-red" and the color would be blue on all devices smaller than the medium width.

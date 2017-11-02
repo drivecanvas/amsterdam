@@ -1,31 +1,30 @@
-/*
-  If you modify a color here, you're good to go.
-  If you add or remove a new color here, you also have to add or remove it in _colors.scss in the main _sass directory.
-  That file turns these into classes for text, border, and background.
-*/
+//
+//  If you modify a color here, you're good to go.
+//  If you add or remove a new color here, you also have to add or remove it in _colors.scss in the main _sass directory.
+//  That file turns these into classes for text, border, and background.
 
 $canvas-blue: #3857e7; //AA
-$medium-blue: #304CCA; //AA
+$medium-blue: #304cca; //AA
 $dark-blue: #2c45b7; //AAA
-$teal: #37E6C8; //AAA on dark, Fail on white
+$teal: #37e6c8; //AAA on dark, Fail on white
 $light-gold: #fbf3de;
-$gold: #FFD966; // Fail on White, AA on dark
+$gold: #ffd966; // Fail on White, AA on dark
 
 // Solids
-$grey0: #F2F5FA;
-$grey1: #D3D6DE;
-$grey2: #91959E;
-$grey3: #626A7A;
-$grey4: #373E4D;
-$grey5: #1C2230;
+$grey0: #f2f5fa;
+$grey1: #d3d6de;
+$grey2: #91959e;
+$grey3: #626a7a;
+$grey4: #373e4d;
+$grey5: #1c2230;
 
 // Alphas
-$grey0-a: rgba(21,50,115,0.05);
-$grey1-a: rgba(29,45,82,0.2);
-$grey2-a: rgba(33,43,64,0.5);
-$grey3-a: rgba(33,43,64,0.7);
-$grey4-a: rgba(33,41,59,0.9);
-$grey5-a: rgba(15,23,38,0.95);
+$grey0-a: rgba(21, 50, 115, 0.05);
+$grey1-a: rgba(29, 45, 82, 0.2);
+$grey2-a: rgba(33, 43, 64, 0.5);
+$grey3-a: rgba(33, 43, 64, 0.7);
+$grey4-a: rgba(33, 41, 59, 0.9);
+$grey5-a: rgba(15, 23, 38, 0.95);
 
 $red: #e63147; // AA Large
 $black: #000;

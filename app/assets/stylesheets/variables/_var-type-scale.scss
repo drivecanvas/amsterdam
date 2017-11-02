@@ -2,8 +2,6 @@
 $base-font-size:   1rem;
 $base-line-height: 1.5;
 
-
-
 // Primary Type Scale -- Increments of 8px / .5rem with exceptions
 // Ideally all of these are a multiple of 8px / .5rem
 // At minimum, new sizes should be a multiple of of 4 / .25rem
@@ -28,46 +26,44 @@ $s-h3: 1.25rem;
 $s-h2: 1.5rem;
 $s-h1: 2rem;
 
-h1, .h1 { font-size: $s-h1; font-weight: bold; }
-h2, .h2 { font-size: $s-h2; font-weight: bold; }
-h3, .h3 { font-size: $s-h3; font-weight: bold; }
-h4, .h4 { font-size: $s-h4; font-weight: bold; }
-h5, .h5 { font-size: $s-h5; line-height:1.5rem; }
-h6, .h6 {
+h1,
+.h1 {
+  font-size: $s-h1;
+  font-weight: bold;
+}
+
+h2,
+.h2 {
+  font-size: $s-h2;
+  font-weight: bold;
+}
+
+h3,
+.h3 {
+  font-size: $s-h3;
+  font-weight: bold;
+}
+
+h4,
+.h4 {
+  font-size: $s-h4;
+  font-weight: bold;
+}
+
+h5,
+.h5 {
+  font-size: $s-h5;
+  line-height: 1.5rem;
+}
+
+h6,
+.h6 {
   font-size: $s-h6;
-  line-height:1.5rem;
+  line-height: 1.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: bold;
 }
-
-// /!\ This will define classes to control:
-// * font-size
-// * font-weight
-// * font-style
-//
-// Classes available:
-//
-// .f-[size]
-// .f-[weight]
-// .f-[style]
-//
-// .f-[size]-[weight]
-// .f-[size]-[style]
-//
-// .f-[size]-[weight]-[style]
-//
-// You can also use the mixin `font`, example:
-// @include font('[size]');
-// @include font('[weight]');
-// @include font('[style]');
-//
-// @include font('[size]-[weight]');
-// @include font('[size]-[style]');
-//
-// @include font('[size]-[weight]-[style]');
-//
-// [size], [weight], [style] can be any of the following keys:
 
 $f-sizes: (
   12: (
@@ -113,7 +109,7 @@ $breakpoints: (
 ) !default;
 
 @each $size-name, $size in $f-sizes {
- .fs-#{$size-name} {
+  .fs-#{$size-name} {
     font-size: map-get($size, font-size);
     line-height: map-get($size, line-height);
   }
@@ -128,10 +124,4 @@ $breakpoints: (
       }
     }
   }
-}
-
-// END OF SIZING
-
-@mixin font($name) {
-  @extend .#{$name};
 }

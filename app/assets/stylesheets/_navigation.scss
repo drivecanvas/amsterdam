@@ -1,22 +1,19 @@
-.nav{
-  list-style:none;
-  margin:0;
-  padding:0;
-  li{
-    padding-bottom:0;
-    margin-bottom:0;
-    transition:all .2s;
-  }
-  li.active{
-    box-shadow: inset 0 -4px 0 0 $teal;
-  }
-  a{
-    line-height:1rem;
-  }
-}
-#hiwNav li.active {
-    box-shadow: none;
-    a{
-      color:$canvas-blue;
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    transition: all .2s;
+
+    &.active {
+      box-shadow: inset 0 -4px 0 0 $teal;
     }
+  }
+
+  a {
+    line-height: 1rem;
+  }
 }

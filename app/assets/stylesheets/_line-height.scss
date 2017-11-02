@@ -3,9 +3,17 @@ $leading-solid: 1;
 $leading-headline: 1.25;
 $leading-text: 1.5;
 
-.leading-solid { line-height: $leading-solid }
-.leading-headline { line-height: $leading-headline }
-.leading-text { line-height: $leading-text }
+.leading-solid {
+  line-height: $leading-solid;
+}
+
+.leading-headline {
+  line-height: $leading-headline;
+}
+
+.leading-text {
+  line-height: $leading-text;
+}
 
 //Type Spacing
 $space-before: 1.5rem;

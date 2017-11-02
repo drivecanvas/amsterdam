@@ -1,15 +1,22 @@
-/* Contents:
-   Position Utilities
-   XY Coordinate Utilities
-   Z-Index Coordinate Utilities
- */
+// Contents:
+//   Position Utilities
+//   XY Coordinate Utilities
+//   Z-Index Coordinate Utilities
 
-/* Position adapted from Basscss */
-.relative { position: relative }
-.absolute { position: absolute }
-.fixed    { position: fixed }
+// Position adapted from Basscss
+.relative {
+  position: relative;
+}
 
-/* XY Coordinates */
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+// XY Coordinates
 $properties: (
   'bottom',
   'left',
@@ -58,7 +65,7 @@ $spaces: (
   transform: translate(0, -50%);
 }
 
-/* z-index Coordinates */
+// z-index Coordinates
 $nz1: -1;
 $z1: 111;
 $z2: 222;
@@ -88,5 +95,7 @@ $z-indexes: (
 );
 
 @each $z-name, $z-value in $z-indexes {
-  .#{$z-name} { z-index: $z-value; }
+  .#{$z-name} {
+    z-index: $z-value;
+  }
 }

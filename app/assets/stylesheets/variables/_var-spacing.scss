@@ -1,22 +1,12 @@
-/*
-  Spacing Scale, Modified from Tachyons - Docs: http://tachyons.io/docs/layout/spacing/
-  An eight step powers of two scale ranging from 0 to 16rem.
-*/
+//
+// Spacing Scale, Modified from Tachyons - Docs: http://tachyons.io/docs/layout/spacing/
+// An eight step powers of two scale ranging from 0 to 16rem.
 
-$space-none: 0;
-$space-xs:   0.25rem;
-$space-s:    0.5rem;
-$space-m:    1rem;
-$space-l:    2rem;
-$space-xl:   4rem;
-$space-xxl:  8rem;
-$space-xxxl: 16rem;
-
-/*0px*/
-/*4px*/
-/*8px*/
-/*16px*/
-/*32px*/
-/*64px*/
-/*128px*/
-/*256px*/
+$space-none: 0; //0px
+$space-xs:   0.25rem; //4px
+$space-s:    0.5rem; //8px
+$space-m:    1rem; //16px
+$space-l:    2rem; //32px
+$space-xl:   4rem; //64px
+$space-xxl:  8rem; //128px
+$space-xxxl: 16rem; //256px

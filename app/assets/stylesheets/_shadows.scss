@@ -20,7 +20,7 @@ $bs-color-hex: #3c3c3c;
 .shadow-x-b {
   box-shadow: 0 2px 4px 0 $bs-color-default;
 
-  &:before {
+  &::before {
     background: $white;
     content: "";
     height: 1px;

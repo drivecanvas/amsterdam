@@ -1,13 +1,13 @@
-/**
- * Lists
- */
-
-ul, ol, dl {
-    margin-bottom: $space-m;
-    margin-top: 0;
+// Lists
+ul,
+ol,
+dl {
+  margin-bottom: $space-m;
+  margin-top: 0;
 }
 
-ul, dl {
+ul,
+dl {
   padding-left: 0;
 }
 
@@ -26,8 +26,7 @@ li {
   }
 }
 
-/* Definition List Specific */
-
+// Definition List Specific
 dl {
   list-style: square;
 
@@ -54,11 +53,11 @@ dl {
     padding-left: 1.5rem;
     position: relative;
 
-    &:before {
-      background-image: url('../icons/icon-checkmark.svg');
+    &::before {
+      background-image: url("../icons/icon-checkmark.svg");
       background-position: 0 2px;
       background-size: contain;
-      content: ' ';
+      content: " ";
       display: block;
       height: 1em;
       left: 0;
