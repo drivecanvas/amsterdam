@@ -54,38 +54,40 @@ $padding-slider: 16px;
 
 // Homepage Specific Styles
 
-.homeHeroKeys{
-  img{
-    transform: rotate(13deg);
+.homeHeroKeys {
+  img {
+    transform:rotate(13deg);
   }
-  right: 10%;
+  right: 5%;
   top: 0;
   width: 11rem;
-  @include breakpoint(s) {
-    right: 20%;
-    bottom: 2%;
+  @include breakpoint('md') {
+    right: 10%;
     width: 16rem;
   };
-  @include breakpoint(m) {
-    right: 25%;
-    top: 0%;
-    width: 16rem;
+  @include breakpoint('lg') {
+    right:30%;
+  };
+  @include breakpoint('xl') {
+    right:23%;
   };
 }
 
-.homeHeroCards{
+.homeHeroCards {
   width: 13rem;
-  right: 0%;
-  bottom: 10%;
-  @include breakpoint(s) {
-    right: 22%;
-    bottom: 3%;
+  right: 5%;
+  top:65%;
+  @include breakpoint('sm') {
+    right:15%;
+  };
+  @include breakpoint('md') {
     width: 20rem;
   };
-  @include breakpoint(m) {
-    right: 30%;
-    bottom: 5%;
-    width: 20rem;
+  @include breakpoint('lg') {
+    right:35%;
+  };
+  @include breakpoint('xl') {
+    right:25%;
   };
 }
 
@@ -97,10 +99,7 @@ $padding-slider: 16px;
 }
 
 .homeHeroBackgroundOffset{
-  transform:translateX(50%);
-  @include breakpoint(l) {
-    transform: translateX(36%);
-  }
+  transform:translateX(36%);
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
