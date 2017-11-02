@@ -32,10 +32,6 @@ linters:
   QualifyingElement:
     enabled: false
 
-  # Remove once all project have AutoPrefixer
-  VendorPrefix:
-    enabled: false
-
   # Remove after deprecation phase
   ImportantRule:
     enabled: false

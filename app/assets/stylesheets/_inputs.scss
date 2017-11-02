@@ -1,4 +1,5 @@
 // scss-lint:disable PseudoElement
+// scss-lint:disable VendorPrefix
 @mixin placeholder-style {
   &:-moz-placeholder { @content; }
   &:-ms-input-placeholder { @content; }
@@ -6,6 +7,7 @@
   &::-webkit-input-placeholder { @content; }
 }
 // scss-lint:enable PseudoElement
+// scss-lint:enable VendorPrefix
 
 textarea.form-control {
   border: 2px solid $grey2;
