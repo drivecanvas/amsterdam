@@ -120,26 +120,26 @@ $fixed-measures: (
 
 @each $name, $value in $fixed-measures {
   .width-#{$name} {
-    width-#{$name}: $value;
+    width: $value;
   }
 
   .min-width-#{$name} {
-    min-width-#{$name}: $value;
+    min-width: $value;
   }
 
   .max-width-#{$name} {
-    max-width-#{$name}: $value;
+    max-width: $value;
   }
 
   .height-#{$name} {
-    height-#{$name}: $value;
+    height: $value;
   }
 
   .min-height-#{$name} {
-    min-height-#{$name}: $value;
+    min-height: $value;
   }
 
   .max-height-#{$name} {
-    max-height-#{$name}: $value;
+    max-height: $value;
   }
 }
