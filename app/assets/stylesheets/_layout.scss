@@ -78,7 +78,7 @@ $viewport-measures: (
   25,
   50,
   75,
-  100,
+  100
 );
 
 @each $name, $value in $viewport-measures {
