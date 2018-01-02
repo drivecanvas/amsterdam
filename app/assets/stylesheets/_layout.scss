@@ -62,26 +62,48 @@
 }
 
 // Viewport widths & heights
-
+// -------------------------
+//
+// Usage:
+//
+// To apply a viewport width or height the following syntax
+// .vw100 -> width: 100vw;
+// .vh100 -> height: 100vh;
+// .vw50 -> width: 50vw;
+// .vh50 -> height: 50vh;
+//
+// `$viewport-measures` defined below, defines all the avalaible classes
+//
 $viewport-measures: (
-  'h25': 25vh,
-  'h50': 50vh,
-  'h75': 75vh,
-  'h100': 100vh,
-  'w25': 25vw,
-  'w50': 50vw,
-  'w75': 75vw,
-  'w100': 100vw
+  25,
+  50,
+  75,
+  100,
 );
 
 @each $name, $value in $viewport-measures {
-  .v#{$name} {
-    #{$name}: $value;
+  .vw#{$name} {
+    width: #{$value}vw;
+  }
+
+  .vh#{$name} {
+    height: #{$value}vh;
   }
 }
 
 // Proportional widths & heights
-
+// -----------------------------
+//
+// Usage:
+//
+// To apply a percentage based width or height use some of the following syntax
+// .width-100 -> width: 100%;
+// .height-100 -> height: 100%;
+// .width-50 -> width: 50%;
+// .height-50 -> height: 50%;
+//
+// `$percentage-measures` defined below, defines all the avalaible classes
+//
 $percentage-measures: (
   '0': 0,
   '10': 10%,
@@ -107,7 +129,17 @@ $percentage-measures: (
 }
 
 // Fixed widths & heights
-
+// ----------------------
+//
+// Usage:
+// To apply a fixed width or height, use the following syntax:
+// .width-xs -> width: 16rem;
+// .height-xs -> height: 16rem;
+// .width-l -> width: 48rem;
+// .height-l -> height: 48rem;
+//
+// `$fixed-measures` defined below, defines all the avalaible classes
+//
 $fixed-measures: (
   'xs': 16rem,
   's': 24rem,
