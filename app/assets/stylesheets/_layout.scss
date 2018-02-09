@@ -123,8 +123,24 @@ $percentage-measures: (
     width: $value;
   }
 
+  .max-width-#{$name} {
+    max-width: $value;
+  }
+
+  .min-width-#{$name} {
+    min-width: $value;
+  }
+
   .height-#{$name} {
     height: $value;
+  }
+
+  .max-height-#{$name} {
+    max-height: $value;
+  }
+
+  .min-height-#{$name} {
+    min-height: $value;
   }
 }
 
