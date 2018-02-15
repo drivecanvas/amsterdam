@@ -8,6 +8,9 @@ $bg-default: #fafbfe;
 $bs-color-default: rgba(0, 0, 0, 0.2);
 $bs-color-hex: #3c3c3c;
 
+.shadow-thin {
+  box-shadow: 0 0 2px 0 $bs-color-default;
+}
 
 .shadow {
   box-shadow: 0 2px 4px 0 $bs-color-default;
