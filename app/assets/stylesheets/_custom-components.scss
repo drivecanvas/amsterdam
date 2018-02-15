@@ -1,0 +1,37 @@
+.girg-component {
+  height: 100%;
+  max-width: 930px !important;
+  min-height: 376px;
+}
+
+.girg-component-left {
+  float: left;
+  height: 100%;
+  width: 57%;
+}
+
+.girg-component-right {
+  float: right;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  width: 43%;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.girg-component-mobile {
+  width: 370px;
+}
+
+.girg-component-mobile-top {
+  text-align: center;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
