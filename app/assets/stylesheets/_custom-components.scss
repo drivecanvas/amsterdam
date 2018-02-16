@@ -39,3 +39,10 @@
 .learn-more-link:hover {
   text-decoration: none;
 }
+
+@media screen and (min-width: 992px) {
+  .learn-more-link {
+    position: relative;
+    top: 24px;
+  }
+}
