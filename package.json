@@ -6,7 +6,7 @@
   "license": "MIT",
   "homepage": "https://github.com/drivecanvas/amsterdam",
   "scripts": {
-    "start": "node ./build.js",
+    "start": "",
     "deploy": "git push -f staging-amsterdam `git rev-parse --abbrev-ref HEAD`:master && heroku restart -a staging-amsterdam",
     "before_script": "yarn add --force node-sass"
   },
