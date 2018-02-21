@@ -74,9 +74,6 @@ $measure-narrow:24em;
   margin-bottom: $space-m;
 }
 
-@mixin bold {
-  font-family: 'Avenir LT W01_85 Heavy1475544', $base-font-family;
-}
 //
 // Font Face Family declarations for style
 //
@@ -94,7 +91,7 @@ $measure-narrow:24em;
 .bold,
 strong,
 .strong {
-  @include bold;
+  font-family: 'Avenir LT W01_85 Heavy1475544', $base-font-family;
 }
 // Specialized font to handle weight and italic
 .bold.italic {
