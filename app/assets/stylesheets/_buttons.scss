@@ -1,5 +1,3 @@
-@import "typography";
-
 // CTA or Call to Actions.
 
 // These can be a combination of inputs, buttons, and <a> tags throughout the site.
@@ -16,7 +14,6 @@
 // Semibold font-weight
 // Slightly Open Letter Spacing
 @mixin global-cta {
-  @include bold;
   transition: all .1s;
   border: 0;
   font-weight: 500;
@@ -310,6 +307,7 @@ a.cta-secondary {
   padding: $space-m $space-l;
   background-color: $canvas-blue;
   color: $white !important;
+  font-weight: 700;
 
   &:hover {
     background-color: $medium-blue;
