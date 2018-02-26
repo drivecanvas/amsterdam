@@ -342,6 +342,14 @@ a.cta-secondary {
   }
 }
 
+.cta-primary-inverted {
+  @include global-cta;
+  @include default-button;
+  background-color: $white;
+  color: $canvas-blue;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
 
 
 // The disabled class can be added via javascript to any CTA in addition to a disabled utility.

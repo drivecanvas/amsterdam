@@ -1,6 +1,6 @@
 {
   "name": "amsterdam",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "author": "abloom@drivecanvas.com",
   "main": "index.js",
   "license": "MIT",
@@ -10,7 +10,8 @@
     "deploy": "git push -f staging-amsterdam `git rev-parse --abbrev-ref HEAD`:master && heroku restart -a staging-amsterdam",
     "before_script": "yarn add --force node-sass"
   },
-  "devDependencies": {
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
     "express": "^4.15.3",
     "handlebars": "^4.0.5",
     "metalsmith": "^2.3.0",
@@ -20,8 +21,5 @@
     "metalsmith-layouts": "^1.6.4",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-sass": "^1.4.0"
-  },
-  "dependencies": {
-    "bootstrap": "4.0.0-alpha.6"
   }
 }
