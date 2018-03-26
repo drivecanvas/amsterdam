@@ -1,36 +1,36 @@
 $default-color: rgba(0, 0, 0, .1);
 
-table {
-  box-shadow: 0 1px 0 0 $grey1, 0 -1px 0 0 $grey1;
-  //border-bottom:$border-width-thin solid $grey1;
-  line-height: 1.5rem;
-  border-collapse: separate;
-  border-spacing: 0;
-  max-width: 100%;
-  width: 100%;
-  margin-bottom: $space-m;
-  margin-top: $space-m;
-}
+// table {
+//   box-shadow: 0 1px 0 0 $grey1, 0 -1px 0 0 $grey1;
+//   //border-bottom:$border-width-thin solid $grey1;
+//   line-height: 1.5rem;
+//   border-collapse: separate;
+//   border-spacing: 0;
+//   max-width: 100%;
+//   width: 100%;
+//   margin-bottom: $space-m;
+//   margin-top: $space-m;
+// }
 
-th {
-  text-align: left;
-  font-weight: 700;
-  //text-transform:uppercase;
-  //letter-spacing:.1em;
-  vertical-align: bottom;
-}
+// th {
+//   text-align: left;
+//   font-weight: 700;
+//   //text-transform:uppercase;
+//   //letter-spacing:.1em;
+//   vertical-align: bottom;
+// }
 
-th,
-td {
-  padding: .25rem .5rem;
-  font-size: .875rem;
-  line-height: inherit;
-  box-shadow: 0 1px 0 0 $default-color;
-}
+// th,
+// td {
+//   padding: .25rem .5rem;
+//   font-size: .875rem;
+//   line-height: inherit;
+//   box-shadow: 0 1px 0 0 $default-color;
+// }
 
-td {
-  vertical-align: text-top;
-}
+// td {
+//   vertical-align: text-top;
+// }
 
 // Utiltity Style Classes
 .striped {
