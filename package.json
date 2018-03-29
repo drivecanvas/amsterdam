@@ -8,7 +8,8 @@
   "scripts": {
     "start": "DEBUG=metalsmith-browser-sync node ./build.js",
     "deploy": "git push -f staging-amsterdam `git rev-parse --abbrev-ref HEAD`:master && heroku restart -a staging-amsterdam",
-    "before_script": "yarn add --force node-sass"
+    "before_script": "yarn add --force node-sass",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
