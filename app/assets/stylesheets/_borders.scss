@@ -1,10 +1,10 @@
 // Basscss Border
 
-$border-width: 2px;
+$border-width: 1px;
 $border-width-hover: .4rem;
 $border-width-thin: 1px;
-$border-width-thick: .5rem;
-$border-radius: 2px;
+$border-width-thick: 2px;
+$rounded-border-radius: 2px;
 
 $default-border-color: $grey1-a;
 
@@ -115,47 +115,6 @@ $borders: (
   }
 }
 
-.b-w-xxs {
-  border-width: calc(#{$space-xs} / 2);
-}
-
-.b-w-xs {
-  border-width: $space-xs;
-}
-
-.b-w-s {
-  border-width: $space-s;
-}
-
-.rounded {
-  border-radius: $border-radius;
-}
-
-.circle {
-  border-radius: 50%;
-}
-
-.rounded-top {
-  border-radius: $border-radius $border-radius 0 0;
-}
-
-.rounded-right {
-  border-radius: 0 $border-radius $border-radius 0;
-}
-
-.rounded-bottom {
-  border-radius: 0 0 $border-radius $border-radius;
-}
-
-.rounded-left {
-  border-radius: $border-radius 0 0 $border-radius;
-}
-
-.not-rounded {
-  border-radius: 0;
-}
-
-
 // ALEX'S STYLES
 // TODO: deprecate
 .border {
@@ -183,36 +142,6 @@ $borders: (
   border-left-width: $border-width;
 }
 
-.border-thin {
-  border-style: solid;
-  border-width: $border-width-thin;
-}
-
-.border-top-thin {
-  border-top-style: solid;
-  border-top-width: $border-width-thin;
-}
-
-.border-right-thin {
-  border-right-style: solid;
-  border-right-width: $border-width-thin;
-}
-
-.border-bottom-thin {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width-thin;
-}
-
-.border-left-thin {
-  border-left-style: solid;
-  border-left-width: $border-width-thin;
-}
-
-.border-thick {
-  border-style: solid;
-  border-width: $border-width-thick;
-}
-
 .border-top-thick {
   border-top-style: solid;
   border-top-width: $border-width-thick;
@@ -238,6 +167,40 @@ $borders: (
   border-width: 1px;
 }
 
-.border-none {
+// END of deprecation
+
+.border-0 {
   border: 0;
+}
+
+.border-width-2 {
+  border-width: 2px;
+}
+
+.rounded {
+  border-radius: $rounded-border-radius;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.rounded-top {
+  border-radius: $rounded-border-radius $rounded-border-radius 0 0;
+}
+
+.rounded-right {
+  border-radius: 0 $rounded-border-radius $rounded-border-radius 0;
+}
+
+.rounded-bottom {
+  border-radius: 0 0 $rounded-border-radius $rounded-border-radius;
+}
+
+.rounded-left {
+  border-radius: $rounded-border-radius 0 0 $rounded-border-radius;
+}
+
+.not-rounded {
+  border-radius: 0;
 }
