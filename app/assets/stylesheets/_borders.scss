@@ -204,3 +204,8 @@ $borders: (
 .not-rounded {
   border-radius: 0;
 }
+
+.not-rounded-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
