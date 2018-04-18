@@ -81,13 +81,29 @@ $viewport-measures: (
   100
 );
 
-@each $name, $value in $viewport-measures {
-  .vw#{$name} {
+@each $value in $viewport-measures {
+  .vw#{$value} {
     width: #{$value}vw;
   }
 
-  .vh#{$name} {
+  .vh#{$value} {
     height: #{$value}vh;
+  }
+
+  .min-vw#{$value} {
+    min-width: #{$value}vw;
+  }
+
+  .min-vh#{$value} {
+    min-height: #{$value}vh;
+  }
+
+  .max-vw#{$value} {
+    max-width: #{$value}vw;
+  }
+
+  .max-vh#{$value} {
+    max-height: #{$value}vh;
   }
 }
 

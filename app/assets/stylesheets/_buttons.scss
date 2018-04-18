@@ -32,7 +32,7 @@
 //
 // These are used for any CTA that looks like a button, whether filled or outlined in appearance.
 @mixin default-button {
-  border-radius: $border-radius;
+  border-radius: 2px;
   text-align: center;
   line-height: 1rem;
   background-color: transparent;
@@ -169,8 +169,8 @@ button:focus {
   // Set Colors for Buttons with Border
   &.border {
     background-color: transparent;
-    border: 0 !important; // removing border and using box shadow to maintain baseline rhythm
-    box-shadow: inset 0 0 0 2px;
+    // border: 0 !important; // removing border and using box shadow to maintain baseline rhythm
+    // box-shadow: inset 0 0 0 2px;
     // Set Blues
     &.canvas-blue {
       color: $canvas-blue;
@@ -349,6 +349,28 @@ a.cta-secondary {
   color: $canvas-blue;
   padding: 1rem 2rem;
   text-decoration: none;
+}
+
+.cta-outlined {
+  @include global-cta;
+  @include default-button;
+  border: 1px solid $grey3;
+  color: $grey3;
+  background-color: transparent;
+
+  &:hover {
+    color: $white;
+    background-color: $grey3;
+  }
+}
+
+.cta-s {
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+}
+
+.cta-m {
+  padding: 0.5rem 1rem;
 }
 
 
