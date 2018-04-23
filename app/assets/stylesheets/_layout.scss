@@ -51,6 +51,12 @@
   overflow: auto;
 }
 
+.overflow-unset {
+  overflow: unset;
+  overflow-x: unset;
+  overflow-y: unset;
+}
+
 .clearfix::before,
 .clearfix::after {
   content: " ";
