@@ -150,6 +150,29 @@
   animation: radar-effect 5s ease infinite;
 }
 
+.bounce {
+  animation: bounce .75s infinite ease alternate;
+  -webkit-animation: bounce .75s infinite ease alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(0.5rem);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(0.5rem);
+  }
+}
+
 // Animation Utilities
 .a-reverse {
   animation-direction: reverse;
