@@ -163,26 +163,6 @@ $borders: (
   border-left-width: $border-width-thick;
 }
 
-.border-top-thick-8 {
-  border-top-style: solid;
-  border-top-width: $border-width-thick-8;
-}
-
-.border-right-thick-8 {
-  border-right-style: solid;
-  border-right-width: $border-width-thick-8;
-}
-
-.border-bottom-thick-8 {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width-thick-8;
-}
-
-.border-left-thick-8 {
-  border-left-style: solid;
-  border-left-width: $border-width-thick-8;
-}
-
 .border-dotted {
   border-style: dotted;
   border-width: 1px;
@@ -195,7 +175,11 @@ $borders: (
 }
 
 .border-width-2 {
-  border-width: 2px;
+  border-width: $border-width-thick;
+}
+
+.border-width-8 {
+  border-width: $border-width-thick-8;
 }
 
 .rounded {
