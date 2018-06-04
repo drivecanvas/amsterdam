@@ -4,6 +4,7 @@
 // Currently using increments of 16 from base until l, 32 l through xxl
 // All default styles are applied before a breakpoint of 32em / 512px, which is the measure of ideal line length for our base font size.
 // $breakpoints:(
+//   xs: 24em:   /* 384px */
 //   s: 32em,    /* 512px */
 //   m: 48em,    /* 768px */
 //   l: 64em,    /* 1024px */
