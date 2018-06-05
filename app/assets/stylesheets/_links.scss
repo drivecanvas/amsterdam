@@ -71,6 +71,9 @@ nav {
   cursor: pointer;
 }
 
+.user-select-none {
+  user-select: none;
+}
 
 @each $color-name, $color-value in $colors {
   a.#{$color-name} {
@@ -85,3 +88,4 @@ nav {
     }
   }
 }
+
