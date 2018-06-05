@@ -4,6 +4,7 @@ $border-width: 1px;
 $border-width-hover: .4rem;
 $border-width-thin: 1px;
 $border-width-thick: 2px;
+$border-width-thick-8: 8px;
 $rounded-border-radius: 2px;
 
 $default-border-color: $grey1-a;
@@ -174,7 +175,11 @@ $borders: (
 }
 
 .border-width-2 {
-  border-width: 2px;
+  border-width: $border-width-thick;
+}
+
+.border-width-8 {
+  border-width: $border-width-thick-8;
 }
 
 .rounded {
