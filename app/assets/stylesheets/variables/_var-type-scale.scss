@@ -100,14 +100,6 @@ $f-sizes: (
   ),
 );
 
-$breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
-
 @each $size-name, $size in $f-sizes {
   .fs-#{$size-name} {
     font-size: map-get($size, font-size);

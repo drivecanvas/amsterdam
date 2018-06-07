@@ -26,6 +26,14 @@
 //    }
 //  }
 
+// Example using medium breakpoint (m).
+// Setting the color to red for any device wider than medium breakpoint.
+// .m-red {
+//    @include breakpoint('md') {
+//      color: red;
+//    };
+//  }
+//  In html, this could look like class="blue m-red" and the color would be blue on all devices smaller than the medium width.
 @mixin breakpoint($size) {
   @each $breakpoint, $value in $grid-breakpoints {
     @if $size == $breakpoint {
@@ -35,12 +43,3 @@
     }
   }
 }
-
-// Example using medium breakpoint (m).
-// Setting the color to red for any device wider than medium breakpoint.
-// .m-red {
-//    @include breakpoint('md') {
-//      color: red;
-//    };
-//  }
-//  In html, this could look like class="blue m-red" and the color would be blue on all devices smaller than the medium width.

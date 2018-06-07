@@ -34,12 +34,36 @@ $positive-spaces: (
 // 'xxxl': -$space-xxxl
 // );
 
+// non-media
 @each $property-name, $property-value in $properties {
   @each $direction-name, $direction-values in $directions {
     @each $space-name, $space-value in $positive-spaces {
       .#{$property-name}#{$direction-name}-#{$space-name} {
         @each $direction-value in $direction-values {
           #{$property-value}#{$direction-value}: #{$space-value};
+        }
+      }
+    }
+  }
+}
+
+// Media
+// Properties: m, p
+// Directions: x, y, t, r, b, l
+// Breaks:     xs, sm, md, lg, xl
+// Spaces:     0, xs, s, m, l, xl, xxl, xxxl
+// Format:     #{$property}#{$direction}-#{$breakpoint}-#{$space}
+// Examples:   pl-md-m, pr-md-s, etc...
+@each $property-name, $property-value in $properties {
+  @each $direction-name, $direction-values in $directions {
+    @each $breakpoint-name, $breakpoint in $breakpoints {
+      @each $space-name, $space-value in $positive-spaces {
+        .#{$property-name}#{$direction-name}-#{$breakpoint-name}-#{$space-name} {
+          @each $direction-value in $direction-values {
+            @media screen and (min-width: $breakpoint) {
+              #{$property-value}#{$direction-value}: #{$space-value};
+            }
+          }
         }
       }
     }
