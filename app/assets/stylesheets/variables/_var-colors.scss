@@ -7,8 +7,10 @@ $canvas-blue: #3857e7; //AA
 $medium-blue: #304cca; //AA
 $dark-blue: #2c45b7; //AAA
 $teal: #37e6c8; //AAA on dark, Fail on white
+$light-teal: #d7faf4; // Successfully applied i.e. applied discount code
 $light-gold: #fbf3de;
 $gold: #ffd966; // Fail on White, AA on dark
+$green: #05892C; // Extra i.e. discount credit
 
 // Solids
 $grey0: #f2f5fa;
@@ -36,8 +38,10 @@ $colors: (
   'medium-blue': $medium-blue,
   'dark-blue': $dark-blue,
   'teal': $teal,
+  'light-teal': $light-teal,
   'gold': $gold,
   'light-gold': $light-gold,
+  'green': $green,
   'grey0': $grey0,
   'grey1': $grey1,
   'grey2': $grey2,
