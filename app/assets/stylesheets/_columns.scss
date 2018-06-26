@@ -1,0 +1,26 @@
+// Not to be confused with grid columns, these are CSS3 multi columns
+$columns: (
+  2,3,4
+); 
+
+@each $column in $columns {
+  .columns-#{$column} {
+    column-count: #{$column};
+  }
+}
+
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  @each $column in $columns {
+    @media screen and (min-width: $breakpoint) {
+      .columns-#{$breakpoint-name}-#{$column} {
+        column-count: #{$column};
+      }
+    }
+  }
+}
+
+// Breaks
+.break-inside-avoid {
+  break-inside: avoid;
+  page-break-inside: avoid; // Firefox support
+}

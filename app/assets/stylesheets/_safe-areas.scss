@@ -1,0 +1,31 @@
+$zones: (
+  ('l', '-left'),
+  ('r', '-right'),
+  ('t', '-top'),
+  ('b', '-bottom'),
+);
+
+$attrs: (
+  ('m', 'margin'),
+  ('p', 'padding'),
+  ('border', 'border')
+);
+
+// Margins, borders, padding for zones
+@each $abv, $attr in $attrs {
+  @each $dir, $attr-dir in $zones {
+    .#{$abv}-safe-area-#{$dir} {
+      #{$attr}#{$attr-dir}: env(safe-area-inset#{$attr-dir});
+    }
+  }
+
+  .#{$abv}-safe-area-x {
+    #{$attr}-left: env(safe-area-inset-left);
+    #{$attr}-right: env(safe-area-inset-right);
+  }
+
+  .#{$abv}-safe-area-y {
+    #{$attr}-top: env(safe-area-inset-left);
+    #{$attr}-bottom: env(safe-area-inset-right);
+  }
+}
