@@ -8,7 +8,9 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1536px,
+  xxxl: 2048px
 ) !default;
 //@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 //@include _assert-starts-at-zero($grid-breakpoints);
