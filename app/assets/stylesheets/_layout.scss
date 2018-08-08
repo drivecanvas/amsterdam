@@ -52,9 +52,9 @@
 }
 
 .overflow-unset {
-  overflow: unset;
-  overflow-x: unset;
-  overflow-y: unset;
+  overflow: unset !important;
+  overflow-x: unset !important;
+  overflow-y: unset !important;
 }
 
 .clearfix::before,
