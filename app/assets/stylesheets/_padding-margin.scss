@@ -14,14 +14,14 @@ $directions: (
 );
 
 $positive-spaces: (
-  '0': 0,
   'xs': $space-xs,
   's': $space-s,
   'm': $space-m,
   'l': $space-l,
   'xl': $space-xl,
   'xxl': $space-xxl,
-  'xxxl': $space-xxxl
+  'xxxl': $space-xxxl,
+  '0': 0,
 );
 
 // $negative-spaces: (
