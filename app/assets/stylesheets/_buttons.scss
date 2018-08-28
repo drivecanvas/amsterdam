@@ -351,6 +351,16 @@ a.cta-secondary {
   text-decoration: none;
 }
 
+.cta-primary-wired {
+  @include global-cta;
+  @include default-button;
+  background-color: $white;
+  color: $canvas-blue;
+  border: 2px solid $canvas-blue;
+  padding: calc(1rem - 2px) calc(2rem - 2px);
+  text-decoration: none;
+}
+
 .cta-outlined {
   @include global-cta;
   @include default-button;

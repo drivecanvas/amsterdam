@@ -16,6 +16,10 @@
   position: fixed;
 }
 
+.sticky {
+  position: sticky;
+}
+
 // XY Coordinates
 $properties: (
   'bottom',
@@ -25,8 +29,6 @@ $properties: (
 );
 
 $spaces: (
-  '-1': -1px,
-  '0': 0,
   'xs': $space-xs,
   's': $space-s,
   'm': $space-m,
@@ -34,7 +36,9 @@ $spaces: (
   'xl': $space-xl,
   'xxl': $space-xxl,
   'xxxl': $space-xxxl,
-  '100': 100%
+  '100': 100%,
+  '-1': -1px,
+  '0': 0,
 );
 
 @each $property in $properties {
