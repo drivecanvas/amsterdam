@@ -142,6 +142,11 @@ strong,
   text-decoration: underline;
 }
 
+.no-decoration,
+.no-decoration:hover {
+  text-decoration: none !important;
+}
+
 .truncate {
   max-width: 100%;
   overflow: hidden;
