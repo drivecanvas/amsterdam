@@ -323,6 +323,13 @@ a.cta-secondary {
   &:disabled:hover {
     background-color: $grey2;
   }
+
+  &.bg-hover-grey5:hover {
+    background-color: $grey5;
+  }
+  &.bg-active-grey5:active {
+    background-color: $grey5;
+  }
 }
 // SECONDARY CTA to appear as alternate in conjunction with primary - Dark Grey Text Link without Button.
 .cta-secondary {
@@ -340,15 +347,6 @@ a.cta-secondary {
     text-decoration: underline;
     color: $black;
   }
-}
-
-.cta-primary-inverted {
-  @include global-cta;
-  @include default-button;
-  background-color: $white;
-  color: $canvas-blue;
-  padding: 1rem 2rem;
-  text-decoration: none;
 }
 
 .cta-primary-wired {
