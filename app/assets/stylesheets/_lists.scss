@@ -63,6 +63,10 @@ dl {
       left: 0;
       position: absolute;
       width: 1em;
+
+      &.ck-grey2 {
+        background-image: url('../images/icons/icon-checkmark-grey2.svg');
+      }
     }
   }
 }

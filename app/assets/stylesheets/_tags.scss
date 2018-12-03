@@ -1,0 +1,15 @@
+.tag {
+  height: 1rem;
+  @extend .rounded;
+  @extend .px-s;
+}
+
+.inline-bullet-tag {
+  &::before {
+    content: '•';
+  }
+
+  &:first-child::before {
+    content: '';
+  }
+}

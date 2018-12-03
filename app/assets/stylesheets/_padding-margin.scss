@@ -22,6 +22,7 @@ $positive-spaces: (
   'xxl': $space-xxl,
   'xxxl': $space-xxxl,
   '0': 0,
+  'auto': 'auto',
 );
 
 // $negative-spaces: (
@@ -89,22 +90,10 @@ $positive-spaces: (
   }
 }
 
-.ml-auto {
-  margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
-}
-
-.my-auto,
 .vertical-center {
-  margin-top: auto;
-  margin-bottom: auto;
+  @extend .my-auto;
 }
 
-.mx-auto,
 .float-center {
-  margin-left: auto;
-  margin-right: auto;
+  @extend .mx-auto;
 }

@@ -30,3 +30,12 @@ $bs-color-default: rgba(0, 0, 0, 0.2);
 .text-shadow {
   text-shadow: 0 2px 1px $bs-color-default;
 }
+
+.transition-shadow {
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.hover-shadow:hover {
+  @extend .shadow;
+  margin-top: -1px;
+}
