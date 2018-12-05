@@ -8,9 +8,10 @@ $medium-blue: #304cca; //AA
 $dark-blue: #2c45b7; //AAA
 $teal: #37e6c8; //AAA on dark, Fail on white
 $light-teal: #d7faf4; // Successfully applied i.e. applied discount code
+$dark-teal: #1F806F; //AA on white - i.e. discount credit
 $light-gold: #fbf3de;
 $gold: #ffd966; // Fail on White, AA on dark
-$green: #05892C; // Extra i.e. discount credit
+$green: #05892C; // Temporarily Deprecated color for discount credit, should update to dark-teal
 
 // Solids
 $grey0: #f2f5fa;
@@ -39,6 +40,7 @@ $colors: (
   'dark-blue': $dark-blue,
   'teal': $teal,
   'light-teal': $light-teal,
+  'dark-teal': $dark-teal,
   'gold': $gold,
   'light-gold': $light-gold,
   'green': $green,
