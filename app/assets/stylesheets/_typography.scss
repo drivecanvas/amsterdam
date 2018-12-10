@@ -130,6 +130,23 @@ strong,
   text-align: justify;
 }
 
+$properties: (
+  'center',
+  'left',
+  'right',
+  'justify',
+);
+
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  @each $property in $properties {
+    @media screen and (min-width: $breakpoint) {
+      .text-#{$property}-#{$breakpoint-name} {
+        text-align: #{$property};
+      }
+    }
+  }
+}
+
 .nowrap {
   white-space: nowrap;
 }
