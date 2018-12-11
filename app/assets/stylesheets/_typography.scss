@@ -140,7 +140,7 @@ $properties: (
 @each $breakpoint-name, $breakpoint in $breakpoints {
   @each $property in $properties {
     @media screen and (min-width: $breakpoint) {
-      .text-#{$property}-#{$breakpoint-name} {
+      .text-#{$breakpoint-name}-#{$property} {
         text-align: #{$property};
       }
     }
