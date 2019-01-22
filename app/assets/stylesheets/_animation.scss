@@ -199,7 +199,7 @@
 // }
 
 .shine-loading{
-  background-image: linear-gradient(to right, $grey0 10%, $grey1 30%, $grey0 50%, $grey0 100%);
+  background-image: linear-gradient(to right, $grey0 10%, #ddd 30%, $grey0 50%, $grey0 100%);
   background-size: 200% 100%;
   -webkit-animation: shine-loading 1s  infinite;
   -moz-animation: shine-loading 1s  infinite;
