@@ -172,6 +172,32 @@
   }
 }
 
+
+
+@-webkit-keyframes shine-loading {
+   0%{background-position:0% 92%}
+   50%{background-position:100% 9%}
+   100%{background-position:0% 92%}
+}
+@-moz-keyframes shine-loading {
+   0%{background-position:0% 92%}
+   50%{background-position:100% 9%}
+   100%{background-position:0% 92%}
+}
+@keyframes shine-loading {
+   0%{background-position:0% 92%}
+   50%{background-position:100% 9%}
+   100%{background-position:0% 92%}
+}
+
+.shine-loading{
+  -webkit-animation: shine-loading 4s ease infinite;
+  -moz-animation: shine-loading 4s ease infinite;
+  animation: shine-loading 4s ease infinite;
+  background: linear-gradient (to right, $grey0 0%, $grey0 33%, $grey1 50%, $grey0 66%, $grey0 100%);
+  background-size: 400% 400%;
+}
+
 // Animation Utilities
 .a-reverse {
   animation-direction: reverse;
