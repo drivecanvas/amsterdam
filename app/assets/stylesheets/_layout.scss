@@ -166,6 +166,46 @@ $percentage-measures: (
   }
 }
 
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  @each $name, $value in $percentage-measures {
+    .width-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        width: $value;
+      }
+    }
+
+    .min-width-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        min-width: $value;
+      }
+    }
+
+    .max-width-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        max-width: $value;
+      }
+    }
+
+    .height-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        height: $value;
+      }
+    }
+
+    .min-height-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        min-height: $value;
+      }
+    }
+
+    .max-height-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        max-height: $value;
+      }
+    }
+  }
+}
+
 // Fixed widths & heights
 // ----------------------
 //
@@ -190,6 +230,7 @@ $fixed-measures: (
   'xxxl': 128rem
 );
 
+// non-media styles
 @each $name, $value in $fixed-measures {
   .width-#{$name} {
     width: $value;
@@ -213,5 +254,45 @@ $fixed-measures: (
 
   .max-height-#{$name} {
     max-height: $value;
+  }
+}
+
+@each $breakpoint-name, $breakpoint in $breakpoints {
+  @each $name, $value in $fixed-measures {
+    .width-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        width: $value;
+      }
+    }
+
+    .min-width-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        min-width: $value;
+      }
+    }
+
+    .max-width-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        max-width: $value;
+      }
+    }
+
+    .height-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        height: $value;
+      }
+    }
+
+    .min-height-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        min-height: $value;
+      }
+    }
+
+    .max-height-#{$breakpoint-name}-#{$name} {
+      @media screen and (min-width: $breakpoint) {
+        max-height: $value;
+      }
+    }
   }
 }
