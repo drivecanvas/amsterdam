@@ -1,43 +1,3 @@
-// TODO: @deprecate
-// Basscss Layout Display
-.inline {
-  display: inline;
-}
-
-.block {
-  display: block;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-// Flex Box
-.flex-1 {
-  flex: 1;
-}
-
-.order-0 {
-  order: 0;
-}
-
-.order-1 {
-  order: 1;
-}
-
-.order-2 {
-  order: 2;
-}
-
-.order-3 {
-  order: 3;
-}
-
-.order-last {
-  order: 99999;
-}
-
-
 // Overflow
 .overflow-hidden {
   overflow: hidden;
@@ -186,8 +146,6 @@ $fixed-measures: (
   'm': 32rem,
   'l': 48rem,
   'xl': 64rem,
-  'xxl': 96rem,
-  'xxxl': 128rem
 );
 
 @each $name, $value in $fixed-measures {

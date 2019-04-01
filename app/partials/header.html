@@ -1,42 +1,9 @@
 <header role="" class="bg-white container-fluid relative z3">
   <div class="row">
     <div class="logo col-4 py-m">
-      <a href="/snowball" class="">
-        <svg class="canvas-blue icon-logo-wordmark block"><use xlink:href="#icon-logo-wordmark"></use></svg>
+      <a href="/" class="">
+        <svg class="canvas-blue icon-logo-wordmark d-block"><use xlink:href="#icon-logo-wordmark"></use></svg>
       </a>
     </div>
-    <nav class="col-8 s-hide s-m-hide" role="">
-      <div class="row justify-content-end">
-        <a class="col-auto block py-m px-m h5 grey3" tl-location="global_nav" tl-cta="browse_inventory" href="https://drivecanvas.com/app">Browse Cars</a>
-        <!-- <a class="col-auto block py-m px-m h5 grey3" href="<%= inventory_path %>">Browse Cars</a> -->
-        <a class="col-auto block py-m px-m h5 grey3 scrollTo" tl-location="global_nav" tl-cta="pricing" href="/snowball#pricing">Pricing</a>
-        <!-- <a class="col-auto block py-m px-m h5 grey3" href="/#pricing">Browse Cars</a> -->
-        <a class="col-auto block py-m px-m h5 grey3" tl-location="global_nav" tl-cta="about_us" href="/about">About Us</a>
-        <!-- <%= link_to 'About Us', about_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
-        <a class="col-auto block py-m px-m h5 grey3" target="_blank" tl-location="global_nav" tl-cta="faq" href="/faq">FAQ</a>
-        <!-- <%= link_to 'FAQ', faq_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
-        <a class="col-auto block py-m px-m h5 grey3" tl-location="global_nav" tl-cta="sign_in" href="https://drivecanvas.com/app/login">Sign In</a>
-        <!-- <%= link_to 'Sign In', new_user_session_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
-      </div>
-    </nav>
-    <nav class="col-8  m-l-hide l-xl-hide xl-hide">
-      <div class="row justify-content-end">
-        <a href="#" class="col-auto px-l py-m" id="globalNavToggle">
-          <svg id="menuToggle" class="absolute transition-02s grey3 icon block"><use xlink:href="#icon-menu"></use></svg>
-          <svg id="closeToggle" class="absolute transition-02s opacity-0 grey3 icon block"><use xlink:href="#icon-close"></use></svg>
-        </a>
-      </div>
-    </nav>
   </div>
 </header>
-
-<nav class="offCanvasNav fixed bg-white z2 top-0 bottom-0 left-100 transition-02s transition-ease-out overflow-y-scroll width-100 m-l-hide l-xl-hide xl-hide py-xl">
-  <a class="col-12 block py-m px-m h5 grey3" href="https://staging-carmada.herokuapp.com/app/">Browse Cars</a>
-  <!-- <%= link_to 'Browse Cars', inventory_path,  class: 'col-auto block py-m px-m h5 grey3' %> -->
-  <a class="col-12 block py-m px-m h5 grey3" href="{{site.baseurl}}/about">About Us</a>
-  <!-- <%= link_to 'About Us', about_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
-  <a class="col-12 block py-m px-m h5 grey3" href="https://drivecanvas.zendesk.com/hc/">FAQ</a>
-  <!-- <%= link_to 'FAQ', faq_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
-  <a class="col-12 block py-m px-m h5 grey3" href="#">Sign In</a>
-  <!-- <%= link_to 'Sign In', new_user_session_path, class: 'col-auto block py-m px-m h5 grey3' %> -->
-</nav>

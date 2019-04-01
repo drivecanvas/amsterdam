@@ -14,6 +14,10 @@ The Canvas Design System Library
 * [brew](https://brew.sh/)
 * [git](https://git-scm.com/)
 
+### Deprecation
+
+See [deprecations guide](https://github.com/drivecanvas/amsterdam/blob/master/DEPRECATION.md) when upgrading.
+
 ### Installation
 
 Once you have installed `node` and `brew`, install `yarn`
@@ -32,7 +36,7 @@ Enter the directory and install the dependencies
 
 ```
 cd amsterdam
-yarn 
+yarn
 ```
 
 Launch the server and start designing~

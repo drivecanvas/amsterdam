@@ -20,30 +20,20 @@ $borders: (
   '-bottom',
 );
 
-@media only screen and (max-width : $screen-sm-min) {
-  @each $border in $borders {
-    .border-xs#{$border} {
-      border#{$border}: solid 1px $default-border-color;
-    }
+@each $border in $borders {
+  .border#{$border} {
+    border#{$border}: solid 1px $default-border-color;
+  }
 
-    .no-border-xs#{$border} {
-      border#{$border}: 0;
-    }
+  .no-border#{$border} {
+    border#{$border}: 0;
   }
 }
 
-@media only screen and (min-width : $screen-sm-min) {
+@include breakpoint('sm') {
   @each $border in $borders {
-    .border-xs#{$border} {
-      border#{$border}: solid 1px $default-border-color;
-    }
-
     .border-sm#{$border} {
       border#{$border}: solid 1px $default-border-color;
-    }
-
-    .no-border-xs#{$border} {
-      border#{$border}: 0;
     }
 
     .no-border-sm#{$border} {
@@ -52,26 +42,10 @@ $borders: (
   }
 }
 
-@media only screen and (min-width : $screen-md-min) {
+@include breakpoint('md') {
   @each $border in $borders {
-    .border-xs#{$border} {
-      border#{$border}: solid 1px $default-border-color;
-    }
-
-    .border-sm#{$border} {
-      border#{$border}: solid 1px $default-border-color;
-    }
-
     .border-md#{$border} {
       border#{$border}: solid 1px $default-border-color;
-    }
-
-    .no-border-xs#{$border} {
-      border#{$border}: 0;
-    }
-
-    .no-border-sm#{$border} {
-      border#{$border}: 0;
     }
 
     .no-border-md#{$border} {
@@ -80,34 +54,10 @@ $borders: (
   }
 }
 
-@media only screen and (min-width : $screen-lg-min) {
+@include breakpoint('lg') {
   @each $border in $borders {
-    .border-xs#{$border} {
-      border#{$border}: solid 1px $default-border-color;
-    }
-
-    .border-sm#{$border} {
-      border#{$border}: solid 1px $default-border-color;
-    }
-
-    .border-md#{$border} {
-      border#{$border}: solid 1px $default-border-color;
-    }
-
     .border-lg#{$border} {
       border#{$border}: solid 1px $default-border-color;
-    }
-
-    .no-border-xs#{$border} {
-      border#{$border}: 0;
-    }
-
-    .no-border-sm#{$border} {
-      border#{$border}: 0;
-    }
-
-    .no-border-md#{$border} {
-      border#{$border}: 0;
     }
 
     .no-border-lg#{$border} {
@@ -116,59 +66,21 @@ $borders: (
   }
 }
 
-// ALEX'S STYLES
-// TODO: deprecate
-.border {
-  border-style: solid;
-  border-width: $border-width;
+@media screen and (min-width: map-get($breakpoints, 'xl')) {
+  @each $border in $borders {
+    .border-xl#{$border} {
+      border#{$border}: solid 1px $default-border-color;
+    }
+
+    .no-border-xl#{$border} {
+      border#{$border}: 0;
+    }
+  }
 }
 
-.border-top {
-  border-top-style: solid;
-  border-top-width: $border-width;
-}
-
-.border-right {
-  border-right-style: solid;
-  border-right-width: $border-width;
-}
-
-.border-bottom {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width;
-}
-
-.border-left {
-  border-left-style: solid;
-  border-left-width: $border-width;
-}
-
-.border-top-thick {
-  border-top-style: solid;
-  border-top-width: $border-width-thick;
-}
-
-.border-right-thick {
-  border-right-style: solid;
-  border-right-width: $border-width-thick;
-}
-
-.border-bottom-thick {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width-thick;
-}
-
-.border-left-thick {
-  border-left-style: solid;
-  border-left-width: $border-width-thick;
-}
-
-.border-dotted {
-  border-style: dotted;
-  border-width: 1px;
-}
-
-// END of deprecation
+/**
+ * Widths
+ */
 
 .border-0 {
   border: 0;
@@ -181,6 +93,10 @@ $borders: (
 .border-width-8 {
   border-width: $border-width-thick-8;
 }
+
+/**
+ * Radii
+ */
 
 .rounded {
   border-radius: $rounded-border-radius;
