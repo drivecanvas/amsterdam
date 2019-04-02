@@ -1,0 +1,9 @@
+@media(max-width: map-get($grid-breakpoints, 'md')) {
+  /* Make view full width on phones */
+  html, body {
+    width: auto!important;
+    overflow-x: hidden!important;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+  }
+}
