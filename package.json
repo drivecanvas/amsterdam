@@ -12,7 +12,7 @@
     "postversion": "git push && git push --tags"
   },
   "engines": {
-    "node": "10.3.0"
+    "node": "8.11.3"
   },
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
