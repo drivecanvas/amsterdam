@@ -104,32 +104,26 @@ $borders: (
 
 .circle {
   border-radius: 50%;
-  // -webkit-border-radius: 50%;
 }
 
 .rounded-top {
   border-radius: $rounded-border-radius $rounded-border-radius 0 0;
-  // -webkit-border-radius: $rounded-border-radius $rounded-border-radius 0 0;
 }
 
 .rounded-right {
   border-radius: 0 $rounded-border-radius $rounded-border-radius 0;
-  // -webkit-border-radius: 0 $rounded-border-radius $rounded-border-radius 0;
 }
 
 .rounded-bottom {
   border-radius: 0 0 $rounded-border-radius $rounded-border-radius;
-  // -webkit-border-radius: 0 0 $rounded-border-radius $rounded-border-radius;
 }
 
 .rounded-left {
   border-radius: $rounded-border-radius 0 0 $rounded-border-radius;
-  // -webkit-border-radius: $rounded-border-radius 0 0 $rounded-border-radius;
 }
 
 .not-rounded {
   border-radius: 0;
-  // -webkit-border-radius: 0;
 }
 
 .not-rounded-left {

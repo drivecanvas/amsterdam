@@ -16,4 +16,34 @@ The following CSS rules are now deprecated, see equivalent for how to upgrade
 .border-xs-top // -> .border-top
 .border-xs-bottom // -> .border-bottom
 .no-border-xs-bottom // -> .no-border
+
+.inline-block -> .d-inline-block (comes from amsterdam)
+.inline -> .d-inline (comes from amsterdam)
+.block -> .d-block (comes from amsterdam)
+
+.width-xxl
+.min-width-xxl
+.max-width-xxl
+.height-xxl
+.min-height-xxl
+.max-height-xxl
+.width-xxl
+.min-width-xxl
+.max-width-xxl
+.height-xxl
+.min-height-xxl
+.max-height-xxl
+
+.width-xxxl
+.min-width-xxxl
+.max-width-xxxl
+.height-xxxl
+.min-height-xxxl
+.max-height-xxxl
+.width-xxxl
+.min-width-xxxl
+.max-width-xxxl
+.height-xxxl
+.min-height-xxxl
+.max-height-xxxl
 ```
