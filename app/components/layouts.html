@@ -4,4 +4,352 @@ collection: components
 title: Layouts
 ---
 
-<h1>TODO</h1>
+<p>The followings CSS rules are intended to apply a certain width or height to a DOM element.</p>
+
+<h2 class="grey5-a">Proportion and Fixed sizings</h2>
+
+<p class="mb-s">The following classes are availables:</p>
+
+<ul class="mb-m bold grey3">
+  <li>.width-<span class="red">*</span> { width: <span class="red">*</span>px; }</li>
+  <li>.height-<span class="red">*</span> { height: <span class="red">*</span>px; }</li>
+  <li>.min-height-<span class="red">*</span> { min-width: <span class="red">*</span>px; }</li>
+  <li>.max-height-<span class="red">*</span> { max-width: <span class="red">*</span>px; }</li>
+</ul>
+
+<p class="mb-l">
+  The wildcard (*) refers to a specific measure, follow this guide to use any of the following measure.
+  <a href="#proportion">Proportion</a> based or <a href="#fixed">fixed</a> sizing.
+</p>
+
+<h3 id="proportion" class="grey5-a">Proportion sizing (% unit)</h3>
+
+<h4 class="grey5-a bold">.width-<span class="red">*</span> { width: <span class="red">*</span>%; }</h4>
+
+<div class="d-flex mb-l flex-column">
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-0"></div>
+    </div>
+    <caption>.width-<span class="red">0</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-10"></div>
+    </div>
+    <caption>.width-<span class="red">10</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-20"></div>
+    </div>
+    <caption>.width-<span class="red">20</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-30"></div>
+    </div>
+    <caption>.width-<span class="red">30</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-40"></div>
+    </div>
+    <caption>.width-<span class="red">40</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-50"></div>
+    </div>
+    <caption>.width-<span class="red">50</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-60"></div>
+    </div>
+    <caption>.width-<span class="red">60</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-70"></div>
+    </div>
+    <caption>.width-<span class="red">70</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-80"></div>
+    </div>
+    <caption>.width-<span class="red">80</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-90"></div>
+    </div>
+    <caption>.width-<span class="red">90</span></caption>
+  </div>
+
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-100"></div>
+    </div>
+    <caption>.width-<span class="red">100</span></caption>
+  </div>
+</div>
+
+<h4 class="grey5-a bold">.height-<span class="red">*</span> { height: <span class="red">*</span>%; }</h4>
+
+<div class="d-flex mb-l flex-wrap flex-row fs-12">
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-0"></div>
+    </div>
+    <caption>.height-<span class="red">0</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-10"></div>
+    </div>
+    <caption>.height-<span class="red">10</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-20"></div>
+    </div>
+    <caption>.height-<span class="red">20</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-30"></div>
+    </div>
+    <caption>.height-<span class="red">30</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-40"></div>
+    </div>
+    <caption>.height-<span class="red">40</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-50"></div>
+    </div>
+    <caption>.height-<span class="red">50</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-60"></div>
+    </div>
+    <caption>.height-<span class="red">60</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-70"></div>
+    </div>
+    <caption>.height-<span class="red">70</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-80"></div>
+    </div>
+    <caption>.height-<span class="red">80</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-90"></div>
+    </div>
+    <caption>.height-<span class="red">90</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xs">
+      <div class="px-xs bg-grey0-a height-100"></div>
+    </div>
+    <caption>.height-<span class="red">100</span></caption>
+  </div>
+</div>
+
+<h3 id="fixed" class="grey5-a">Fixed sizing (px unit)</h3>
+
+<h4 class="grey5-a bold">.width-<span class="red">*</span> { width: <span class="red">*</span>px; }</h4>
+
+<div class="d-flex mb-l flex-column">
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-xxxs"></div>
+    </div>
+    <caption>.width-<span class="red">xxxs</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-xxs"></div>
+    </div>
+    <caption>.width-<span class="red">xxs</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-xs"></div>
+    </div>
+    <caption>.width-<span class="red">xs</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-s"></div>
+    </div>
+    <caption>.width-<span class="red">s</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-m"></div>
+    </div>
+    <caption>.width-<span class="red">m</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-l"></div>
+    </div>
+    <caption>.width-<span class="red">l</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-xl"></div>
+    </div>
+    <caption>.width-<span class="red">xl</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a width-xxl"></div>
+    </div>
+    <caption>.width-<span class="red">xxl</span></caption>
+  </div>
+</div>
+
+<h4 class="grey5-a bold">.height-<span class="red">*</span> { height: <span class="red">*</span>px; }</h4>
+
+<div class="d-flex mb-l flex-wrap flex-row fs-12">
+  <div class="mr-s">
+    <div class="border mb-xs height-xl">
+      <div class="px-xs bg-grey0-a height-xxxs"></div>
+    </div>
+    <caption>.height-<span class="red">xxxs</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xl">
+      <div class="px-xs bg-grey0-a height-xxs"></div>
+    </div>
+    <caption>.height-<span class="red">xxs</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xl">
+      <div class="px-xs bg-grey0-a height-xs"></div>
+    </div>
+    <caption>.height-<span class="red">xs</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xl">
+      <div class="px-xs bg-grey0-a height-s"></div>
+    </div>
+    <caption>.height-<span class="red">s</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xl">
+      <div class="px-xs bg-grey0-a height-m"></div>
+    </div>
+    <caption>.height-<span class="red">m</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xl">
+      <div class="px-xs bg-grey0-a height-l"></div>
+    </div>
+    <caption>.height-<span class="red">l</span></caption>
+  </div>
+
+  <div class="mr-s">
+    <div class="border mb-xs height-xl">
+      <div class="px-xs bg-grey0-a height-xl"></div>
+    </div>
+    <caption>.height-<span class="red">xl</span></caption>
+  </div>
+</div>
+
+<h2 id="viewport" class="grey5-a">Viewport sizing (vh/vw unit)</h2>
+
+<h3 class="grey5-a bold">.vw<span class="red">*</span> { width: <span class="red">*</span>vw; }</h3>
+
+<div class="d-flex flex-column mb-l">
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a vw25"></div>
+    </div>
+    <caption>.vw<span class="red">25</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a vw50"></div>
+    </div>
+    <caption>.vw<span class="red">50</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a vw75"></div>
+    </div>
+    <caption>.vw<span class="red">75</span></caption>
+  </div>
+  <div class="mb-s">
+    <div class="border mb-xs">
+      <div class="py-xs bg-grey0-a vw100"></div>
+    </div>
+    <caption>.vw<span class="red">100</span></caption>
+  </div>
+</div>
+
+<h3 class="grey5-a bold">.vh<span class="red">*</span> { height: <span class="red">*</span>vh; }</h3>
+
+<div class="d-flex mb-l flex-wrap flex-row fs-12">
+  <div class="mb-s mr-s">
+    <div class="border mb-xs vh100">
+      <div class="px-xs bg-grey0-a vh25"></div>
+    </div>
+    <caption>.vh<span class="red">25</span></caption>
+  </div>
+  <div class="mb-s mr-s">
+    <div class="border mb-xs vh100">
+      <div class="px-xs bg-grey0-a vh50"></div>
+    </div>
+    <caption>.vh<span class="red">50</span></caption>
+  </div>
+  <div class="mb-s mr-s">
+    <div class="border mb-xs vh100">
+      <div class="px-xs bg-grey0-a vh75"></div>
+    </div>
+    <caption>.vh<span class="red">75</span></caption>
+  </div>
+  <div class="mb-s mr-s">
+    <div class="border mb-xs vh100">
+      <div class="px-xs bg-grey0-a vh100"></div>
+    </div>
+    <caption>.vh<span class="red">100</span></caption>
+  </div>
+</div>
