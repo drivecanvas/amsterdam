@@ -21,6 +21,9 @@ The following CSS rules are now deprecated, see equivalent for how to upgrade
 .inline -> .d-inline (comes from amsterdam)
 .block -> .d-block (comes from amsterdam)
 
+// these rules no longer exists as they're not used anywhere.
+// given the sice of these fixed measure, if they're being, it's mostlikely that we're doing
+// something wrong
 .width-xxl
 .min-width-xxl
 .max-width-xxl
