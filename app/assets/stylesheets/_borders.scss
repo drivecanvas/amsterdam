@@ -186,6 +186,10 @@ $borders: (
   border-radius: $rounded-border-radius;
 }
 
+.rounded-pill {
+  border-radius: 50rem;
+}
+
 .circle {
   border-radius: 50%;
 }
