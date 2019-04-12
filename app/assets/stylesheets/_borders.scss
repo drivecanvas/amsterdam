@@ -186,6 +186,12 @@ $borders: (
   border-radius: $rounded-border-radius;
 }
 
+.rounded-pill {
+  // 10rem keeps this consistent with the class available in bootstrap 4
+  // overflow will be evened out on the top and the bottom to make the ends rounded
+  border-radius: 10rem;
+}
+
 .circle {
   border-radius: 50%;
 }
