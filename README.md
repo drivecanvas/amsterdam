@@ -45,6 +45,13 @@ Launch the server and start designing~
 yarn start
 ```
 
+### Guide
+
+See the online [guide](https://staging-amsterdam.herokuapp.com/). Please make sure that
+when you edit rules, you also update the documentation! If you add new things, consider improving
+the documentation and adding illustrations to spread the knowledge faster amongts the team.
+
+
 ### Deploying to [staging-amsterdam](https://staging-amsterdam.herokuapp.com/)
 
 After adding the remote
