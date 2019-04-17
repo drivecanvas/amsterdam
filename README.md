@@ -14,6 +14,10 @@ The Canvas Design System Library
 * [brew](https://brew.sh/)
 * [git](https://git-scm.com/)
 
+### Deprecation
+
+See [deprecations guide](https://github.com/drivecanvas/amsterdam/blob/master/DEPRECATION.md) when upgrading.
+
 ### Installation
 
 Once you have installed `node` and `brew`, install `yarn`
@@ -32,7 +36,7 @@ Enter the directory and install the dependencies
 
 ```
 cd amsterdam
-yarn 
+yarn
 ```
 
 Launch the server and start designing~
@@ -40,6 +44,13 @@ Launch the server and start designing~
 ```
 yarn start
 ```
+
+### Guide
+
+See the online [guide](https://staging-amsterdam.herokuapp.com/). Please make sure that
+when you edit rules, you also update the documentation! If you add new things, consider improving
+the documentation and adding illustrations to spread the knowledge faster amongts the team.
+
 
 ### Deploying to [staging-amsterdam](https://staging-amsterdam.herokuapp.com/)
 

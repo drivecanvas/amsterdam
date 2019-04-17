@@ -1,0 +1,193 @@
+---
+layout: components.html
+collection: components
+title: Positions
+---
+
+
+<h2>Different positions</h2>
+
+<ul class="mb-l italic bold">
+  <li>.absolute { position: absolute; }</li>
+  <li>.relative { position: relative; }</li>
+  <li>.fixed { position: fixed; }</li>
+  <li>.sticky { position: sticky; }</li>
+</ul>
+
+<h2>Sizes</h2>
+
+<div
+  class="mb-s text-center bold"
+>
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-0"></div>
+    </div>
+    <caption>.absolute.left-0</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-50"></div>
+    </div>
+    <caption>.absolute.left-50</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left--1"></div>
+    </div>
+    <caption>.absolute.left--1</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-100"></div>
+    </div>
+    <caption>.absolute.left-100</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-xs"></div>
+    </div>
+    <caption>.absolute.left-xs</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-s"></div>
+    </div>
+    <caption>.absolute.left-s</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-m"></div>
+    </div>
+    <caption>.absolute.left-m</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-l"></div>
+    </div>
+    <caption>.absolute.left-l</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-xl"></div>
+    </div>
+    <caption>.absolute.left-xl</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-xxl"></div>
+    </div>
+    <caption>.absolute.left-xxl</caption>
+  </div>
+
+  <div class="d-flex flex-column mb-l">
+    <div class="border-bottom relative mb-m">
+      <div class="p-s bg-grey2-a absolute left-xxxl"></div>
+    </div>
+    <caption>.absolute.left-xxxl</caption>
+  </div>
+</div>
+
+
+<h2>Directions</h2>
+
+<div
+  class="mb-l text-center bold"
+  style="
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 6rem);
+    grid-gap: .5rem;
+    place-items: stretch;
+  "
+>
+  <div class="d-flex flex-column">
+    <div class="border flex-grow-1 relative mb-xs">
+      <div class="p-s bg-grey2-a absolute"></div>
+    </div>
+    <caption>.absolute</caption>
+  </div>
+
+  <div class="d-flex flex-column">
+    <div class="border flex-grow-1 relative mb-xs">
+      <div class="p-s bg-grey2-a absolute left-50"></div>
+    </div>
+    <caption>.absolute.left-50</caption>
+  </div>
+
+  <div class="d-flex flex-column">
+    <div class="border flex-grow-1 relative mb-xs">
+      <div class="p-s bg-grey2-a absolute right-0"></div>
+    </div>
+    <caption>.absolute.right-0</caption>
+  </div>
+
+  <div class="d-flex flex-column">
+    <div class="border flex-grow-1 relative mb-xs">
+      <div class="p-s bg-grey2-a absolute top-50"></div>
+    </div>
+    <caption>.absolute.top-50</caption>
+  </div>
+
+  <div class="d-flex flex-column">
+    <div class="border flex-grow-1 relative mb-xs">
+      <div class="p-s bg-grey2-a absolute top-50 left-50"></div>
+    </div>
+    <caption>.absolute.top-50.left-50</caption>
+  </div>
+
+  <div class="d-flex flex-column">
+    <div class="border flex-grow-1 relative mb-xs">
+      <div class="p-s bg-grey2-a absolute top-50 right-0"></div>
+    </div>
+    <caption>.absolute.top-50.right-0</caption>
+  </div>
+
+  <div class="d-flex flex-column">
+    <div class="border flex-grow-1 relative mb-xs">
+      <div class="p-s bg-grey2-a absolute bottom-0"></div>
+    </div>
+    <caption>.absolute.bottom-0</caption>
+  </div>
+
+  <div class="d-flex flex-column">
+    <div class="border flex-grow-1 relative mb-xs">
+      <div class="p-s bg-grey2-a absolute bottom-0 left-50"></div>
+    </div>
+    <caption>.absolute.bottom-0.left-50</caption>
+  </div>
+
+  <div class="d-flex flex-column">
+    <div class="border flex-grow-1 relative mb-xs">
+      <div class="p-s bg-grey2-a absolute bottom-0 right-0"></div>
+    </div>
+    <caption>.absolute.bottom-0.right-0</caption>
+  </div>
+</div>
+
+
+<h2>Z-indexes</h2>
+
+<div class="relative white bold height-xs">
+  <div style="left: 0rem; top: 0rem;" class="p-l rounded absolute nz1 bg-dark-blue">.nz1</div>
+  <div style="left: 4rem; top: 1rem;" class="p-l rounded absolute z1 bg-canvas-blue">.z1</div>
+  <div style="left: 8rem; top: 2rem;" class="p-l rounded absolute z2 bg-teal">.z2</div>
+  <div style="left: 12rem; top: 3rem;" class="p-l rounded absolute z3 bg-gold">.z3</div>
+  <div style="left: 16rem; top: 4rem;" class="p-l rounded absolute z4 bg-grey4">.z4</div>
+  <div style="left: 20rem; top: 5rem;" class="p-l rounded absolute z5 bg-dark-teal">.z5</div>
+  <div style="left: 24rem; top: 6rem;" class="p-l rounded absolute z6 bg-grey5-a">.z6</div>
+  <div style="left: 28rem; top: 7rem;" class="p-l rounded absolute z7 bg-grey1-a">.z7</div>
+  <div style="left: 32rem; top: 8rem;" class="p-l rounded absolute z8 bg-grey3-a">.z8</div>
+  <div style="left: 36rem; top: 9rem;" class="p-l rounded absolute z9 bg-grey2">.z9</div>
+  <div style="left: 40rem; top: 10rem;" class="p-l rounded absolute z10 bg-medium-blue">.z10</div>
+  <div style="left: 44rem; top: 11rem;" class="p-l rounded absolute z11 bg-red">.z11</div>
+</div>
