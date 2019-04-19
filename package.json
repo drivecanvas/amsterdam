@@ -11,9 +11,6 @@
     "before_script": "yarn add --force node-sass",
     "postversion": "git push && git push --tags"
   },
-  "engines": {
-    "node": ">=8.16.0"
-  },
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "express": "^4.15.3",
